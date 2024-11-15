@@ -1,0 +1,2233 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ud2_2_primera_app/">
+      
+      
+        <link rel="next" href="../../ud3/ud3_1_componentes_basicos/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+    
+    
+      
+        <title>UD2 - 2.3. Maquetación básica del interfaz de usuario - DAM - Diseño de Interfaces - 2023/24</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/bs5_layout.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud2-23-maquetacion-basica-del-interfaz-de-usuario" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-header__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAM - Diseño de Interfaces - 2023/24
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD2 - 2.3. Maquetación básica del interfaz de usuario
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proyectos/proyecto2ev/" class="md-tabs__link">
+          
+  
+  Proyecto 2ª ev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Inicio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud1/ud1_intro/" class="md-tabs__link">
+          
+  
+  UD1 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ud2_1_electron_requisitos/" class="md-tabs__link">
+          
+  
+  UD2 Elementos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud3/ud3_1_componentes_basicos/" class="md-tabs__link">
+          
+  
+  UD3 Componentes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-tabs__link">
+          
+  
+  UD4 Componentes avanzados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud5/ud5_1_usabilidad/" class="md-tabs__link">
+          
+  
+  UD5 Usabilidad y accesibilidad
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-nav__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAM - Diseño de Interfaces - 2023/24
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 2ª ev
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 2ª ev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyectos/proyecto2ev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DIN semipresencial 2023-24 - Proyecto 2ª Evaluación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Inicio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM Desarrollo de Interfaces 2023-2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entorno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entorno de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/ud1_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2 Elementos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 Elementos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud2_1_electron_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.1. Introducción a Electron. Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud2_2_primera_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.2. Creando la primera aplicación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UD2 - 2.3. Maquetación básica del interfaz de usuario
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.3. Maquetación básica del interfaz de usuario
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    Objetivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diseno-adaptable-o-responsivo" class="md-nav__link">
+    Diseño adaptable o responsivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disposicion-de-la-interfaz-de-usuario" class="md-nav__link">
+    Disposición de la interfaz de usuario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-de-maquetacion" class="md-nav__link">
+    Elementos de maquetación
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos de maquetación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contenedores" class="md-nav__link">
+    Contenedores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filas" class="md-nav__link">
+    Filas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columnas" class="md-nav__link">
+    Columnas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puntos-de-ruptura-breakpoints" class="md-nav__link">
+    Puntos de ruptura (Breakpoints)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-cajas" class="md-nav__link">
+    Modelo de cajas
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de cajas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partes-de-una-caja" class="md-nav__link">
+    Partes de una caja
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margen-y-relleno-en-bootstrap" class="md-nav__link">
+    Margen y relleno en Bootstrap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bordes-en-bootstrap" class="md-nav__link">
+    Bordes en Bootstrap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visibilidad-display" class="md-nav__link">
+    Visibilidad (display)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-cajas-flexibles-flexbox" class="md-nav__link">
+    Modelo de cajas flexibles (Flexbox)
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de cajas flexibles (Flexbox)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direccion-de-los-elementos" class="md-nav__link">
+    Dirección de los elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justificar-la-posicion-de-los-elementos" class="md-nav__link">
+    Justificar la posición de los elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alineacion-de-elementos" class="md-nav__link">
+    Alineación de elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alineamiento-individual-de-elementos" class="md-nav__link">
+    Alineamiento individual de elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relleno" class="md-nav__link">
+    Relleno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crecimiento-y-encogimiento-grow-and-shrink" class="md-nav__link">
+    Crecimiento y encogimiento (grow and shrink)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envoltura-wrap" class="md-nav__link">
+    Envoltura (wrap)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orden-de-los-elementos" class="md-nav__link">
+    Orden de los elementos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD3 Componentes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 Componentes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_1_componentes_basicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3 - 3.1 Componentes básicos de una interfaz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_2_electron_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3. 2 Comunicación entre procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD4 Componentes avanzados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD4 Componentes avanzados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.1 Componentes avanzados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_2_electron_react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.2 Integración de React en Electron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_3_react-eventos-estados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.3 Eventos y estados en React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_4_route-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.4 Navegación y persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_5_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.5 Aplicación de ejemplo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD5 Usabilidad y accesibilidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UD5 Usabilidad y accesibilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_1_usabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.1 Usabilidad y experiencia de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_2_flutter_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.2 Introducción a Flutter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_3_flutter_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.3 Flutter: Widgets y Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_4_flutter_state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.4 Flutter: Gestión de estados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_5_flutter_navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.5 Flutter: Navegación e interactividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_6_flutter_persistence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.6 Flutter: Persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_7_flutter_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.7 Flutter: Comunicación con el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    Objetivos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diseno-adaptable-o-responsivo" class="md-nav__link">
+    Diseño adaptable o responsivo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disposicion-de-la-interfaz-de-usuario" class="md-nav__link">
+    Disposición de la interfaz de usuario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-de-maquetacion" class="md-nav__link">
+    Elementos de maquetación
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos de maquetación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contenedores" class="md-nav__link">
+    Contenedores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filas" class="md-nav__link">
+    Filas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columnas" class="md-nav__link">
+    Columnas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puntos-de-ruptura-breakpoints" class="md-nav__link">
+    Puntos de ruptura (Breakpoints)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-cajas" class="md-nav__link">
+    Modelo de cajas
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de cajas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partes-de-una-caja" class="md-nav__link">
+    Partes de una caja
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margen-y-relleno-en-bootstrap" class="md-nav__link">
+    Margen y relleno en Bootstrap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bordes-en-bootstrap" class="md-nav__link">
+    Bordes en Bootstrap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visibilidad-display" class="md-nav__link">
+    Visibilidad (display)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-cajas-flexibles-flexbox" class="md-nav__link">
+    Modelo de cajas flexibles (Flexbox)
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de cajas flexibles (Flexbox)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direccion-de-los-elementos" class="md-nav__link">
+    Dirección de los elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justificar-la-posicion-de-los-elementos" class="md-nav__link">
+    Justificar la posición de los elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alineacion-de-elementos" class="md-nav__link">
+    Alineación de elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alineamiento-individual-de-elementos" class="md-nav__link">
+    Alineamiento individual de elementos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relleno" class="md-nav__link">
+    Relleno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crecimiento-y-encogimiento-grow-and-shrink" class="md-nav__link">
+    Crecimiento y encogimiento (grow and shrink)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envoltura-wrap" class="md-nav__link">
+    Envoltura (wrap)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orden-de-los-elementos" class="md-nav__link">
+    Orden de los elementos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ud2-23-maquetacion-basica-del-interfaz-de-usuario">UD2 - 2.3. Maquetación básica del interfaz de usuario<a class="headerlink" href="#ud2-23-maquetacion-basica-del-interfaz-de-usuario" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#diseño-adaptable-o-responsivo">Diseño adaptable o responsivo</a></li>
+<li><a href="#disposición-de-la-interfaz-de-usuario">Disposición de la interfaz de usuario</a></li>
+<li><a href="#elementos-de-maquetación">Elementos de maquetación</a><ul>
+<li><a href="#contenedores">Contenedores</a></li>
+<li><a href="#filas">Filas</a></li>
+<li><a href="#columnas">Columnas</a></li>
+<li><a href="#puntos-de-ruptura-breakpoints">Puntos de ruptura (<em>Breakpoints</em>)</a></li>
+</ul>
+</li>
+<li><a href="#modelo-de-cajas">Modelo de cajas</a><ul>
+<li><a href="#partes-de-una-caja">Partes de una caja</a></li>
+<li><a href="#margen-y-relleno-en-bootstrap">Margen y relleno en Bootstrap</a></li>
+<li><a href="#bordes-en-bootstrap">Bordes en Bootstrap</a></li>
+</ul>
+</li>
+<li><a href="#visibilidad-display">Visibilidad (<em>display</em>)</a></li>
+<li><a href="#modelo-de-cajas-flexibles-flexbox">Modelo de cajas flexibles (<em>Flexbox</em>)</a><ul>
+<li><a href="#dirección-de-los-elementos">Dirección de los elementos</a></li>
+<li><a href="#justificar-la-posición-de-los-elementos">Justificar la posición de los elementos</a></li>
+<li><a href="#alineación-de-elementos">Alineación de elementos</a></li>
+<li><a href="#alineamiento-individual-de-elementos">Alineamiento individual de elementos</a></li>
+<li><a href="#relleno">Relleno</a></li>
+<li><a href="#crecimiento-y-encogimiento-grow-and-shrink">Crecimiento y encogimiento (<em>grow and shrink</em>)</a></li>
+<li><a href="#envoltura-wrap">Envoltura (<em>wrap</em>)</a></li>
+<li><a href="#orden-de-los-elementos">Orden de los elementos</a></li>
+</ul>
+</li>
+<li><a href="#bibliografía">Bibliografía</a></li>
+</ul>
+<div style="page-break-after: always"></div>
+
+<h2 id="objetivos">Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<p>Maquetar la disposición básica de una interfaz de usuario biblioteca de componentes <a href="https://getbootstrap.com/">Bootstrap</a>. Esta biblioteca ue permite, de forma sencilla, crear una interfaz que se adapte a cualquier pantalla gracias a un diseño flexible.</p>
+<h2 id="diseno-adaptable-o-responsivo">Diseño adaptable o responsivo<a class="headerlink" href="#diseno-adaptable-o-responsivo" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="Diseño web responsivo" src="../assets/responsive-design.jpg" width="150px" /></p>
+<p>El diseño adaptable es una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de la interfaz de usuario al dispositivo que se esté utilizando para visitarlas.</p>
+<p>Existen multitud de dispositivos como tabletas, teléfonos inteligentes, libros electrónicos, portátiles, PC, etc. Además, aun dentro de cada tipo, cada dispositivo tiene sus características concretas: tamaño de pantalla, resolución, potencia de CPU, sistema operativo o capacidad de memoria entre otras. Esta tecnología pretende que con un único diseño, todo se vea correctamente en cualquier dispositivo.</p>
+<div class="admonition note">
+<p class="admonition-title">StatCounter</p>
+<p>En la web <em><strong>StatCounter</strong></em> se pueden consultar estadísticas de uso de resoluciones de pantalla de distintos tipos de dispositivos y paises.</p>
+<p>La imagen se muestra la evolución de las resoluciones de pantalla de escritorio en España desde agosto de 2022 hasta agosto de 2023.</p>
+<p><img alt="StatCounter - Desktop screen resolution stats in Spain Aug 2023" src="../assets/StatCounter-resolution-ES-monthly-202208-202308.png" /></p>
+<p><a href="https://gs.statcounter.com/screen-resolution-stats/desktop/spain">https://gs.statcounter.com/screen-resolution-stats/desktop/spain</a></p>
+<p><em>En el ejemplo se puede ver que el 28,4% utiliza la resolución 1920x1080, por lo tanto es buena idea diseñar la interfaz para que se vea correctamente en esta resolución. Sin embargo, el 71,6% restante utiliza otras resoluciones, por lo que es necesario que la interfaz se adapte a cualquier resolución.</em></p>
+</div>
+<h2 id="disposicion-de-la-interfaz-de-usuario">Disposición de la interfaz de usuario<a class="headerlink" href="#disposicion-de-la-interfaz-de-usuario" title="Permanent link">&para;</a></h2>
+<p>Para conseguir una interfaz adaptativa, utilizaremos un <strong>diseño de rejilla flexible</strong>, que se adapta a diferentes tamaños de pantalla.</p>
+<p>Bootstrap utiliza un sistema de rejilla que permite crear diseños flexibles y adaptables a diferentes tamaños de pantalla. Para ello, se divide la pantalla en 12 columnas y se asigna a cada elemento un número de columnas. Por ejemplo, si queremos que un elemento ocupe la mitad de la pantalla, le asignaremos 6 columnas.</p>
+<p>Además, gracias a los puntos de ruptura, podemos definir diferentes tamaños de pantalla y asignar a cada elemento un número de columnas diferente para cada tamaño.</p>
+<h2 id="elementos-de-maquetacion">Elementos de maquetación<a class="headerlink" href="#elementos-de-maquetacion" title="Permanent link">&para;</a></h2>
+<p>Bootstrap nos proporciona una serie de elementos de maquetación que nos permiten crear una interfaz de usuario adaptativa.</p>
+<h3 id="contenedores">Contenedores<a class="headerlink" href="#contenedores" title="Permanent link">&para;</a></h3>
+<p>Los contenedores son los elementos que se utilizan para crear el diseño de rejilla. Existen dos tipos de contenedores:</p>
+<ul>
+<li><code>.container</code>: Crea un contenedor con un ancho fijo. El ancho del contenedor se adapta a la pantalla en función del punto de ruptura.</li>
+<li><code>.container-fluid</code>: Crea un contenedor con un ancho fluido. El ancho del contenedor se adapta a la pantalla en función del punto de ruptura.</li>
+</ul>
+<h3 id="filas">Filas<a class="headerlink" href="#filas" title="Permanent link">&para;</a></h3>
+<p>Las filas se utilizan para agrupar elementos en una misma línea. Para crear una fila, utilizaremos el elemento <code>.row</code>.</p>
+<h3 id="columnas">Columnas<a class="headerlink" href="#columnas" title="Permanent link">&para;</a></h3>
+<p>Las columnas se utilizan para definir el número de columnas que ocupa un elemento. Para crear una columna, utilizaremos el elemento <code>.col</code>.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="container text-center" style="background: #aaa; color: #000">
+    <div class="row m-1 py-1">
+        <div class="col m-1" style="background: #ddd;">col</div>
+        <div class="col m-1" style="background: #ddd;">col</div>
+        <div class="col m-1" style="background: #ddd;">col</div>
+    </div>
+</div>
+
+<p><em><a href="../../examples/ud2_bs_row_col.html">Ejemplo de disposición de columnas</a></em></p>
+<h3 id="puntos-de-ruptura-breakpoints">Puntos de ruptura (<em>Breakpoints</em>)<a class="headerlink" href="#puntos-de-ruptura-breakpoints" title="Permanent link">&para;</a></h3>
+<p>A <code>.col</code> podemos asignarle el número de columnas que queremos que ocupe en función del tamaño de la pantalla.</p>
+<p>Por ejemplo, si queremos que un elemento ocupe la mitad de la pantalla, le asignaremos 6 columnas. Para ello, utilizaremos la clase <code>.col-2</code> y <code>.col-7</code> que en total ocupan 9 columnas, quedan 3 libres que podemos asignar a una última columna sin especificar su tamaño.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-2&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-7&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="container text-center" style="background: #aaa; color: #000">
+    <div class="row py-1">
+        <div class="col-2 m-1" style="background: #ddd;">col-2</div>
+        <div class="col-7 m-1" style="background: #ddd;">col-7</div>
+        <div class="col m-1" style="background: #ddd;">col</div>
+    </div>
+</div>
+
+<p>Además, podemos asignar un número de columnas diferente <strong>para cada tamaño de pantalla</strong>. Para ello, utilizaremos la clase <code>.col-{tamaño}-{número de columnas}</code>.</p>
+<p>En la siguiente tabla se muestran los puntos de ruptura (<em>Breakpoints</em>) y los tamaños de pantalla que se corresponden con cada uno de ellos.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Breakpoint</th>
+<th style="text-align: center;">clase</th>
+<th style="text-align: center;">Dimensiones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Extra small</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">&lt;576px</td>
+</tr>
+<tr>
+<td style="text-align: center;">Small</td>
+<td style="text-align: center;"><strong>sm</strong></td>
+<td style="text-align: center;">≥576px</td>
+</tr>
+<tr>
+<td style="text-align: center;">Medium</td>
+<td style="text-align: center;"><strong>md</strong></td>
+<td style="text-align: center;">≥768px</td>
+</tr>
+<tr>
+<td style="text-align: center;">Large</td>
+<td style="text-align: center;"><strong>lg</strong></td>
+<td style="text-align: center;">≥992px</td>
+</tr>
+<tr>
+<td style="text-align: center;">Extra large</td>
+<td style="text-align: center;"><strong>xl</strong></td>
+<td style="text-align: center;">≥1200px</td>
+</tr>
+<tr>
+<td style="text-align: center;">Extra extra large</td>
+<td style="text-align: center;"><strong>xxl</strong></td>
+<td style="text-align: center;">≥1400px</td>
+</tr>
+</tbody>
+</table>
+<p>Siguiendo con el ejemplo anterior, para que se adapte a pantallas de tamaño medio. Para ello, utilizaremos la clase <code>.col-md-#</code>. Cuando se supere el punto de ruptura mínimo <strong><code>md</code></strong> (≥768px), los elementos se apilarán.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-2&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-7&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Renderizado utilizando para pantallas de ancho medio <strong><code>md</code></strong> (≥768px):</p>
+<div class="container-fluid text-center" style="background: #aaa; color: #000">
+    <div class="row gap-1 p-1">
+        <div class="col-sm-2" style="background: #ddd;">col-sm-2</div>
+        <div class="col-sm-7" style="background: #ddd;">col-sm-7</div>
+        <div class="col" style="background: #ddd;">col</div>
+    </div>
+</div>
+
+<p>Ejemplo de rendereado al superar el punto de ruptura mínimo <strong><code>md</code></strong> (&lt;768px):</p>
+<div class="container text-center">
+    <div class="row">
+        <div class="col text-end">--></div>
+        <div class="col-6" style="background: #aaa; color: #000">
+            <div class="row p-1 gy-1">
+                <div class="col-12" style="background: #ddd;">col-sm-2</div>
+                <div class="col-12" style="background: #ddd;">col-sm-7</div>
+                <div class="col-12" style="background: #ddd;">col</div>
+            </div>
+        </div>
+        <div class="col text-start"><--</div>
+    </div>
+</div>
+
+<p>Los puntos de ruptura se pueden combinar para definir diferentes tamaños de pantalla. <em>Por ejemplo,</em> si queremos que un elemento ocupe la mitad de la pantalla en pantallas de tamaño medio, un tercio en pantallas grandes, pero que ocupe toda la pantalla en pantallas de tamaño pequeño, utilizaremos las clases <strong><code>col-sm-12 col-md-6 col-lg-4</code></strong>.</p>
+<p><em><a href="../../examples/ud2_bs_row_col_responsive.html">Ejemplo responsivo de disposición de columnas</a></em></p>
+<p><em><a href="../../examples/ud2_bs_grid/">Ejemplo básico de maquetación de una interfaz mediante filas y columnas</a></em></p>
+<div style="page-break-after: always"></div>
+
+<h2 id="modelo-de-cajas">Modelo de cajas<a class="headerlink" href="#modelo-de-cajas" title="Permanent link">&para;</a></h2>
+<p>El modelo de cajas CSS se aplica a cajas que presentan comportamiento en bloque. El modelo define cómo funcionan juntas las diferentes partes de una caja (margen, borde, relleno y contenido) para crear una caja. Para complicarlo un poco más, hay un modelo de cajas estándar y un modelo de cajas alternativo.</p>
+<h3 id="partes-de-una-caja">Partes de una caja<a class="headerlink" href="#partes-de-una-caja" title="Permanent link">&para;</a></h3>
+<p>Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:</p>
+<ul>
+<li>El <strong>contenido</strong> de la caja: El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como <code>width</code> y <code>height</code>.</li>
+<li>El <strong>relleno</strong> de la caja (<strong>padding</strong>): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad <code>padding</code>.</li>
+<li>El <strong>borde</strong> de la caja (<strong>border</strong>): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad <code>border</code>.</li>
+<li>El <strong>margen</strong> de la caja ( <strong>margin</strong>): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad <code>margin</code>.</li>
+</ul>
+<p><img alt="modelo de cajas" src="../assets/box-model.png" /></p>
+<p>En el modelo de cajas estándar, (<code>box-sizing: content-box;</code>) que utilizan por defecto todos los navegadores, el ancho y alto de la caja se calculan incluyendo el tamaño del relleno y el borde. Lo que supone algunos problemas a la hora de diseñar una interfaz de usuario.</p>
+<p>Bootstrap utiliza el modelo de cajas alternativo (<code>box-sizing: border-box</code>), donde el ancho y alto de la caja se calculan incluye los tamaños del borde y el relleno.</p>
+<h3 id="margen-y-relleno-en-bootstrap">Margen y relleno en Bootstrap<a class="headerlink" href="#margen-y-relleno-en-bootstrap" title="Permanent link">&para;</a></h3>
+<p>Para añadir margen y relleno a los elementos, se utilizan las clases <code>.m-{tamaño}</code> y <code>.p-{tamaño}</code> respectivamente, donde <code>{tamaño}</code> puede ser:</p>
+<ul>
+<li><strong><code>0</code></strong>: Sin margen o relleno (0px).</li>
+<li><strong><code>1</code></strong>: 0.25rem (4px)</li>
+<li><strong><code>2</code></strong>: 0.5rem (8px)</li>
+<li><strong><code>3</code></strong>: 1rem (16px) valor <strong>por defecto</strong>.</li>
+<li><strong><code>4</code></strong>: 1.5rem (24px)</li>
+<li><strong><code>5</code></strong>: 3rem (48px)</li>
+<li><strong><code>auto</code></strong>: Margen o relleno automático.</li>
+<li><strong><code>x</code></strong>: Margen o relleno horizontal.</li>
+<li><strong><code>y</code></strong>: Margen o relleno vertical.</li>
+<li><strong><code>t</code></strong>: (<em>top</em>) Margen o relleno superior.</li>
+<li><strong><code>b</code></strong>: (<em>bottom</em>) Margen o relleno inferior.</li>
+<li><strong><code>s</code></strong>: (<em>start</em>) Margen o relleno al inicio. Izquierda en lenguajes de escritura de izquierda a derecha LTR (<em>left-to-right</em>) y derecha en lenguajes de escritura de derecha a izquierda RTL (<em>right-to-left</em>)</li>
+<li><strong><code>e</code></strong>: (<em>end</em>) Margen o relleno derecho. Derecha en lenguajes de escritura de izquierda a derecha LTR (<em>left-to-right</em>) e izquierda en lenguajes de escritura de derecha a izquierda RTL (<em>right-to-left</em>)</li>
+</ul>
+<h3 id="bordes-en-bootstrap">Bordes en Bootstrap<a class="headerlink" href="#bordes-en-bootstrap" title="Permanent link">&para;</a></h3>
+<p>Para añadir bordes a los elementos, se utilizan las clases <code>.border</code>, <code>.border-{tamaño}</code> y <code>.border-{lado}-{tamaño}</code> respectivamente, donde <code>{tamaño}</code> puede ser:</p>
+<div class="d-flex flex-wrap gap-2 text-center mx-5">
+    <span class="p-1 bg-light border border-secondary border-0">border-0</span>
+    <span class="p-1 bg-light border border-secondary border-1">border-1</span>
+    <span class="p-1 bg-light border border-secondary border-2">border-2</span>
+    <span class="p-1 bg-light border border-secondary border-3">border-3</span>
+    <span class="p-1 bg-light border border-secondary border-4">border-4</span>
+    <span class="p-1 bg-light border border-secondary border-5">border-5</span>
+</div>
+
+<p>Y <code>{lado}</code> puede ser:</p>
+<div class="d-flex flex-wrap gap-2 text-center mx-5">
+    <span class="p-1 bg-light border-secondary border-4 border-top">border-top</span>
+    <span class="p-1 bg-light border-secondary border-4 border-bottom">border-bottom</span>
+    <span class="p-1 bg-light border-secondary border-4 border-start">border-start</span>
+    <span class="p-1 bg-light border-secondary border-4 border-end">border-end</span>
+</div>
+
+<p>También podemos aplicar colores con las siguientes clases:</p>
+<div class="d-flex gap-2 text-center mx-5 flex-wrap">
+    <span class="p-1 bg-light border border-4 border-primary">border-primary</span>
+    <span class="p-1 bg-light border border-4 border-primary-subtle">border-primary-subtle</span>
+    <span class="p-1 bg-light border border-4 border-secondary">border-secondary</span>
+    <span class="p-1 bg-light border border-4 border-secondary-subtle">border-secondary-subtle</span>
+    <span class="p-1 bg-light border border-4 border-success">border-success</span>
+    <span class="p-1 bg-light border border-4 border-success-subtle">border-success-subtle</span>
+    <span class="p-1 bg-light border border-4 border-danger">border-danger</span>
+    <span class="p-1 bg-light border border-4 border-danger-subtle">border-danger-subtle</span>
+    <span class="p-1 bg-light border border-4 border-warning">border-warning</span>
+    <span class="p-1 bg-light border border-4 border-warning-subtle">border-warning-subtle</span>
+    <span class="p-1 bg-light border border-4 border-info">border-info</span>
+    <span class="p-1 bg-light border border-4 border-info-subtle">border-info-subtle</span>
+    <span class="p-1 bg-light border border-4 border-light">border-light</span>
+    <span class="p-1 bg-light border border-4 border-light-subtle">border-light-subtle</span>
+    <span class="p-1 bg-light border border-4 border-dark">border-dark</span>
+    <span class="p-1 bg-light border border-4 border-dark-subtle">border-dark-subtle</span>
+    <span class="p-1 bg-light border border-4 border-black">border-black</span>
+    <span class="p-1 bg-light border border-4 border-white">border-white</span>
+</div>
+
+<p>Además, podemos aplicar efectos de borde con las siguientes clases:</p>
+<div class="d-flex flex-wrap gap-2 text-center mx-5">
+    <span class="p-1 bg-light border border-4 border-secondary rounded">rounded</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-0">rounded-0</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-1">rounded-1</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-2">rounded-2</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-3">rounded-3</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-4">rounded-4</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-5">rounded-5</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-circle">rounded-circle</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-pill">rounded-pill</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-top">rounded-top</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-bottom">rounded-bottom</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-start">rounded-start</span>
+    <span class="p-1 bg-light border border-4 border-secondary rounded-end">rounded-end</span>
+</div>
+
+<p>También podemos aplicar opacidad con las siguiente clases:</p>
+<div class="d-flex flex-wrap gap-2 text-center mx-5">
+    <span class="p-1 bg-light border border-4 border-dark border-opacity-25">border-opacity-25</span>
+    <span class="p-1 bg-light border border-4 border-dark border-opacity-50">border-opacity-50</span>
+    <span class="p-1 bg-light border border-4 border-dark border-opacity-75">border-opacity-75</span>
+    <span class="p-1 bg-light border border-4 border-dark border-opacity-100">border-opacity-100</span>
+</div>
+
+<div style="page-break-after: always"></div>
+
+<h2 id="visibilidad-display">Visibilidad (<em>display</em>)<a class="headerlink" href="#visibilidad-display" title="Permanent link">&para;</a></h2>
+<p>La propiedad <code>display</code> se utiliza para cambiar el comportamiento de visualización de un elemento. Por defecto, los elementos se muestran como elementos en bloque. Sin embargo, existen otros valores que permiten cambiar el comportamiento de visualización de los elementos.</p>
+<p>En Bootstrap se utilizan las clases <strong><code>.d-{valor}</code></strong> y <strong><code>.d-{valor}-{tamaño}</code></strong> respectivamente, donde <strong><code>{valor}</code></strong> puede ser:</p>
+<ul>
+<li><strong><code>none</code></strong>: El elemento no se muestra, ni ocupa espacio en la vista. <em>No confundir con <code>visibility: hidden;</code> que oculta el elemento pero sigue ocupando espacio vacío en la vista</em>.</li>
+<li><strong><code>block</code></strong>: El elemento ocupa todo el espacio disponible, el siguiente elemento a se situará por debajo. <em>Los <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> y <code>&lt;p&gt;</code>, entre otros, tienen este comportamiento</em>.</li>
+<li><strong><code>inline</code></strong>: El elemento ocupa el espacio que ocupe el contenido, el siguiente elemento se situa a continuación. <em>Los elementos <code>&lt;span&gt;</code> son un buen ejemplo</em>.</li>
+<li><strong><code>inline-block</code></strong>:  Se comporta como un elemento <code>inline</code>, pero permite cambiar el ancho y el alto.</li>
+<li><strong><code>grid</code></strong>: El elemento se comporta como un contenedor de cuadrícula.</li>
+<li><strong><code>flex</code></strong>: El elemento se comporta como un contenedor flexible. <em>Ver apartado <a href="#modelo-de-cajas-flexibles-flexbox">Modelo de cajas flexibles (<em>Flexbox</em>)</a></em>.</li>
+</ul>
+<p>Por ejemplo, para ocultar un elemento en pantallas más pequeñas, pero que se muestre en tamaños medianos o superiores podemos establecer las siguientes clases <strong><code>.d-none .d-md-block</code></strong>. Por lo general, al ocultar el elemento, se activa una opción para acceder a los elementos en una vista separada, normalmente un menú desplegable. Muy utilizado en diseño <em>responsive</em> para dispositivos móviles.</p>
+<div class="container-fluid">
+    <div class="row gap-3">
+        <div class="col-7 border p-0 m-0">
+            <div class="p-0 m-0 d-flex flex-row align-items-stretch">
+                <div class="col-4 p-2 align-self-stretch flex-grow-1" style="background: #def;">Este elemento se muestra en pantallas medianas o superiores.</div>
+                <div class="col-8 p-2 align-self-stretch flex-grow-1" style="background: #eee;">
+                    <p>Contenido principal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 border p-0 m-0">
+            <p class="m-0 p-2" style="background: #def;">🔻 Menú</p>
+            <div class="row p-0 m-0">
+                 <div class="col" style="background: #eee;">
+                    <p>Contenido principal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 id="modelo-de-cajas-flexibles-flexbox">Modelo de cajas flexibles (<em>Flexbox</em>)<a class="headerlink" href="#modelo-de-cajas-flexibles-flexbox" title="Permanent link">&para;</a></h2>
+<p>El diseño de Caja Flexible (o <em>Flexbox</em>),​ es un modelo de diseño CSS3. La disposición de <em>flexbox</em> permite que los elementos adaptables dentro de un contenedor se organicen automáticamente dependiendo del tamaño de la pantalla o del dispositivo.</p>
+<p>Para designar un contenedor como un contenedor flexible, en Bootstrap se utiliza la clase <strong><code>.d-flex</code></strong> para aplicar la propiedad <code>display: flex;</code> y <strong><code>.d-inline-flex</code></strong> para aplicar la propiedad <code>display: inline-flex;</code>.</p>
+<p>Ejemplo de contenedor flexible con tres elementos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="d-flex border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p>Ejemplo de contenedor flexible en línea con tres elementos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex-inline&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="d-flex-inline border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p>Podemos aplicar puntos de ruptura a los contenedores flexibles para que se adapten a diferentes tamaños de pantalla. Para ello, utilizaremos las clases <code>.flex-{tamaño}</code> y <code>.inline-flex-{tamaño}</code> respectivamente. Tal como hemos visto en el apartado <a href="#puntos-de-ruptura-breakpoints">Puntos de ruptura (<em>Breakpoints</em>)</a>.</p>
+<h3 id="direccion-de-los-elementos">Dirección de los elementos<a class="headerlink" href="#direccion-de-los-elementos" title="Permanent link">&para;</a></h3>
+<p>Por defecto, los elementos se colocan en una fila, de izquierda a derecha. Para cambiar la dirección de los elementos, utilizaremos la clase <code>.flex-{dirección}</code> donde <code>{dirección}</code> puede ser:</p>
+<ul>
+<li><strong><code>row</code></strong>: (<em>por defecto</em>) Los elementos se colocan en una fila, de izquierda a derecha.</li>
+<li><strong><code>row-reverse</code></strong>: Los elementos se colocan en una fila, de derecha a izquierda.</li>
+<li><strong><code>column</code></strong>: Los elementos se colocan en una columna, de arriba a abajo.</li>
+<li><strong><code>column-reverse</code></strong>: Los elementos se colocan en una columna, de abajo a arriba.</li>
+</ul>
+<p>Ejemplo de contenedor flexible con tres elementos en una fila y en una fila inversa:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex flex-row&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex flex-row-reverse&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="d-flex flex-row mb-3 border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+<div class="d-flex flex-row-reverse border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p>Ejemlo de contenedor flexible con tres elementos en una columna y en una columna inversa:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex flex-column&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex flex-column-reverse&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="d-flex flex-column mb-3 border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+<div class="d-flex flex-column-reverse border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p>También podemos cambiar la dirección de los elementos en función del tamaño de la pantalla. Para ello, utilizaremos las clases <code>.flex-{tamaño}-{dirección}</code>. Tal como hemos visto en el apartado <a href="#puntos-de-ruptura-breakpoints">Puntos de ruptura (<em>Breakpoints</em>)</a>.</p>
+<h3 id="justificar-la-posicion-de-los-elementos">Justificar la posición de los elementos<a class="headerlink" href="#justificar-la-posicion-de-los-elementos" title="Permanent link">&para;</a></h3>
+<p>Para justificar la alineación de los elementos, utilizaremos la clase <code>.justify-content-{alineación}</code>.</p>
+<p>Ejemplo de contenedor flexible con tres elementos justificados a la izquierda, a la derecha, centrados, distribuidos y distribuidos equitativamente:</p>
+<p><strong><code>justify-content-start</code></strong>:</p>
+<div class="d-flex justify-content-start mb-3 border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p><strong><code>justify-content-end</code></strong>:</p>
+<div class="d-flex justify-content-end border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p><strong><code>justify-content-center</code></strong>:</p>
+<div class="d-flex justify-content-center border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p><strong><code>justify-content-between</code></strong>:</p>
+<div class="d-flex justify-content-between border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p><strong><code>justify-content-around</code></strong>:</p>
+<div class="d-flex justify-content-around border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p><strong><code>justify-content-evenly</code></strong>:</p>
+<div class="d-flex justify-content-evenly border border-secondary border-3 p-2 gap-2">
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 1</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-2 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p>Podemos cambiar la justificación de los elementos en función del tamaño de la pantalla. Para ello, utilizaremos las clases <code>.justify-content-{tamaño}-{alineación}</code>. Tal como hemos visto en el apartado <a href="#puntos-de-ruptura-breakpoints">Puntos de ruptura (<em>Breakpoints</em>)</a>.</p>
+<h3 id="alineacion-de-elementos">Alineación de elementos<a class="headerlink" href="#alineacion-de-elementos" title="Permanent link">&para;</a></h3>
+<p>Para alinear los elementos, utilizaremos la clase <code>.align-items-{alineación}</code>.</p>
+<p>Ejemplo de contenedor flexible con tres elementos alineados arriba, abajo, centrados, estirados y en la línea base de la tipografía (se ha cambiado el tamaño del texto de los elementos para que se pueda apreciar mejor la alineación):</p>
+<ul>
+<li>Arriba <strong><code>align-items-start</code></strong>:</li>
+</ul>
+<div class="d-flex align-items-start mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary">Item 1</h1>
+    <h5 class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</h5>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary">Item 3</h3>
+</div>
+
+<ul>
+<li>Abajo <strong><code>align-items-end</code></strong>:</li>
+</ul>
+<div class="d-flex align-items-end mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary">Item 1</h1>
+    <h5 class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</h5>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary">Item 3</h3>
+</div>
+
+<ul>
+<li>Centro <strong><code>align-items-center</code></strong>:</li>
+</ul>
+<div class="d-flex align-items-center mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary">Item 1</h1>
+    <h5 class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</h5>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary">Item 3</h3>
+</div>
+
+<ul>
+<li>Estirado <strong><code>align-items-stretch</code></strong>:</li>
+</ul>
+<div class="d-flex align-items-stretch mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary">Item 1</h1>
+    <h5 class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</h5>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary">Item 3</h3>
+</div>
+
+<ul>
+<li>Línea base del texto <strong><code>align-items-baseline</code></strong>:</li>
+</ul>
+<div class="d-flex align-items-baseline mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary">Item 1</h1>
+    <h5 class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</h5>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary">Item 3</h3>
+</div>
+
+<p>Podemos cambiar la alineación de los elementos en función del tamaño de la pantalla. Para ello, utilizaremos las clases <code>.align-items-{tamaño}-{alineación}</code>. Tal como hemos visto en el apartado <a href="#puntos-de-ruptura-breakpoints">Puntos de ruptura (<em>Breakpoints</em>)</a>.</p>
+<h3 id="alineamiento-individual-de-elementos">Alineamiento individual de elementos<a class="headerlink" href="#alineamiento-individual-de-elementos" title="Permanent link">&para;</a></h3>
+<p>Para alinear individualmente los elementos, utilizaremos la clase <code>.align-self-{alineación}</code>.</p>
+<p>Ejemplo de contenedor flexible con tres elementos alineados arriba, abajo, centrados, estirados y en la línea base de la tipografía:</p>
+<ul>
+<li>Arriba <strong><code>align-self-start</code></strong>:</li>
+</ul>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 1</h1>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary align-self-start">Item 2 (align-self-start)</p>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 3</h3>
+</div>
+
+<ul>
+<li>Abajo <strong><code>align-self-end</code></strong>:</li>
+</ul>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 1</h1>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary align-self-end">Item 2 (align-self-end)</p>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 3</h3>
+</div>
+
+<ul>
+<li>Centro <strong><code>align-self-center</code></strong>:</li>
+</ul>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 1</h1>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary align-self-center">Item 2 (align-self-center)</p>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 3</h3>
+</div>
+
+<ul>
+<li>Estirado <strong><code>align-self-stretch</code></strong>:</li>
+</ul>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 1</h1>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 2 (align-self-stretch)</p>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 3</h3>
+</div>
+
+<ul>
+<li>Línea base del texto <strong><code>align-self-baseline</code></strong> (<em>en el ejemplo, los elementos 1 y 4 se encuentran estirados e ignoran la alineación a la línea base del texto</em>):</li>
+</ul>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <h1 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 1</h1>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary align-self-baseline">Item 2 (align-self-baseline)</p>
+    <h6 class="p-1 m-0 bg-light border border-2 border-secondary align-self-baseline">Item 3 (align-self-baseline)</h6>
+    <h3 class="p-1 m-0 bg-light border border-2 border-secondary align-self-stretch">Item 4</h3>
+</div>
+
+<p>Podemos cambiar la alineación de los elementos en función del tamaño de la pantalla. Para ello, utilizaremos las clases <code>.align-self-{tamaño}-{alineación}</code>. Tal como hemos visto en el apartado <a href="#puntos-de-ruptura-breakpoints">Puntos de ruptura (<em>Breakpoints</em>)</a>.</p>
+<h3 id="relleno">Relleno<a class="headerlink" href="#relleno" title="Permanent link">&para;</a></h3>
+<p>La clase <strong><code>.flex-fill</code></strong> en una serie de elementos hermanos, fuerza a tener tamaños iguales a su contenido mientras ocupa todo el espacio disponible de forma equitativa.</p>
+<p>Ejemplo de contenedor flexible con tres elementos con la clase <code>.flex-fill</code>, se puede observar que los elementos en los que se ha definido la clase (1 y 3) ocupan todo el espacio disponible de forma equitativa y el elemento 2 solo ocupa el espacio que necesita:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-fill&quot;</span><span class="p">&gt;</span>Item 1 (con mayor contenido)<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-fill&quot;</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <p class="p-1 flex-fill m-0 bg-light border border-2 border-secondary">Item 1 (con mayor contenido)</p>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-1 flex-fill m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<h3 id="crecimiento-y-encogimiento-grow-and-shrink">Crecimiento y encogimiento (<em>grow and shrink</em>)<a class="headerlink" href="#crecimiento-y-encogimiento-grow-and-shrink" title="Permanent link">&para;</a></h3>
+<p>La clase <strong><code>.flex-grow-{número}</code></strong> en una serie de elementos hermanos, fuerza a que los elementos crezcan en función del número que se le asigne. Por defecto, todos los elementos tienen un valor de 0, por lo que no crecen. Si se asigna un valor de 1, todos los elementos crecerán por igual. Si se asigna un valor de 2, los elementos crecerán el doble que los elementos con valor 1.</p>
+<p>Ejemplo de crecimiento de un elemento con la clase <code>.flex-grow-1</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-grow-1&quot;</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <p class="p-1 flex-grow-1 m-0 bg-light border border-2 border-secondary">Item 1 (flex-grow-1)</p>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</p>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 3</p>
+</div>
+
+<p>La clase <strong><code>.flex-shrink-{número}</code></strong> en una serie de elementos hermanos, fuerza a que los elementos se encojan en función del número que se le asigne. Por defecto, todos los elementos tienen un valor de 1, por lo que se encogen por igual. Si se asigna un valor de 2, los elementos se encogerán el doble que los elementos con valor 1.</p>
+<p>Ejemplo de encogimiento de un elemento con la clase <code>.flex-shrink-1</code>. <em>Para forzar el encogimiento de un elemento, se establece un ancho del 100% (<code>w-100</code>) al elemento 2</em>, se puede observar como el contenido del elemento 1 hace fuerza un salto de línea:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;flex-shrink-1&quot;</span><span class="p">&gt;</span>Item 1 (flex-shrink-1)<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;w-100&quot;</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2" style="height: 100px;">
+    <p class="p-1 flex-shrink-1 m-0 bg-light border border-2 border-secondary">Item 1 (flex-shrink-1)</p>
+    <p class="p-1 m-0 bg-light border border-2 border-secondary w-100">Item 2</p>
+</div>
+
+<h3 id="envoltura-wrap">Envoltura (<em>wrap</em>)<a class="headerlink" href="#envoltura-wrap" title="Permanent link">&para;</a></h3>
+<p>La clase <strong><code>.flex-wrap</code></strong> en un contenedor flexible, fuerza a que los elementos se envuelvan en función del tamaño del contenedor.</p>
+<p>Ejemplo <strong>sin aplicar envoltura</strong> de elementos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex flex-wrap&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    ...
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 10<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="container">
+    <div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2 w-50 mx-auto">
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 1</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 3</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 4</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 5</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 6</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 7</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 8</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 9</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 10</p>
+    </div>
+</div>
+
+<p>Ejemplo <strong>aplicando envoltura</strong> de elementos con la clase <code>.flex-wrap</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex flex-wrap&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    ...
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Item 10<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="container">
+    <div class="d-flex flex-wrap mb-3 border border-secondary border-3 p-2 gap-2 w-50 mx-auto">
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 1</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 2</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 3</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 4</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 5</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 6</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 7</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 8</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 9</p>
+        <p class="p-1 m-0 bg-light border border-2 border-secondary">Item 10</p>
+    </div>
+</div>
+
+<h3 id="orden-de-los-elementos">Orden de los elementos<a class="headerlink" href="#orden-de-los-elementos" title="Permanent link">&para;</a></h3>
+<p>La clase <strong><code>.order-{número}</code></strong> en un elemento flexible, fuerza a que el elemento se ordene en función del número que se le asigne. Por defecto, todos los elementos tienen un valor de 0, por lo que se ordenan en el orden en el que se encuentran en el código HTML. Si se asigna un valor de 1, el elemento se ordenará en primer lugar. Si se asigna un valor de 2, el elemento se ordenará en segundo lugar, y así sucesivamente.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;d-flex&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;order-3&quot;</span><span class="p">&gt;</span>Item 1 (3)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;order-1&quot;</span><span class="p">&gt;</span>Item 2 (1)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;order-2&quot;</span><span class="p">&gt;</span>Item 3 (2)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="d-flex mb-3 border border-secondary border-3 p-2 gap-2">
+    <div class="p-1 m-0 bg-light border border-2 border-secondary order-3">Item 1 (3)</div>
+    <div class="p-1 m-0 bg-light border border-2 border-secondary order-1">Item 2 (1)</div>
+    <div class="p-1 m-0 bg-light border border-2 border-secondary order-2">Item 3 (2)</div>
+</div>
+
+<p><em><a href="../../examples/ud2_bs_flex/">Ejemplo básico de maquetación de una interfaz mediante flexbox</a></em></p>
+<h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://getbootstrap.com/docs/5.3/">Bootstrap 5</a></li>
+<li><a href="https://bootstrap-cheatsheet.themeselection.com/">Bootstrap 5 Cheat Sheet</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model">MDN - Modelo de cajas</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jsanvil/din2023" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      
+    
+  </body>
+</html>

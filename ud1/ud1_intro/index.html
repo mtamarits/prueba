@@ -1,0 +1,1589 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../entorno/">
+      
+      
+        <link rel="next" href="../../ud2/ud2_1_electron_requisitos/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+    
+    
+      
+        <title>UD1 Introducción - DAM - Diseño de Interfaces - 2023/24</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/bs5_layout.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud1-introduccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-header__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAM - Diseño de Interfaces - 2023/24
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD1 Introducción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proyectos/proyecto2ev/" class="md-tabs__link">
+          
+  
+  Proyecto 2ª ev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Inicio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  UD1 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud2/ud2_1_electron_requisitos/" class="md-tabs__link">
+          
+  
+  UD2 Elementos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud3/ud3_1_componentes_basicos/" class="md-tabs__link">
+          
+  
+  UD3 Componentes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-tabs__link">
+          
+  
+  UD4 Componentes avanzados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud5/ud5_1_usabilidad/" class="md-tabs__link">
+          
+  
+  UD5 Usabilidad y accesibilidad
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-nav__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAM - Diseño de Interfaces - 2023/24
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 2ª ev
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 2ª ev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyectos/proyecto2ev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DIN semipresencial 2023-24 - Proyecto 2ª Evaluación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Inicio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM Desarrollo de Interfaces 2023-2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entorno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entorno de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-diseno-de-una-interfaz-el-diseno-grafico" class="md-nav__link">
+    El diseño de una interfaz. El diseño gráfico
+  </a>
+  
+    <nav class="md-nav" aria-label="El diseño de una interfaz. El diseño gráfico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-busca-la-interfaz-de-usuario" class="md-nav__link">
+    ¿Qué busca la interfaz de usuario?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planteamiento-y-diseno-de-una-interfaz" class="md-nav__link">
+    Planteamiento y diseño de una interfaz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-de-una-interfaz-grafica-de-usuario-gui" class="md-nav__link">
+    Elementos de una interfaz gráfica de usuario (GUI)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-interfaces-graficas" class="md-nav__link">
+    Tipos de interfaces gráficas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-color" class="md-nav__link">
+    El color
+  </a>
+  
+    <nav class="md-nav" aria-label="El color">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-sistema-rgb" class="md-nav__link">
+    El sistema RGB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matiz-saturacion-y-brillo-hsv" class="md-nav__link">
+    Matiz, saturación y brillo (HSV)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-importancia-de-los-colores" class="md-nav__link">
+    La importancia de los colores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia-y-webgrafia" class="md-nav__link">
+    Bibliografía y webgrafía
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2 Elementos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 Elementos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_1_electron_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.1. Introducción a Electron. Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_2_primera_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.2. Creando la primera aplicación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_3_maquetacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.3. Maquetación básica del interfaz de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD3 Componentes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 Componentes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_1_componentes_basicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3 - 3.1 Componentes básicos de una interfaz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_2_electron_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3. 2 Comunicación entre procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD4 Componentes avanzados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD4 Componentes avanzados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.1 Componentes avanzados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_2_electron_react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.2 Integración de React en Electron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_3_react-eventos-estados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.3 Eventos y estados en React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_4_route-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.4 Navegación y persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_5_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.5 Aplicación de ejemplo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD5 Usabilidad y accesibilidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UD5 Usabilidad y accesibilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_1_usabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.1 Usabilidad y experiencia de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_2_flutter_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.2 Introducción a Flutter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_3_flutter_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.3 Flutter: Widgets y Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_4_flutter_state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.4 Flutter: Gestión de estados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_5_flutter_navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.5 Flutter: Navegación e interactividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_6_flutter_persistence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.6 Flutter: Persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_7_flutter_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.7 Flutter: Comunicación con el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-diseno-de-una-interfaz-el-diseno-grafico" class="md-nav__link">
+    El diseño de una interfaz. El diseño gráfico
+  </a>
+  
+    <nav class="md-nav" aria-label="El diseño de una interfaz. El diseño gráfico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-busca-la-interfaz-de-usuario" class="md-nav__link">
+    ¿Qué busca la interfaz de usuario?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planteamiento-y-diseno-de-una-interfaz" class="md-nav__link">
+    Planteamiento y diseño de una interfaz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-de-una-interfaz-grafica-de-usuario-gui" class="md-nav__link">
+    Elementos de una interfaz gráfica de usuario (GUI)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-interfaces-graficas" class="md-nav__link">
+    Tipos de interfaces gráficas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-color" class="md-nav__link">
+    El color
+  </a>
+  
+    <nav class="md-nav" aria-label="El color">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-sistema-rgb" class="md-nav__link">
+    El sistema RGB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matiz-saturacion-y-brillo-hsv" class="md-nav__link">
+    Matiz, saturación y brillo (HSV)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-importancia-de-los-colores" class="md-nav__link">
+    La importancia de los colores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia-y-webgrafia" class="md-nav__link">
+    Bibliografía y webgrafía
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ud1-introduccion">UD1 Introducción<a class="headerlink" href="#ud1-introduccion" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="#el-diseño-de-una-interfaz-el-diseño-gráfico">El diseño de una interfaz. El diseño gráfico</a><ul>
+<li><a href="#qué-busca-la-interfaz-de-usuario">¿Qué busca la interfaz de usuario?</a></li>
+<li><a href="#planteamiento-y-diseño-de-una-interfaz">Planteamiento y diseño de una interfaz</a></li>
+<li><a href="#elementos-de-una-interfaz-gráfica-de-usuario-gui">Elementos de una interfaz gráfica de usuario (GUI)</a></li>
+<li><a href="#tipos-de-interfaces-gráficas">Tipos de interfaces gráficas</a></li>
+</ul>
+</li>
+<li><a href="#el-color">El color</a><ul>
+<li><a href="#el-sistema-rgb">El sistema RGB</a></li>
+<li><a href="#matiz-saturación-y-brillo-hsv">Matiz, saturación y brillo <em>(HSV)</em></a></li>
+<li><a href="#la-importancia-de-los-colores">La importancia de los colores</a></li>
+</ul>
+</li>
+<li><a href="#bibliografía-y-webgrafía">Bibliografía y webgrafía</a></li>
+</ul>
+<h2 id="el-diseno-de-una-interfaz-el-diseno-grafico">El diseño de una interfaz. El diseño gráfico<a class="headerlink" href="#el-diseno-de-una-interfaz-el-diseno-grafico" title="Permanent link">&para;</a></h2>
+<p>El diseño de interfaces busca poner los puntos de contacto entre un usuario y una computadora, es decir, se genera una conexión entre dos máquinas de cualquier tipo y se les da un soporte para generar comunicación entre los distintos estratos. </p>
+<p>Generalmente es la forma en la cual se conectan el hardware con el software, que comprende las aplicaciones, programas y herramientas, su finalidad es que un usuario pueda realizar una acción determinada en la forma que se desea, teniendo eficacia, rendimiento y seguridad en cada proceso, lo que involucra que:</p>
+<ul>
+<li>La acción efectuada sea la que el usuario tiene intenciones de hacer.</li>
+<li>La orden se debe realizar de forma eficaz y precisa.</li>
+<li>La acción debe afectar solamente al componente de Hardware o a la aplicación que se tenía considerada utilizar, esto sin afectar a otros componentes.</li>
+</ul>
+<p>Este conjunto de elementos, que se reflejan en la pantalla y que permiten al usuario llevar a cabo acciones bien definidas, se compone de elementos de acción, alternativas de navegación, identificación y contenidos.</p>
+<p>Así, podemos definir el diseño gráfico como programar, proyectar y realizar comunicaciones visuales de aplicaciones u otro tipo de herramientas software comunicándose con el hardware donde se ejecuta. A día de hoy, este área de desarrollo tiene a sus propios profesionales, denominados diseñadores gráficos. Sus funciones:</p>
+<ul>
+<li>Función estética</li>
+<li>Función publicitaria</li>
+<li>Función comunicativa</li>
+</ul>
+<p>Se distinguen 4 grupos de elementos en el diseño de interfaces:</p>
+<ul>
+<li>Elementos conceptuales</li>
+<li>Elementos visuales</li>
+<li>Elementos de relación</li>
+<li>Elementos prácticos</li>
+</ul>
+<p>Por lo tanto, la interfaz será un conjunto de elementos gráficos y un diseño de su distribución que permite una mejor presentación y navegación en la aplicación. Si no existen ambos factores unidos, el resultado final no será óptimo, pudiendo tirar por tierra todo el buen trabajo que lleva en el backend. Ejemplo:</p>
+<p><img alt="Ejemplo de diseño de interfaz intuitiva" src="../assets/ejemplo_interfaz.png" /></p>
+<p>Como se puede apreciar, la figura, las dos imágenes son la misma aplicación. En la izquierda tenemos un mal diseño, ya que los los elementos no aparecen diferenciados, no se puede leer bien el texto, no se aprecian correctamente las imágenes, etc. Mientras que en la imagen de la derecha, la navegación del usuario es mucho más intuitiva, proporcionando un mayor grado de satisfacción al usarla.</p>
+<h3 id="que-busca-la-interfaz-de-usuario">¿Qué busca la interfaz de usuario?<a class="headerlink" href="#que-busca-la-interfaz-de-usuario" title="Permanent link">&para;</a></h3>
+<p>Para responder a esta pregunta debemos recordar la siguiente figura, la cual muestra la relación que existe entre los diferentes elementos que intervienen en un equipo:</p>
+<pre class="mermaid"><code>flowchart
+    A("&lt;font color=black&gt; Usuario") --&gt; B("&lt;font color=black&gt; Interfaz\nAplicación")
+    style A fill:#fea,stroke:#888
+    style B fill:#cfa,stroke:#888
+    B --&gt; A
+    B --&gt; C("&lt;font color=black&gt; Interfaz\nSistema Operativo")
+    style C fill:#fdd,stroke:#888
+    C --&gt; B
+    C --&gt; D("&lt;font color=black&gt; Hardware")
+    style D fill:#aef,stroke:#888
+    D --&gt; C
+    C --&gt; A</code></pre>
+<p>Con ello, podemos entender que la interfaz de usuario busca establecer una relación entre el usuario que utiliza la aplicación y el hardware del equipo mediante el uso del S.O.</p>
+<p>Las interfaces de usuario son muchas y variadas, tantas como hardware que debemos utilizar, como por ejemplo la siguiente imagen:</p>
+<p><img alt="Interfaz de usuario en un electrodoméstico" src="../assets/interfaz_hardware.png" /></p>
+<h3 id="planteamiento-y-diseno-de-una-interfaz">Planteamiento y diseño de una interfaz<a class="headerlink" href="#planteamiento-y-diseno-de-una-interfaz" title="Permanent link">&para;</a></h3>
+<p><img align="right" alt="La interfaz de usuario es como un chiste, si tienes que explicarla no es buena" src="../assets/user_interface_joke.jpg" width="150px" /></p>
+<p>En la construcción de una aplicación debemos tener en cuenta diferentes fases, desde la definición de los objetivos que persigue nuestro proyecto hasta el diseño visual definitivo, pasando por las especificaciones funcionales. </p>
+<p>Las fases del diseño pueden verse en la siguiente pila:</p>
+<p><img alt="Fases de diseño de la interfaz de usuario" src="../assets/fases.jpg" /></p>
+<p>Los elementos clave que debemos tener en cuenta para crear nuestra aplicación son:</p>
+<ul>
+<li>a. Elementos que van a formar parte de nuestra aplicación</li>
+<li>b. Extensión de la aplicación</li>
+<li>c. patrones de diseño que van a utilizarse para estandarizar el diseño de interfaces</li>
+<li>d. Aspectos técnicos de usabilidad </li>
+</ul>
+<h3 id="elementos-de-una-interfaz-grafica-de-usuario-gui">Elementos de una interfaz gráfica de usuario (GUI)<a class="headerlink" href="#elementos-de-una-interfaz-grafica-de-usuario-gui" title="Permanent link">&para;</a></h3>
+<p>Podemos observar la evolución de las GUI ha llegado a ofrecer a los usuarios unas interfaces con una usabilidad óptima. Para conseguir esto se ha establecido que las interfaces tienen que cumplir una serie de características que, entre otras, serán:</p>
+<ul>
+<li><strong>Accesible e intuitiva</strong>: una interfaz tiene que ser intuitiva en su uso, tiene que mostrar con claridad las funcionalidades que ofrece y tiene que facilitar llegar de manera sencilla y clara.</li>
+<li><strong>Aprendizaje y uso fácil:</strong> las interfaces tienen que ser fáciles de usar y también de aprender por parte de los usuarios más noveles.</li>
+<li><strong>Consistencia</strong>: las interfaces tienen que seguir un mismo diseño y estructura entre ellas y también con otras interfaces de aplicaciones análogas. También tendrán que ser consistente cuando se ejecuten en diferentes entornos.</li>
+<li>Ofrecer el <strong>control</strong> de las interfaces: una interfaz tiene que saber librar su control al usuario que la usará.</li>
+<li><strong>Anticipación</strong>: se tendrán que prever los posibles errores que pueda cometer un usuario o las necesidades que pueda demostrar y ofrecer soluciones antes de que aparezcan o controlándolos y ofreciendo soluciones.</li>
+<li><strong>Legibilidad</strong>: tendrán que ser fácilmente interpretables y ofrecer una legibilidad adecuada a los usuarios.</li>
+<li><strong>Autonomía</strong>: un usuario no tiene que necesitar más información o ayuda que la que una interfaz le ofrece o, la que puede encontrar a partir de las indicaciones que le indicará esta interfaz.</li>
+<li><strong>Reducir carga de memoria</strong>: para poder usar una interfaz más de una vez no habrá que obligar a los usuarios a recordar la ubicación de las funcionalidades, sino que estas tendrán que ser sencillas de encontrar. Esto hará que no sea indispensable memorizar muchas informaciones para aprender a usar una interfaz determinada.</li>
+<li><strong>Internacionalización</strong> de la interfaz: tiene que permitir ser entendida y utilizable por usuarios de diferentes culturas e idiomas o bien haciéndola internacional con iconos fácilmente reconocibles o con la posibilidad de seleccionar el idioma con el cual se querrá trabajar.</li>
+<li><strong>Valores iniciales</strong>: también conocidos como valores por defecto o estándar. Son los valores que en las interfaces que llevan un formulario incorporado aparecerán seleccionados inicialmente. Además, tienen que poder ser descartados de manera sencilla.</li>
+<li><strong>Ley de <em>Fitts</em></strong>: una interfaz tiene que conseguir optimizar la ley de <em>Fitts</em>. Esta ley, en ergonomía, modelará el movimiento humano, haciendo una estimación del tiempo que puede necesitar un ser humano para mover un puntero desde una zona de la pantalla hasta otra teniendo en cuenta variables como los objetivos, la distancia hasta lograrlos y el tamaño que tendrán.</li>
+</ul>
+<p>Las interfaces gráficas de usuario disponen de una serie de elementos propios, comunes a muchas de las GUI desarrolladas, que dispondrán de unas características y propiedades. Con estos elementos se facilitará el desarrollo de las GUI de las aplicaciones informáticas, cosa que ofrece la posibilidad de cumplir la mayoría de las características definidas.</p>
+<p>Para que el usuario pueda usar estos elementos, tendrá que usar alguno de los dispositivos de entrada/salida que se han ido desarrollando a lo largo de los últimos años. El teclado del ordenador ha sido el dispositivo indispensable, como lo es hoy en día el ratón. Pero hay otros como el touchpad (ratón táctil), la tableta gráfica, el trackball (bola), los joysticks, las pantallas táctiles o los micrófonos. Como dispositivos de salida, además de la pantalla, serán importantes los altavoces o los LED informativos.</p>
+<p>Algunos de estos dispositivos serán indispensables para el funcionamiento correcto de algunos de los elementos que ofrecen las GUI. Cada interfaz gráfica usará algunos elementos en función del suyo en torno a trabajo, y no todas tienen los mismos elementos.</p>
+<p>Algunos de los elementos de las GUI que se pueden encontrar de manera habitual en muchas interfaces son:</p>
+<ul>
+<li>Ventanas</li>
+<li>Cuadros de diálogo</li>
+<li>Asistentes</li>
+<li>Menús</li>
+<li>Pestañas</li>
+<li>Barras de herramientas</li>
+<li>Iconos</li>
+<li>En torno a trabajo</li>
+<li>Entornos de escritorio</li>
+<li>Controles</li>
+<li>Tipografía</li>
+</ul>
+<h3 id="tipos-de-interfaces-graficas">Tipos de interfaces gráficas<a class="headerlink" href="#tipos-de-interfaces-graficas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Command Line Interfaces (CLI)</strong></p>
+<p>Fueron las primeras interfaces, era solo una línea de comandos y un prompt para mostrar la posición actual o un mensaje, un ejemplo en el caso de los primeros ordenadores MS-DOS. </p>
+<p>Con una interfaz de líneas de comandos o Command Line Interface (CLI), se tecleaban comandos específicos para establecer la comunicación con la computadora, el resultado se mostraba en formato de texto. </p>
+</li>
+<li>
+<p><strong>Text User Interface (TUI)</strong></p>
+<p>En ellas la interacción con el dispositivo también se da por medio del teclado.  Las TUI marcan el paso de las interfaces de líneas de comando a interfaces gráficas de usuario. </p>
+</li>
+<li>
+<p><strong>Graphical User Interfaces (GUI)</strong></p>
+<p>Este software se aplica con elementos gráficos de control e imágenes que se toman como referencia de objetos de la realidad. </p>
+<p>En este sentido, se suele recurrir al ratón y al teclado como dispositivos de control, aunque también ya es muy común que entren pantallas táctiles.Aquí los iconos también se introducen en el mundo digital, al igual que el escritorio o la papelera.</p>
+</li>
+<li>
+<p><strong>Voice User Interface (VUI)</strong></p>
+<p>La Voice User Interface también permite la interacción con las computadoras por medio del control por voz, un ejemplo es Apple con  Siri, Amazon con Alexa, Microsoft con Cortana o la búsqueda de Google mediante voz.</p>
+<p>De esta forma, se puede acceder a algunas aplicaciones de un modo más efectivo y garantizando una mayor accesibilidad.</p>
+</li>
+<li>
+<p><strong>Natural User Interface (NUI)</strong></p>
+<p>Con Natural User Interface, la comunicación con el dispositivo se da de forma más intuitiva, puede ser considerada como una evolución de la interfaz gráfica de usuario y de la Voice User Interface. </p>
+<p>Los diferentes sensores, cámaras y micrófonos permiten una comunicación versátil, la interfaz de usuario interactiva reacciona a los gestos, a los movimientos y al lenguaje, siendo capaz de reconocer rostros y objetos. </p>
+</li>
+</ul>
+<div style="page-break-after: always"></div>
+
+<h2 id="el-color">El color<a class="headerlink" href="#el-color" title="Permanent link">&para;</a></h2>
+<p>El ojo humano solo es capaz de percibir los denominados colores aditivos; a través de la combinación de éstos es posible obtener el resto de los colores, estos son:</p>
+<ul>
+<li>Rojo (R - Red) </li>
+<li>Verde (G - Green)</li>
+<li>Azul (B - Blue)</li>
+</ul>
+<h3 id="el-sistema-rgb">El sistema RGB<a class="headerlink" href="#el-sistema-rgb" title="Permanent link">&para;</a></h3>
+<p>De la misma forma, un ordenador es capaz de obtener la representación de todos los colores utilizando el sistema RGB, indicando la proporción de cada uno de ellos dentro de dicha combinación, dando lugar a toda la paleta de colores conocida.</p>
+<p>Para representar cada color de forma que pueda ser traducido por el ordenador se utilizan 8 bits para codificar cada uno de los colores aditivos, es decir, se establece la proporción de cada color que va a formar parte de los 3. La escala monocromática de un color tendrá 256 (28) valores.</p>
+<p>A la hora de representar cada uno de los colores, es posible utilizar tanto el sistema hexadecimal (donde codificamos con 4 bits cada uno de los dígitos de la cifra) como el decimal (de 0 a 255).</p>
+<p>El número de combinación de colores se calcula multiplicando el número máximo de grados en la escala monocromática de cada color: 256x256x256, obteniendo 16.777.256 colores.</p>
+<p><em>Por ejemplo, el color <strong>amarillo</strong> estaría formado por:</em></p>
+<p><img align="right" alt="Modelo aditivo de colores rojo, verde, azul" src="../assets/rgb.jpg" width="200" /></p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Valor decimal</th>
+<th>Valor binario</th>
+<th>Valor hexadecimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rojo</td>
+<td>255</td>
+<td>1111 1111</td>
+<td>FF</td>
+</tr>
+<tr>
+<td>Verde</td>
+<td>255</td>
+<td>1111 1111</td>
+<td>FF</td>
+</tr>
+<tr>
+<td>Azul</td>
+<td>0</td>
+<td>0000 0000</td>
+<td>00</td>
+</tr>
+</tbody>
+</table>
+<p><em>En hexadecimal quedaría expresado: <code>#FFFF00</code></em></p>
+<h3 id="matiz-saturacion-y-brillo-hsv">Matiz, saturación y brillo <em>(HSV)</em><a class="headerlink" href="#matiz-saturacion-y-brillo-hsv" title="Permanent link">&para;</a></h3>
+<p>Además del grado en la escala monocromática de cada uno de los colores RGB, los colores representan 3 propiedades que permiten distinguirse unos de otros:</p>
+<p><img align="right" alt="Modelo de color HSV" src="../assets/hsb.png" width="200" /></p>
+<ul>
+<li><strong>Matiz (<em>Hue</em>)</strong>. Atributo que permite distinguir un color de otro. Los 3 matices primarios son los colores aditivos, verde, rojo y azul; el resto de los colores se obtiene mezclando estos 3. El matiz permite definir 2 colores como complementarios cuando están uno frente al otro en el círculo cromático.</li>
+<li><strong>Saturación (<em>Saturation</em>)</strong>. Este atributo define la intensidad de un color. Pueden relacionarse con el ancho de banda de luz que estamos visualizando, por tanto, queda condicionado por el nivel de gris presente en un color: cuando mayor sea el nivel de gris, menos saturado será un color, y será menos intenso.</li>
+<li><strong>Valor o Brillo (<em>Value</em>, <em>Brightness</em>)</strong>. Atributo que define la cantidad de luz de un color. Representa lo oscuro (si se le añade negro) o claro ( si se le añade blanco) que es un color respecto de su patrón, es decir, respecto del color puro sin modificar el brillo. En una composición de colores en diseño gráfico, cuanto más brillante sea un color, más cerca parece estar.</li>
+</ul>
+<p>Estas propiedades nos permiten definir los colores como cromáticos, complementarios o  cercanos, así como definir el contraste de color.</p>
+<h3 id="la-importancia-de-los-colores">La importancia de los colores<a class="headerlink" href="#la-importancia-de-los-colores" title="Permanent link">&para;</a></h3>
+<p>Cada color evoca una emoción o una acción, por lo tanto, a la hora de diseñar una interfaz es recomendable elegir unos colores acordes.</p>
+<p><em>Por ejemplo:</em></p>
+<ul>
+<li><span style="color:red; font-size: large; text-shadow: 1px 0 1px white, 0 1px 1px white, -1px 0 1px white, 0 -1px 1px white;"><strong>Rojo</strong></span>: Lujuria, Poder, Emoción, Amor, Velocidad, Ira</li>
+<li><span style="color:yellow; font-size: large; text-shadow: 1px 0 1px black, 0 1px 1px black, -1px 0 1px black, 0 -1px 1px black;"><strong>Amarillo</strong></span>: Competencia, Felicidad, Barato, Baja calidad</li>
+<li><span style="color:green; font-size: large; text-shadow: 1px 0 1px white, 0 1px 1px white, -1px 0 1px white, 0 -1px 1px white;"><strong>Verde</strong></span>: Buen Gusto, Envidia, Ecológico, Salud, Dinero</li>
+<li><span style="color:blue; font-size: large; text-shadow: 1px 0 1px white, 0 1px 1px white, -1px 0 1px white, 0 -1px 1px white;"><strong>Azul</strong></span>: Sofisticación, Competencia, Alta calidad, Corporativo, Fiabilidad</li>
+<li><span style="color:pink; font-size: large; text-shadow: 1px 0 1px black, 0 1px 1px black, -1px 0 1px black, 0 -1px 1px black;"><strong>Rosa</strong></span>: Autoridad, Sinceridad, Femenino y Coqueto</li>
+<li><span style="color:purple; font-size: large; text-shadow: 1px 0 1px white, 0 1px 1px white, -1px 0 1px white, 0 -1px 1px white;"><strong>Violeta/Morado</strong></span>: Calidez, Sofisticación, Poder</li>
+<li><span style="color:orange; font-size: large; text-shadow: 1px 0 1px black, 0 1px 1px black, -1px 0 1px black, 0 -1px 1px black;"><strong>Naranja</strong></span>: Robustez, Emoción</li>
+<li><span style="color:brown; font-size: large; text-shadow: 1px 0 1px white, 0 1px 1px white, -1px 0 1px white, 0 -1px 1px white;"><strong>Marrón</strong></span>: Dolor</li>
+<li><span style="color:black; font-size: large; text-shadow: 1px 0 1px white, 0 1px 1px white, -1px 0 1px white, 0 -1px 1px white;"><strong>Negro</strong></span>: Felicidad, Sofisticación, Caro, Miedo</li>
+<li><span style="color:white; font-size: large; text-shadow: 1px 0 1px black, 0 1px 1px black, -1px 0 1px black, 0 -1px 1px black;"><strong>Blanco</strong></span>: Pureza</li>
+</ul>
+<h2 id="bibliografia-y-webgrafia">Bibliografía y webgrafía<a class="headerlink" href="#bibliografia-y-webgrafia" title="Permanent link">&para;</a></h2>
+<ul>
+<li>García-Miguel, D; García-Miguel, B; Fernández, A. Diseño de interfaces. Editorial síntesi. 2021</li>
+<li>Disseny d’interficies al IOC.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jsanvil/din2023" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      
+    
+  </body>
+</html>

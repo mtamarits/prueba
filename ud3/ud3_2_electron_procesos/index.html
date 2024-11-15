@@ -1,0 +1,1968 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ud3_1_componentes_basicos/">
+      
+      
+        <link rel="next" href="../../ud4/ud4_1_componentes_avanzados/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+    
+    
+      
+        <title>UD3. 2 Comunicación entre procesos - DAM - Diseño de Interfaces - 2023/24</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/bs5_layout.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud3-2-comunicacion-entre-procesos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-header__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAM - Diseño de Interfaces - 2023/24
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD3. 2 Comunicación entre procesos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proyectos/proyecto2ev/" class="md-tabs__link">
+          
+  
+  Proyecto 2ª ev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Inicio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud1/ud1_intro/" class="md-tabs__link">
+          
+  
+  UD1 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud2/ud2_1_electron_requisitos/" class="md-tabs__link">
+          
+  
+  UD2 Elementos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ud3_1_componentes_basicos/" class="md-tabs__link">
+          
+  
+  UD3 Componentes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-tabs__link">
+          
+  
+  UD4 Componentes avanzados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud5/ud5_1_usabilidad/" class="md-tabs__link">
+          
+  
+  UD5 Usabilidad y accesibilidad
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-nav__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAM - Diseño de Interfaces - 2023/24
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 2ª ev
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 2ª ev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyectos/proyecto2ev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DIN semipresencial 2023-24 - Proyecto 2ª Evaluación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Inicio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM Desarrollo de Interfaces 2023-2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entorno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entorno de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/ud1_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2 Elementos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 Elementos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_1_electron_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.1. Introducción a Electron. Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_2_primera_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.2. Creando la primera aplicación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_3_maquetacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.3. Maquetación básica del interfaz de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD3 Componentes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 Componentes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud3_1_componentes_basicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3 - 3.1 Componentes básicos de una interfaz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UD3. 2 Comunicación entre procesos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UD3. 2 Comunicación entre procesos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-no-un-solo-proceso" class="md-nav__link">
+    ¿Por qué no un solo proceso?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-modelo-multi-proceso" class="md-nav__link">
+    El modelo multi proceso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-proceso-principal" class="md-nav__link">
+    El proceso principal
+  </a>
+  
+    <nav class="md-nav" aria-label="El proceso principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-ventanas" class="md-nav__link">
+    Gestión de ventanas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-de-la-aplicacion" class="md-nav__link">
+    Ciclo de vida de la aplicación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-nativas" class="md-nav__link">
+    Aplicaciones nativas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-proceso-de-renderizado" class="md-nav__link">
+    El proceso de renderizado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts-de-precarga" class="md-nav__link">
+    Scripts de precarga
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comunicacion-entre-procesos" class="md-nav__link">
+    Comunicación entre procesos
+  </a>
+  
+    <nav class="md-nav" aria-label="Comunicación entre procesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canales-ipc" class="md-nav__link">
+    Canales IPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patron-1-renderizador-a-principal-unidireccional" class="md-nav__link">
+    Patrón 1: Renderizador a principal (unidireccional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patron-2-renderizador-a-principal-bidireccional" class="md-nav__link">
+    Patrón 2: Renderizador a principal (bidireccional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patron-3-principal-a-renderizador" class="md-nav__link">
+    Patrón 3: Principal a renderizador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patron-4-renderizador-a-renderizador" class="md-nav__link">
+    Patrón 4: Renderizador a renderizador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serializacion-de-objetos" class="md-nav__link">
+    Serialización de objetos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD4 Componentes avanzados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD4 Componentes avanzados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.1 Componentes avanzados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_2_electron_react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.2 Integración de React en Electron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_3_react-eventos-estados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.3 Eventos y estados en React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_4_route-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.4 Navegación y persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_5_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.5 Aplicación de ejemplo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD5 Usabilidad y accesibilidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UD5 Usabilidad y accesibilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_1_usabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.1 Usabilidad y experiencia de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_2_flutter_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.2 Introducción a Flutter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_3_flutter_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.3 Flutter: Widgets y Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_4_flutter_state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.4 Flutter: Gestión de estados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_5_flutter_navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.5 Flutter: Navegación e interactividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_6_flutter_persistence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.6 Flutter: Persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_7_flutter_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.7 Flutter: Comunicación con el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-no-un-solo-proceso" class="md-nav__link">
+    ¿Por qué no un solo proceso?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-modelo-multi-proceso" class="md-nav__link">
+    El modelo multi proceso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-proceso-principal" class="md-nav__link">
+    El proceso principal
+  </a>
+  
+    <nav class="md-nav" aria-label="El proceso principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-ventanas" class="md-nav__link">
+    Gestión de ventanas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-de-la-aplicacion" class="md-nav__link">
+    Ciclo de vida de la aplicación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-nativas" class="md-nav__link">
+    Aplicaciones nativas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-proceso-de-renderizado" class="md-nav__link">
+    El proceso de renderizado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts-de-precarga" class="md-nav__link">
+    Scripts de precarga
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comunicacion-entre-procesos" class="md-nav__link">
+    Comunicación entre procesos
+  </a>
+  
+    <nav class="md-nav" aria-label="Comunicación entre procesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canales-ipc" class="md-nav__link">
+    Canales IPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patron-1-renderizador-a-principal-unidireccional" class="md-nav__link">
+    Patrón 1: Renderizador a principal (unidireccional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patron-2-renderizador-a-principal-bidireccional" class="md-nav__link">
+    Patrón 2: Renderizador a principal (bidireccional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patron-3-principal-a-renderizador" class="md-nav__link">
+    Patrón 3: Principal a renderizador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patron-4-renderizador-a-renderizador" class="md-nav__link">
+    Patrón 4: Renderizador a renderizador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serializacion-de-objetos" class="md-nav__link">
+    Serialización de objetos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ud3-2-comunicacion-entre-procesos">UD3. 2 Comunicación entre procesos<a class="headerlink" href="#ud3-2-comunicacion-entre-procesos" title="Permanent link">&para;</a></h1>
+<p>Electron hereda su <strong>arquitectura multiproceso de <em>Chromium</em></strong>, lo que hace que el marco sea muy similar a un navegador web moderno.</p>
+<h2 id="por-que-no-un-solo-proceso">¿Por qué no un solo proceso?<a class="headerlink" href="#por-que-no-un-solo-proceso" title="Permanent link">&para;</a></h2>
+<p>Los navegadores web son aplicaciones increíblemente complicadas. Aparte de su capacidad principal para mostrar contenido web, tienen muchas responsabilidades secundarias, como administrar múltiples ventanas (o pestañas) y cargar extensiones de terceros.</p>
+<p>Anteriormente, los navegadores solían utilizar un único proceso para toda esta funcionalidad. Aunque este patrón significaba menos sobrecarga para cada pestaña abierta, también significaba que un sitio web que fallaba o se bloqueaba afectaría a todo el navegador.</p>
+<h2 id="el-modelo-multi-proceso">El modelo multi proceso<a class="headerlink" href="#el-modelo-multi-proceso" title="Permanent link">&para;</a></h2>
+<p>Para resolver este problema, el equipo de <em>Chrome</em> decidió que cada pestaña se mostraría en su propio proceso, limitando el daño que un código malicioso o con errores podría causar a la aplicación en su conjunto. Un único proceso del navegador controla estos procesos, así como el ciclo de vida de la aplicación en su conjunto. El diagrama de <a href="https://www.google.com/googlebooks/chrome/med_04.html"><em>Chrome Comic</em></a> visualiza este modelo.</p>
+<p>Las aplicaciones <em>Electron</em> están estructuradas de manera muy similar. El desarrollador controla dos tipos de procesos: <a href="#el-proceso-principal"><strong>principal</strong></a> (<em>main process</em>) y <a href="#el-proceso-de-renderizado"><strong>renderizado</strong></a> (<em>renderer process</em>).</p>
+<h2 id="el-proceso-principal">El proceso principal<a class="headerlink" href="#el-proceso-principal" title="Permanent link">&para;</a></h2>
+<p>Cada aplicación de <em>Electron</em> tiene <strong>un único proceso principal</strong>, que actúa como punto de entrada de la aplicación. El proceso principal <strong>se ejecuta en un entorno <em>Node.js</em></strong>, lo que significa que tiene la capacidad de requerir módulos y utilizar todas las API de <em>Node.js</em>.</p>
+<h3 id="gestion-de-ventanas">Gestión de ventanas<a class="headerlink" href="#gestion-de-ventanas" title="Permanent link">&para;</a></h3>
+<p>El propósito principal del proceso principal es <strong>crear y administrar ventanas</strong> de aplicaciones con el módulo <strong><code>BrowserWindow</code></strong>.</p>
+<p>Cada instancia de la clase <code>BrowserWindow</code> crea una ventana de aplicación que carga una página web en un <strong>proceso de renderizado independiente</strong>. Se puede interactuar con este contenido web desde el proceso principal utilizando el objeto <strong><code>webContents</code></strong> de la ventana.</p>
+<div class="highlight"><span class="filename">main.js</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">win</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">({</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">800</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">1500</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">win</span><span class="p">.</span><span class="nx">loadURL</span><span class="p">(</span><span class="s1">&#39;https://github.com&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">contents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">win</span><span class="p">.</span><span class="nx">webContents</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">contents</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota:</p>
+<p>También se crea un proceso de renderizado para webs incrustadas como el módulo <code>BrowserView</code>. El objeto <code>webContents</code> también es accesible para contenido web incrustado.</p>
+</div>
+<p>Debido a que el módulo <code>BrowserWindow</code> es un <code>EventEmitter</code>, también puede agregar controladores para varios eventos de usuario (<em>por ejemplo, minimizar o maximizar la ventana</em>).</p>
+<p>Cuando una instancia de <code>BrowserWindow</code> se destruye, su proceso de renderizado también finaliza.</p>
+<h3 id="ciclo-de-vida-de-la-aplicacion">Ciclo de vida de la aplicación<a class="headerlink" href="#ciclo-de-vida-de-la-aplicacion" title="Permanent link">&para;</a></h3>
+<p>El proceso principal también controla el ciclo de vida de su aplicación a través del <strong>módulo <code>app</code></strong> de <em>Electron</em>. Este módulo proporciona un gran conjunto de eventos y métodos que se pueden utilizar para agregar un comportamiento personalizado de la aplicación (<em>por ejemplo</em>, cerrar la aplicación mediante código, modificar el <em>dock</em> de la aplicación o mostrar un panel <em>'Acerca de'</em>).</p>
+<p>Como ejemplo práctico, la aplicación que se muestra en la guía de inicio rápido utiliza <code>app</code> para crear una experiencia de ventana de aplicación más nativa.</p>
+<div class="highlight"><span class="filename">main.js</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// cerrando la aplicación cuando no queden ventanas abiertas en plataformas no macOS</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">app</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;window-all-closed&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">platform</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;darwin&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">quit</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">})</span>
+</code></pre></div>
+<h3 id="aplicaciones-nativas">Aplicaciones nativas<a class="headerlink" href="#aplicaciones-nativas" title="Permanent link">&para;</a></h3>
+<p>Para ampliar las funciones de <em>Electron</em> más allá de ser un contenedor de <em>Chromium</em> para contenidos web, el proceso principal también agrega API personalizadas para interactuar con el sistema operativo del usuario. <em>Electron</em> expone varios módulos que controlan la funcionalidad nativa del escritorio, como menús, cuadros de diálogo e íconos de bandeja del sistema.</p>
+<p>Para obtener una lista completa de los principales módulos de proceso de <em>Electron</em>, se puede consultar la <a href="https://www.electronjs.org/docs/latest/api/app">documentación API</a>.</p>
+<h2 id="el-proceso-de-renderizado">El proceso de renderizado<a class="headerlink" href="#el-proceso-de-renderizado" title="Permanent link">&para;</a></h2>
+<p>Cada aplicación de <em>Electron</em> genera <strong>un proceso de renderizado independiente para cada <code>BrowserWindow</code></strong> (y cada web embebida). Un renderizador es responsable de representar contenido web. A todos los efectos, el código ejecutado en los procesos de renderizado debe comportarse de acuerdo con los estándares web.</p>
+<p>Por lo tanto, todas las interfaces de usuario y las funciones de las aplicaciones dentro de una única ventana del navegador deben escribirse con las mismas herramientas y paradigmas que utiliza en la web.</p>
+<p>Lo mínimo que se debe comprender es:</p>
+<ul>
+<li>Un archivo HTML es su punto de entrada para el proceso de renderizado.</li>
+<li>El estilo de la interfaz de usuario se agrega mediante hojas de estilo en cascada (CSS).</li>
+<li>Se puede agregar código <em>JavaScript</em> ejecutable a través de etiquetas <code>&lt;script&gt;</code>.</li>
+</ul>
+<p>Además, esto también significa que <strong>el renderizador no tiene acceso directo a <code>require</code></strong> o otras API de <em>Node.js</em>.</p>
+<div class="admonition warning">
+<p class="admonition-title">ATENCIÓN</p>
+<p>Los procesos de renderizado se pueden generar con un entorno <em>Node.js</em> completo para facilitar el desarrollo. Históricamente, esta solía ser la opción predeterminada, pero esta función estaba deshabilitada por razones de seguridad.</p>
+</div>
+<p>Pero entonces, ¿cómo las interfaces de usuario del proceso de renderizado pueden interactuar con <em>Node.js</em> y la funcionalidad de escritorio nativa de <em>Electron</em> si solo se puede acceder a estas funciones desde el proceso principal?. De hecho, no existe una forma directa de importar los <em>scripts</em> de contenido de <em>Electron</em>.</p>
+<h2 id="scripts-de-precarga">Scripts de precarga<a class="headerlink" href="#scripts-de-precarga" title="Permanent link">&para;</a></h2>
+<p>Los <em>scripts</em> de precarga contienen código que se ejecuta en un proceso de renderizado antes de que su contenido web comience a cargarse. Estos scripts se ejecutan dentro del contexto del renderizador, pero se les otorgan más privilegios al tener acceso a las API de <em>Node.js</em>.</p>
+<p>Se puede adjuntar un <em>script</em> de precarga al proceso principal en el constructor <code>BrowserWindow</code> en la opción <strong><code>webPreferences</code></strong>.</p>
+<div class="highlight"><span class="filename">main.js</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">// ...</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">win</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">({</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="hll"><span class="w">  </span><span class="nx">webPreferences</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="nx">preload</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;path/to/preload.js&#39;</span>
+</span><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="hll"><span class="w">  </span><span class="p">}</span>
+</span><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">})</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">// ...</span>
+</code></pre></div>
+<p>Debido a que el script de precarga comparte una interfaz <code>Window</code> global con los renderizadores y puede acceder a las API de <em>Node.js</em>, sirve para mejorar su renderizador al exponer API arbitrarias en el <code>window</code> global que luego puede consumir su contenido web.</p>
+<p>Aunque los scripts de precarga comparten un <code>window</code> global con el renderizador al que están adjuntos, no puede adjuntar directamente ninguna variable desde el script de precarga a <code>window</code> debido al valor predeterminado de <strong><code>contextIsolation</code></strong>.</p>
+<div class="highlight"><span class="filename">preload.js</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">window</span><span class="p">.</span><span class="nx">myAPI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">desktop</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">renderer.js</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">myAPI</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">// =&gt; undefined</span>
+</code></pre></div>
+<p>El aislamiento de contexto significa que los scripts de precarga están aislados del ámbito principal del renderizador para evitar la filtración de API privilegiadas en el código del contenido web.</p>
+<p>En su lugar, se utiliza el módulo <code>contextBridge</code> para lograr esto de forma segura:</p>
+<div class="highlight"><span class="filename">preload.js</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">contextBridge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">contextBridge</span><span class="p">.</span><span class="nx">exposeInMainWorld</span><span class="p">(</span><span class="s1">&#39;myAPI&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nx">desktop</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">})</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">renderer.js</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">myAPI</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">// =&gt; { desktop: true }</span>
+</code></pre></div>
+<p>Esta característica es increíblemente útil para dos propósitos principales:</p>
+<ul>
+<li>Al exponer las funciones de <strong><code>ipcRenderer</code></strong> al renderizador, puede utilizar la comunicación entre procesos (IPC) para activar las tareas principales del proceso desde el renderizador (y viceversa).</li>
+<li>Si se está desarrollando una aplicación de <em>Electron</em> para una aplicación web existente alojada en una URL remota, se pueden agregar propiedades personalizadas al <code>window</code> global del renderizador que se pueden usar para la lógica del escritorio en el lado del cliente.</li>
+</ul>
+<h2 id="comunicacion-entre-procesos">Comunicación entre procesos<a class="headerlink" href="#comunicacion-entre-procesos" title="Permanent link">&para;</a></h2>
+<p>La comunicación entre procesos (IPC <em>Inter Process Communication</em>) es una parte clave de la creación de aplicaciones de escritorio. Debido a que los procesos principal y de renderizado tienen diferentes responsabilidades, IPC es la única forma de realizar muchas tareas, como llamar a una API nativa desde su interfaz de usuario o activar cambios en su contenido web desde menús nativos.</p>
+<h3 id="canales-ipc">Canales IPC<a class="headerlink" href="#canales-ipc" title="Permanent link">&para;</a></h3>
+<p>Los procesos se comunican pasando mensajes a través de "canales" definidos por el desarrollador con los módulos <code>ipcMain</code> y <code>ipcRenderer</code>. Estos canales son <strong>arbitrarios</strong> (puedes nombrarlos como quieras) y <strong>bidireccionales</strong> (puedes usar el mismo nombre de canal para ambos módulos).</p>
+<p>Repasaremos algunos patrones IPC fundamentales con ejemplos concretos que puedes usar como referencia para el código de tu aplicación.</p>
+<h3 id="patron-1-renderizador-a-principal-unidireccional">Patrón 1: Renderizador a principal (unidireccional)<a class="headerlink" href="#patron-1-renderizador-a-principal-unidireccional" title="Permanent link">&para;</a></h3>
+<p>Para enviar un mensaje IPC unidireccional desde un proceso de renderizador al proceso principal, se puede usar <code>ipcRenderer.send</code> para enviar un mensaje que recibirá <code>ipcMain.on</code>.</p>
+<p>Normalmente se utiliza este patrón para activar una acción en el proceso principal, como guardar un archivo o mostrar un cuadro de diálogo, desde una acción del usuario en el renderizador.</p>
+<p>Para demostrar este patrón, crearemos una aplicación que utiliza IPC para actualizar el título de la ventana de la aplicación desde el proceso de renderizado.</p>
+<h4 id="1-escuchar-eventos-con-ipcmainon">1. Escuchar eventos con <code>ipcMain.on</code><a class="headerlink" href="#1-escuchar-eventos-con-ipcmainon" title="Permanent link">&para;</a></h4>
+<p>En el proceso principal, se crea un <em>listener</em> para el evento 'set-title' con <code>ipcMain.on</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="hll"><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">app</span><span class="p">,</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">,</span><span class="w"> </span><span class="nx">ipcMain</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+</span><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node:path&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">createWindow</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">mainWindow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">({</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="nx">webPreferences</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">      </span><span class="nx">preload</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;preload.js&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">  </span><span class="nx">mainWindow</span><span class="p">.</span><span class="nx">loadFile</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="hll"><span class="kd">function</span><span class="w"> </span><span class="nx">handleSetTitle</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">webContents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">sender</span>
+</span><a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">win</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">.</span><span class="nx">fromWebContents</span><span class="p">(</span><span class="nx">webContents</span><span class="p">)</span>
+</span><a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="hll"><span class="w">  </span><span class="nx">win</span><span class="p">.</span><span class="nx">setTitle</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span>
+</span><a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="hll"><span class="p">}</span>
+</span><a id="__codelineno-7-19" name="__codelineno-7-19"></a>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="nx">app</span><span class="p">.</span><span class="nx">whenReady</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="hll"><span class="w">  </span><span class="nx">ipcMain</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;set-title&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">handleSetTitle</span><span class="p">)</span>
+</span><a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">  </span><span class="nx">createWindow</span><span class="p">()</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">  </span><span class="nx">app</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;activate&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">BrowserWindow</span><span class="p">.</span><span class="nx">getAllWindows</span><span class="p">().</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="nx">createWindow</span><span class="p">()</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="p">})</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="nx">app</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;window-all-closed&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">platform</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;darwin&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">quit</span><span class="p">()</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<p>La función <code>handleSetTitle</code> tiene dos parámetros: un evento con estructura <a href="https://www.electronjs.org/docs/latest/api/structures/ipc-main-event"><code>IpcMainEvent</code></a> y una cadena de texto <code>title</code>. Cada vez que llega un evento <code>set-title</code>, esta función encontrará la instancia de <code>BrowserWindow</code> adjunta al remitente del mensaje y utilizará <code>win.setTitle</code> en ella.</p>
+<h4 id="2-exponer-ipcrenderersend-en-el-script-preloadjs">2. Exponer <code>ipcRenderer.send</code> en el script <code>preload.js</code><a class="headerlink" href="#2-exponer-ipcrenderersend-en-el-script-preloadjs" title="Permanent link">&para;</a></h4>
+<p>Para enviar mensajes al <em>listener</em> creado anteriormente, puede se usa <code>ipcRenderer.send</code>. Debemos elegir qué API exponer desde el script de precarga utilizando <code>contextBridge</code>.</p>
+<p>El script de precarga, expondrá el método <code>setTitle</code> en proceso de renderizado.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">preload.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">contextBridge</span><span class="p">,</span><span class="w"> </span><span class="nx">ipcRenderer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nx">contextBridge</span><span class="p">.</span><span class="nx">exposeInMainWorld</span><span class="p">(</span><span class="s1">&#39;electronAPI&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="hll"><span class="w">  </span><span class="nx">setTitle</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">title</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">ipcRenderer</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;set-title&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">)</span>
+</span><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<p>En este punto, el proceso de renderizado puede llamar a <code>window.electronAPI.setTitle</code> para enviar un mensaje IPC al proceso principal.</p>
+<h4 id="3-crear-el-proceso-de-renderizado-en-la-interfaz-de-usuario">3. Crear el proceso de renderizado en la interfaz de usuario<a class="headerlink" href="#3-crear-el-proceso-de-renderizado-en-la-interfaz-de-usuario" title="Permanent link">&para;</a></h4>
+<p>En el archivo HTML cargado en <code>BrowserWindows</code>, se añade una interface básica consistente en una entrada de texto y un botón.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>    <span class="cm">&lt;!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP --&gt;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Security-Policy&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;default-src &#39;self&#39;; script-src &#39;self&#39;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello IPC!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="hll">    Title: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;title&quot;</span><span class="p">/&gt;</span>
+</span><a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="hll">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btn&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Set<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./renderer.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><a id="__codelineno-9-13" name="__codelineno-9-13"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>Para hacer los elementos interactivos, añadimos algunas líneas de código a <code>renderer.js</code>, que aprovecha la API expuesta por el script de precarga.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">renderer.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">setButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btn&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">titleInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="nx">setButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">titleInput</span><span class="p">.</span><span class="nx">value</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="hll"><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">setTitle</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span>
+</span><a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<p>En este punto, se puede ejecutar la aplicación y probar el botón. Al hacer clic en el botón, se enviará un mensaje IPC al proceso principal, que establecerá el título de la ventana en el valor del campo de entrada.</p>
+<h3 id="patron-2-renderizador-a-principal-bidireccional">Patrón 2: Renderizador a principal (bidireccional)<a class="headerlink" href="#patron-2-renderizador-a-principal-bidireccional" title="Permanent link">&para;</a></h3>
+<p>Para enviar un mensaje IPC bidireccional entre dos procesos, se puede usar <code>ipcMain.handle</code> para crear un <em>listener</em> que devuelva un valor. Luego, se puede usar <code>ipcRenderer.invoke</code> para llamar a la función y obtener el valor devuelto.</p>
+<p>Este patrón se puede utilizar para obtener información del proceso principal, como el nombre de usuario del sistema operativo, desde el proceso principal.</p>
+<p>Para demostrar este patrón, crearemos una aplicación que utiliza IPC para abrir un cuadro de diálogo de sistema y devolver el archivo seleccionado al proceso de renderizado.</p>
+<h4 id="1-crear-un-listener-con-ipcmainhandle">1. Crear un <em>listener</em> con <code>ipcMain.handle</code><a class="headerlink" href="#1-crear-un-listener-con-ipcmainhandle" title="Permanent link">&para;</a></h4>
+<p>En el proceso principal, se crea la función <code>handleFileOpen()</code> que llama a <code>dialog.showOpenDialog</code> que muestrá un diálogo y devuelve el primer archivo seleccionado. Esta función se utiliza como <em>listener</em> cuando un mensaje <code>ipcRenderer.invoke</code> se envía con el evento <code>dialog:openFile</code> que escucha <code>ipcMain.handle</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span>
+<span class="normal"><a href="#__codelineno-11-26">26</a></span>
+<span class="normal"><a href="#__codelineno-11-27">27</a></span>
+<span class="normal"><a href="#__codelineno-11-28">28</a></span>
+<span class="normal"><a href="#__codelineno-11-29">29</a></span>
+<span class="normal"><a href="#__codelineno-11-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="hll"><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">app</span><span class="p">,</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">,</span><span class="w"> </span><span class="nx">ipcMain</span><span class="p">,</span><span class="w"> </span><span class="nx">dialog</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+</span><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node:path&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="hll"><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleFileOpen</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">canceled</span><span class="p">,</span><span class="w"> </span><span class="nx">filePaths</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">dialog</span><span class="p">.</span><span class="nx">showOpenDialog</span><span class="p">()</span>
+</span><a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="hll"><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">canceled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="hll"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">filePaths</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span>
+</span><a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="hll"><span class="w">  </span><span class="p">}</span>
+</span><a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="hll"><span class="p">}</span>
+</span><a id="__codelineno-11-10" name="__codelineno-11-10"></a>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="kd">function</span><span class="w"> </span><span class="nx">createWindow</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">mainWindow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">({</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="nx">webPreferences</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">      </span><span class="nx">preload</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;preload.js&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">  </span><span class="nx">mainWindow</span><span class="p">.</span><span class="nx">loadFile</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="p">}</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="nx">app</span><span class="p">.</span><span class="nx">whenReady</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="hll"><span class="w">  </span><span class="nx">ipcMain</span><span class="p">.</span><span class="nx">handle</span><span class="p">(</span><span class="s1">&#39;dialog:openFile&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">handleFileOpen</span><span class="p">)</span>
+</span><a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">  </span><span class="nx">createWindow</span><span class="p">()</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">  </span><span class="nx">app</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;activate&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">BrowserWindow</span><span class="p">.</span><span class="nx">getAllWindows</span><span class="p">().</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="nx">createWindow</span><span class="p">()</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="p">})</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a>
+<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="nx">app</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;window-all-closed&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">platform</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;darwin&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">quit</span><span class="p">()</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title"><code>dialog:</code></p>
+<p>El prefijo <code>dialog:</code> no tiene efecto en el código. Se utiliza para mejorar la legibilidad.</p>
+</div>
+<h4 id="2-exponer-ipcrendererinvoke-en-el-script-preloadjs">2. Exponer <code>ipcRenderer.invoke</code> en el script <code>preload.js</code><a class="headerlink" href="#2-exponer-ipcrendererinvoke-en-el-script-preloadjs" title="Permanent link">&para;</a></h4>
+<p>Para llamar a la función creada anteriormente, se puede usar <code>ipcRenderer.invoke</code>. Debemos elegir qué API exponer desde el script de precarga utilizando <code>contextBridge</code>.</p>
+<p>El script de precarga, expondrá el método <code>openFile</code> en proceso de renderizado.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">preload.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">contextBridge</span><span class="p">,</span><span class="w"> </span><span class="nx">ipcRenderer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="nx">contextBridge</span><span class="p">.</span><span class="nx">exposeInMainWorld</span><span class="p">(</span><span class="s1">&#39;electronAPI&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="hll"><span class="w">  </span><span class="nx">openFile</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">ipcRenderer</span><span class="p">.</span><span class="nx">invoke</span><span class="p">(</span><span class="s1">&#39;dialog:openFile&#39;</span><span class="p">)</span>
+</span><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="3-crear-el-proceso-de-renderizado-en-la-interfaz-de-usuario_1">3. Crear el proceso de renderizado en la interfaz de usuario<a class="headerlink" href="#3-crear-el-proceso-de-renderizado-en-la-interfaz-de-usuario_1" title="Permanent link">&para;</a></h4>
+<p>Finalmente, screamos el HTML a cargar en <code>BrowserWindows</code>, que contiene un botón que, al hacer clic, llamará a <code>window.electronAPI.openFile</code> y mostrará el resultado en un elemento <code>&lt;span&gt;</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>    <span class="cm">&lt;!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP --&gt;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Security-Policy&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;default-src &#39;self&#39;; script-src &#39;self&#39;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Dialog<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="hll">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btn&quot;</span><span class="p">&gt;</span>Open a File<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="hll">    File path: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;filePath&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;./renderer.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><a id="__codelineno-13-13" name="__codelineno-13-13"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>La interfaz consiste en un botón que utilizaremos para enviar un mensaje IPC al proceso principal y un elemento <code>&lt;span&gt;</code> que utilizaremos para mostrar el resultado. Para hacer los elementos interactivos, añadimos algunas líneas de código a <code>renderer.js</code>, que aprovecha la API expuesta por el script de precarga.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">renderer.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btn&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">filePathElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;filePath&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="nx">btn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">openFile</span><span class="p">()</span>
+</span><a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">  </span><span class="nx">filePathElement</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filePath</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<p>En el código de arriba, se utiliza <code>await</code> para esperar el resultado de <code>window.electronAPI.openFile()</code> y luego se establece el resultado en el elemento <code>&lt;span&gt;</code>.</p>
+<h3 id="patron-3-principal-a-renderizador">Patrón 3: Principal a renderizador<a class="headerlink" href="#patron-3-principal-a-renderizador" title="Permanent link">&para;</a></h3>
+<p>Para enviar un mensaje desde el proceso principal a un proceso de renderizado, necesitamos especificar qué ventana de renderizado recibirá el mensaje. Los mensajes se envían a través de <a href="https://www.electronjs.org/docs/latest/api/web-contents"><code>WebContents</code></a> que se pueden obtener de <code>BrowserWindow</code>. Esta instancia de <code>WebContents</code> contiene un método <a href="https://www.electronjs.org/docs/latest/api/web-contents#contentssendchannel-args"><code>send</code></a> que puede usarse del mismo modo que <code>ipcRenderer.send</code> en el proceso de renderizado.</p>
+<p>Para demostrar este patrón, crearemos un contador de números controlado por el menú nativo del sistema operativo.</p>
+<h4 id="1-enviar-mensajes-con-el-modulo-webcontents">1. Enviar mensajes con el módulo <code>webContents</code><a class="headerlink" href="#1-enviar-mensajes-con-el-modulo-webcontents" title="Permanent link">&para;</a></h4>
+<p>Para esta demo, necesitamos crear un menú personalizado en usando el módulo <code>Menu</code> que usa <code>webContents.send</code> para enviar un mensaje IPC desde el proceso principal al proceso renderizador objetivo.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span>
+<span class="normal"><a href="#__codelineno-15-24">24</a></span>
+<span class="normal"><a href="#__codelineno-15-25">25</a></span>
+<span class="normal"><a href="#__codelineno-15-26">26</a></span>
+<span class="normal"><a href="#__codelineno-15-27">27</a></span>
+<span class="normal"><a href="#__codelineno-15-28">28</a></span>
+<span class="normal"><a href="#__codelineno-15-29">29</a></span>
+<span class="normal"><a href="#__codelineno-15-30">30</a></span>
+<span class="normal"><a href="#__codelineno-15-31">31</a></span>
+<span class="normal"><a href="#__codelineno-15-32">32</a></span>
+<span class="normal"><a href="#__codelineno-15-33">33</a></span>
+<span class="normal"><a href="#__codelineno-15-34">34</a></span>
+<span class="normal"><a href="#__codelineno-15-35">35</a></span>
+<span class="normal"><a href="#__codelineno-15-36">36</a></span>
+<span class="normal"><a href="#__codelineno-15-37">37</a></span>
+<span class="normal"><a href="#__codelineno-15-38">38</a></span>
+<span class="normal"><a href="#__codelineno-15-39">39</a></span>
+<span class="normal"><a href="#__codelineno-15-40">40</a></span>
+<span class="normal"><a href="#__codelineno-15-41">41</a></span>
+<span class="normal"><a href="#__codelineno-15-42">42</a></span>
+<span class="normal"><a href="#__codelineno-15-43">43</a></span>
+<span class="normal"><a href="#__codelineno-15-44">44</a></span>
+<span class="normal"><a href="#__codelineno-15-45">45</a></span>
+<span class="normal"><a href="#__codelineno-15-46">46</a></span>
+<span class="normal"><a href="#__codelineno-15-47">47</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="hll"><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">app</span><span class="p">,</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">,</span><span class="w"> </span><span class="nx">Menu</span><span class="p">,</span><span class="w"> </span><span class="nx">ipcMain</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+</span><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node:path&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">createWindow</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">mainWindow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BrowserWindow</span><span class="p">({</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="nx">webPreferences</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">      </span><span class="nx">preload</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;preload.js&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Menu</span><span class="p">.</span><span class="nx">buildFromTemplate</span><span class="p">([</span>
+</span><a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="hll"><span class="w">    </span><span class="p">{</span>
+</span><a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="hll"><span class="w">      </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span><a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="hll"><span class="w">      </span><span class="nx">submenu</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="hll"><span class="w">        </span><span class="p">{</span>
+</span><a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="hll"><span class="w">          </span><span class="nx">click</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">mainWindow</span><span class="p">.</span><span class="nx">webContents</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;update-counter&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">),</span>
+</span><a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="hll"><span class="w">          </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Increment&#39;</span>
+</span><a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="hll"><span class="w">        </span><span class="p">},</span>
+</span><a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="hll"><span class="w">        </span><span class="p">{</span>
+</span><a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="hll"><span class="w">          </span><span class="nx">click</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">mainWindow</span><span class="p">.</span><span class="nx">webContents</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;update-counter&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">),</span>
+</span><a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="hll"><span class="w">          </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Decrement&#39;</span>
+</span><a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="hll"><span class="w">        </span><span class="p">}</span>
+</span><a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="hll"><span class="w">      </span><span class="p">]</span>
+</span><a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="hll"><span class="w">    </span><span class="p">}</span>
+</span><a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="hll"><span class="w">  </span><span class="p">])</span>
+</span><a id="__codelineno-15-26" name="__codelineno-15-26"></a>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="hll"><span class="w">  </span><span class="nx">Menu</span><span class="p">.</span><span class="nx">setApplicationMenu</span><span class="p">(</span><span class="nx">menu</span><span class="p">)</span>
+</span><a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="w">  </span><span class="nx">mainWindow</span><span class="p">.</span><span class="nx">loadFile</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29"></a>
+<a id="__codelineno-15-30" name="__codelineno-15-30"></a><span class="w">  </span><span class="c1">// Open the DevTools.</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="w">  </span><span class="nx">mainWindow</span><span class="p">.</span><span class="nx">webContents</span><span class="p">.</span><span class="nx">openDevTools</span><span class="p">()</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32"></a><span class="p">}</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33"></a>
+<a id="__codelineno-15-34" name="__codelineno-15-34"></a><span class="nx">app</span><span class="p">.</span><span class="nx">whenReady</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35"></a><span class="hll"><span class="w">  </span><span class="nx">ipcMain</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;counter-value&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">_event</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-15-36" name="__codelineno-15-36"></a><span class="hll"><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="c1">// will print value to Node console</span>
+</span><a id="__codelineno-15-37" name="__codelineno-15-37"></a><span class="hll"><span class="w">  </span><span class="p">})</span>
+</span><a id="__codelineno-15-38" name="__codelineno-15-38"></a><span class="w">  </span><span class="nx">createWindow</span><span class="p">()</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39"></a>
+<a id="__codelineno-15-40" name="__codelineno-15-40"></a><span class="w">  </span><span class="nx">app</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;activate&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-41" name="__codelineno-15-41"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">BrowserWindow</span><span class="p">.</span><span class="nx">getAllWindows</span><span class="p">().</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="nx">createWindow</span><span class="p">()</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-15-43" name="__codelineno-15-43"></a><span class="p">})</span>
+<a id="__codelineno-15-44" name="__codelineno-15-44"></a>
+<a id="__codelineno-15-45" name="__codelineno-15-45"></a><span class="nx">app</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;window-all-closed&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-46" name="__codelineno-15-46"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">platform</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;darwin&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">quit</span><span class="p">()</span>
+<a id="__codelineno-15-47" name="__codelineno-15-47"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="2-exponer-ipcrendereron-en-el-script-preloadjs">2. Exponer <code>ipcRenderer.on</code> en el script <code>preload.js</code><a class="headerlink" href="#2-exponer-ipcrendereron-en-el-script-preloadjs" title="Permanent link">&para;</a></h4>
+<p>Como en los ejemplos anteriores, usamos los módulos <code>contextBridge</code> y <code>ipcRenderer</code> para exponer la funcionalidad IPC en el proceso de renderizado.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">preload.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">contextBridge</span><span class="p">,</span><span class="w"> </span><span class="nx">ipcRenderer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;electron&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="nx">contextBridge</span><span class="p">.</span><span class="nx">exposeInMainWorld</span><span class="p">(</span><span class="s1">&#39;electronAPI&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="hll"><span class="w">  </span><span class="nx">onUpdateCounter</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">ipcRenderer</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;update-counter&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">callback</span><span class="p">)</span>
+</span><a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="3-crear-el-proceso-de-renderizado-en-la-interfaz-de-usuario_2">3. Crear el proceso de renderizado en la interfaz de usuario<a class="headerlink" href="#3-crear-el-proceso-de-renderizado-en-la-interfaz-de-usuario_2" title="Permanent link">&para;</a></h4>
+<p>Para terminar de unirlo todo, creamos la interfaz HTML que contiene un elemento <code>&lt;span&gt;</code> que se actualizará con el valor del contador.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>    <span class="cm">&lt;!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP --&gt;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Security-Policy&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;default-src &#39;self&#39;; script-src &#39;self&#39;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Menu Counter<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="hll">    Current value: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;counter&quot;</span><span class="p">&gt;</span>0<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span><a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./renderer.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><a id="__codelineno-17-12" name="__codelineno-17-12"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>Finalmente, para hacer que los valores se actualicen en el documento HTML, añadimos algunas líneas de código a <code>renderer.js</code>, que aprovecha la API expuesta por el script de precarga.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">renderer.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span>
+<span class="normal"><a href="#__codelineno-18-6">6</a></span>
+<span class="normal"><a href="#__codelineno-18-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;counter&#39;</span><span class="p">)</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="nb">window</span><span class="p">.</span><span class="nx">electronAPI</span><span class="p">.</span><span class="nx">onUpdateCounter</span><span class="p">((</span><span class="nx">_event</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">oldValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">counter</span><span class="p">.</span><span class="nx">innerText</span><span class="p">)</span>
+</span><a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">newValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">oldValue</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">value</span>
+</span><a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="hll"><span class="w">  </span><span class="nx">counter</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">newValue</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
+</span><a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<p>En el código anterior, se utiliza <code>window.electronAPI.onUpdateCounter</code> para registrar un <em>listener</em> para el evento <code>update-counter</code> que actualiza el valor del elemento <code>&lt;span&gt;</code>.</p>
+<h3 id="patron-4-renderizador-a-renderizador">Patrón 4: Renderizador a renderizador<a class="headerlink" href="#patron-4-renderizador-a-renderizador" title="Permanent link">&para;</a></h3>
+<p>No existe una forma directa para enviar mensajes estre procesos de renderizado. Para conseguirlo tenemos dos opciones:</p>
+<ul>
+<li>Usar el proceso principal como intermediario. Esto implica enviar un mensaje desde cada renderer al proceso principal, que reenviará el mensaje al renderer objetivo.</li>
+<li>Pasar un <a href="https://www.electronjs.org/docs/latest/tutorial/message-ports"><code>MessagePort</code></a> desde el proceso principal a los dos renderers. Esto permite una comunicación directa entre los procesos renderizadores después de una configuración inicial.</li>
+</ul>
+<h3 id="serializacion-de-objetos">Serialización de objetos<a class="headerlink" href="#serializacion-de-objetos" title="Permanent link">&para;</a></h3>
+<p>La implementación IPC utiliza el estándar HTML <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm"><code>Structured Clone Algorithm</code></a> para serializar los objetos pasados entre procesos. Esto significa que los objetos que se envían a través de IPC deben ser compatibles con este algoritmo.</p>
+<p>En particular, los objetos DOM (ej. <code>Element</code>, <code>Location</code> y <code>DOMMatrix</code>), objetos Node.js con clases C++ (ej. <code>process.env</code>, miembros de <code>Stream</code>), y objetos Electron con clases C++ (ej. <code>WebContents</code>, <code>BrowserWindow</code> y <code>WebFrame</code>) no son serializables con el algoritmo de clonación estructurada.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jsanvil/din2023" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      
+    
+  </body>
+</html>

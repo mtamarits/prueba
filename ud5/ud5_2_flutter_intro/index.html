@@ -1,0 +1,1451 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ud5_1_usabilidad/">
+      
+      
+        <link rel="next" href="../ud5_3_flutter_layout/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+    
+    
+      
+        <title>UD5 - 5.2 Introducción a Flutter - DAM - Diseño de Interfaces - 2023/24</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/bs5_layout.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud5-52-introduccion-a-flutter" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-header__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAM - Diseño de Interfaces - 2023/24
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD5 - 5.2 Introducción a Flutter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proyectos/proyecto2ev/" class="md-tabs__link">
+          
+  
+  Proyecto 2ª ev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Inicio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud1/ud1_intro/" class="md-tabs__link">
+          
+  
+  UD1 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud2/ud2_1_electron_requisitos/" class="md-tabs__link">
+          
+  
+  UD2 Elementos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud3/ud3_1_componentes_basicos/" class="md-tabs__link">
+          
+  
+  UD3 Componentes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-tabs__link">
+          
+  
+  UD4 Componentes avanzados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ud5_1_usabilidad/" class="md-tabs__link">
+          
+  
+  UD5 Usabilidad y accesibilidad
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-nav__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAM - Diseño de Interfaces - 2023/24
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 2ª ev
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 2ª ev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyectos/proyecto2ev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DIN semipresencial 2023-24 - Proyecto 2ª Evaluación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Inicio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM Desarrollo de Interfaces 2023-2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entorno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entorno de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/ud1_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2 Elementos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 Elementos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_1_electron_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.1. Introducción a Electron. Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_2_primera_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.2. Creando la primera aplicación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_3_maquetacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.3. Maquetación básica del interfaz de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD3 Componentes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 Componentes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_1_componentes_basicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3 - 3.1 Componentes básicos de una interfaz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_2_electron_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3. 2 Comunicación entre procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD4 Componentes avanzados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD4 Componentes avanzados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.1 Componentes avanzados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_2_electron_react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.2 Integración de React en Electron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_3_react-eventos-estados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.3 Eventos y estados en React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_4_route-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.4 Navegación y persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_5_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.5 Aplicación de ejemplo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD5 Usabilidad y accesibilidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UD5 Usabilidad y accesibilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_1_usabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.1 Usabilidad y experiencia de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UD5 - 5.2 Introducción a Flutter
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.2 Introducción a Flutter
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dart" class="md-nav__link">
+    Dart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-del-entorno-de-desarrollo" class="md-nav__link">
+    Instalación del entorno de desarrollo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-entorno-de-desarrollo-vs-code" class="md-nav__link">
+    Configuración del entorno de desarrollo VS Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-proyecto-desde-vs-code" class="md-nav__link">
+    Crear un proyecto desde VS Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-proyecto-desde-la-linea-de-comandos" class="md-nav__link">
+    Crear un proyecto desde la línea de comandos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-un-proyecto" class="md-nav__link">
+    Estructura de un proyecto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widgets" class="md-nav__link">
+    Widgets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primera-aplicacion-siguiendo-el-tutorial-oficial" class="md-nav__link">
+    Primera aplicación siguiendo el tutorial oficial
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_3_flutter_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.3 Flutter: Widgets y Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_4_flutter_state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.4 Flutter: Gestión de estados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_5_flutter_navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.5 Flutter: Navegación e interactividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_6_flutter_persistence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.6 Flutter: Persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_7_flutter_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.7 Flutter: Comunicación con el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dart" class="md-nav__link">
+    Dart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-del-entorno-de-desarrollo" class="md-nav__link">
+    Instalación del entorno de desarrollo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-entorno-de-desarrollo-vs-code" class="md-nav__link">
+    Configuración del entorno de desarrollo VS Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-proyecto-desde-vs-code" class="md-nav__link">
+    Crear un proyecto desde VS Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-proyecto-desde-la-linea-de-comandos" class="md-nav__link">
+    Crear un proyecto desde la línea de comandos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-de-un-proyecto" class="md-nav__link">
+    Estructura de un proyecto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widgets" class="md-nav__link">
+    Widgets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primera-aplicacion-siguiendo-el-tutorial-oficial" class="md-nav__link">
+    Primera aplicación siguiendo el tutorial oficial
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ud5-52-introduccion-a-flutter">UD5 - 5.2 Introducción a Flutter<a class="headerlink" href="#ud5-52-introduccion-a-flutter" title="Permanent link">&para;</a></h1>
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
+<p>Flutter es un framework de código abierto desarrollado por <em>Google</em> para crear aplicaciones nativas multiplataforma. Permite crear aplicaciones para móviles, web y escritorio desde un único código fuente. Utiliza el lenguaje de programación <em>Dart</em>, también desarrollado por <em>Google</em>.</p>
+<p><em>Flutter</em> ha ganado popularidad en los últimos años, por su facilidad de uso, aprendizaje y rendimiento. Cada vez más empresas lo utilizan para desarrollar sus aplicaciones, aunque puede que en un futuro próximo <em>Kotlin Multiplatform</em>, todavía en fase beta, le haga sombra.</p>
+<h2 id="dart">Dart<a class="headerlink" href="#dart" title="Permanent link">&para;</a></h2>
+<p>Dart es un lenguaje de programación <strong>orientado a objetos</strong>, con <strong>tipado estático</strong> y con una <strong>sintaxis</strong> similar a la de <em>Java</em> o <em>C#</em>. Es un lenguaje <strong>compilado</strong>, pero también puede ser interpretado en tiempo de ejecución. Es un lenguaje de programación multiparadigma, ya que soporta programación orientada a objetos, programación imperativa y programación funcional.</p>
+<p>Como es similar a <em>Java</em>, iremos aprendiendo la sintaxis y características de <em>Dart</em> a medida avancemos en el desarrollo de aplicaciones con <em>Flutter</em>.</p>
+<p>Existe una herramienta en línea para probar <em>Dart</em> y <em>Flutter</em> sin necesidad de instalar nada: <a href="https://dartpad.dev/">Dart Pad</a></p>
+<p>Página oficial de <em>Dart</em> con un resumen de la sintaxis básica: <a href="https://dart.dev/language">https://dart.dev/language</a></p>
+<h2 id="instalacion-del-entorno-de-desarrollo">Instalación del entorno de desarrollo<a class="headerlink" href="#instalacion-del-entorno-de-desarrollo" title="Permanent link">&para;</a></h2>
+<p>Seguiremos la guía de instalación oficial de <em>Flutter</em> preparar el entorno de desarrollo: <a href="https://docs.flutter.dev/get-started/install">https://docs.flutter.dev/get-started/install</a></p>
+<ol>
+<li><em>System requirements</em>: Es importante leer los requisitos del sistema para poder instalar <em>Flutter</em>.</li>
+<li><em>Get the Flutter SDK</em>: Descargar e instalar el SDK de <em>Flutter</em> para nuestro sistema operativo.</li>
+<li><em>Update your path</em>: Añadir la ruta de instalación de <em>Flutter</em> al <em>PATH</em> del sistema.</li>
+<li><em>flutter doctor</em>: Ejecutar el comando <code>flutter doctor</code> para comprobar que tenemos todo lo necesario para desarrollar aplicaciones con <em>Flutter</em>.</li>
+<li><em>Android setup</em>: <strong>Opcionalmente</strong>, podemos instalar el <em>Android SDK</em> y configurar un emulador de <em>Android</em> para poder probar nuestras aplicaciones.</li>
+</ol>
+<h2 id="configuracion-del-entorno-de-desarrollo-vs-code">Configuración del entorno de desarrollo <em>VS Code</em><a class="headerlink" href="#configuracion-del-entorno-de-desarrollo-vs-code" title="Permanent link">&para;</a></h2>
+<p>Para desarrollar aplicaciones con <em>Flutter</em>, podemos utilizar cualquier editor de texto o IDE. En este caso, utilizaremos <em>Visual Studio Code</em>. Si todavía no lo tenemos instalado, podemos descargarlo desde la página oficial: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<p>Una vez abierto <em>VS Code</em>, instalaremos la extensión <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter"><em>Flutter extension</em></a>. Esta extensión facilitará el desarrollo así como la ejecución y depuración de aplicaciones.</p>
+<p><img alt="Flutter extension" src="../assets/flutter-vscode-extension.png" width="500" /></p>
+<h2 id="crear-un-proyecto-desde-vs-code">Crear un proyecto desde <em>VS Code</em><a class="headerlink" href="#crear-un-proyecto-desde-vs-code" title="Permanent link">&para;</a></h2>
+<p>Desde <em>VS Code</em> podemos crear un proyecto de <em>Flutter</em> desde la paleta de comandos (<em><strong><code>Ctrl</code></strong>+<strong><code>Shift</code></strong>+<strong><code>P</code></strong></em>). Buscamos el comando <em><strong>Flutter: New Project</strong></em> y seguimos los pasos para crear el proyecto.</p>
+<p><img alt="Paleta de comandos de _VS Code_" src="../assets/flutter-vscode-command-pallete.png" width="500" /></p>
+<p>Seleccionamos la <strong>plantilla base</strong> que queremos utilizar. En este caso, se ha elegido <em><strong>Application</strong></em>.</p>
+<p><img alt="Seleccionar plantilla" src="../assets/flutter-vscode-command-pallete-template.png" width="500" /></p>
+<p>Aparecerá una ventana emergente para <strong>seleccionar el directorio</strong> donde se creará el proyecto. <strong>Creará un nuevo directorio</strong> con el nombre del proyecto.</p>
+<p>Por último, nos solicitará el <strong>nombre del proyecto</strong>. Este nombre se utilizará para crear el paquete de la aplicación, por lo que debe ser único. En este caso, se ha elegido <code>helloworld</code>.</p>
+<p><img alt="Nombre del proyecto" src="../assets/flutter-vscode-command-pallete-name.png" width="500" /></p>
+<p>Una vez creado el proyecto, para ejecutarlo, primero debemos seleccionar el dispositivo de destino. Esto lo podemos hacer desde la barra inferior de <em>VS Code</em>.</p>
+<p><img alt="Seleccionar dispositivo de destino" src="../assets/flutter-vscode-devices1.png" /></p>
+<p>Y seleccionamos el dispositivo de destino.</p>
+<p><img alt="Seleccionar dispositivo de destino" src="../assets/flutter-vscode-devices2.png" width="500" /></p>
+<blockquote>
+<p>Tiene una opción para crear un dispositivo emulador de <em>Android</em> de forma sencilla.</p>
+</blockquote>
+<p>Para lanzar la aplicación, iremos a <em><strong>Run and Debug</strong></em>, al pulsar el botón, compilará la aplicación y la lanzará en el dispositivo seleccionado.</p>
+<p><img alt="Lanzar aplicación" src="../assets/flutter-vscode-build1.png" width="300" /></p>
+<p><img alt="Lanzar aplicación" src="../assets/flutter-helloworld-android.png" width="200" /></p>
+<h2 id="crear-un-proyecto-desde-la-linea-de-comandos">Crear un proyecto desde la línea de comandos<a class="headerlink" href="#crear-un-proyecto-desde-la-linea-de-comandos" title="Permanent link">&para;</a></h2>
+<p>Alternativamente, podemos crear un proyecto de <em>Flutter</em> desde la línea de comandos, podemos ejecutar <code>flutter create &lt;nombre_proyecto&gt;</code>.</p>
+<p>Ejemplo de creación de un proyecto base desde la líena de comandos de <em>Linux</em>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="hll">$<span class="w"> </span>flutter<span class="w"> </span>create<span class="w"> </span>helloworld
+</span><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Creating<span class="w"> </span>project<span class="w"> </span>helloworld...
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Resolving<span class="w"> </span>dependencies<span class="w"> </span><span class="k">in</span><span class="w"> </span>helloworld...<span class="w"> </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Got<span class="w"> </span>dependencies<span class="w"> </span><span class="k">in</span><span class="w"> </span>helloworld.
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Wrote<span class="w"> </span><span class="m">129</span><span class="w"> </span>files.
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>All<span class="w"> </span><span class="k">done</span>!
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>You<span class="w"> </span>can<span class="w"> </span>find<span class="w"> </span>general<span class="w"> </span>documentation<span class="w"> </span><span class="k">for</span><span class="w"> </span>Flutter<span class="w"> </span>at:<span class="w"> </span>https://docs.flutter.dev/
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Detailed<span class="w"> </span>API<span class="w"> </span>documentation<span class="w"> </span>is<span class="w"> </span>available<span class="w"> </span>at:<span class="w"> </span>https://api.flutter.dev/
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>If<span class="w"> </span>you<span class="w"> </span>prefer<span class="w"> </span>video<span class="w"> </span>documentation,<span class="w"> </span>consider:<span class="w"> </span>https://www.youtube.com/c/flutterdev
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>In<span class="w"> </span>order<span class="w"> </span>to<span class="w"> </span>run<span class="w"> </span>your<span class="w"> </span>application,<span class="w"> </span>type:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>helloworld
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span>$<span class="w"> </span>flutter<span class="w"> </span>run
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Your<span class="w"> </span>application<span class="w"> </span>code<span class="w"> </span>is<span class="w"> </span><span class="k">in</span><span class="w"> </span>helloworld/lib/main.dart.
+</code></pre></div>
+<p>Una vez creado el proyecto, nos indica que debemos entrar en el directorio que se ha creado y ejecutar el comando <code>flutter run</code> para ejecutar la aplicación.</p>
+<p>Nos solicita que elijamos un dispositivo de destino. En este caso, se elige <em>Linux</em>, pero también se puede elegir <em>Chrome</em> para ejecutar la aplicación en el navegador.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ cd helloworld/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$ flutter run
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Connected devices:
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Linux (desktop) • linux  • linux-x64      • Ubuntu 22.04.3 LTS 5.15.0-52-generic
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Chrome (web)    • chrome • web-javascript • Google Chrome 119.0.6045.123
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>[1]: Linux (linux)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>[2]: Chrome (chrome)
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Please choose one (or &quot;q&quot; to quit): 1
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Launching lib/main.dart on Linux in debug mode...
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Building Linux application...                                           
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Syncing files to device Linux...                                    79ms
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>Flutter run key commands.
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>r Hot reload. 🔥🔥🔥
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>R Hot restart.
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>h List all available interactive commands.
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>d Detach (terminate &quot;flutter run&quot; but leave application running).
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>c Clear the screen
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>q Quit (terminate the application on the device).
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>A Dart VM Service on Linux is available at: http://127.0.0.1:35111/9Neb9ZazZeE=/
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>The Flutter DevTools debugger and profiler on Linux is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:35111/9Neb9ZazZeE=/
+</code></pre></div>
+<p>Si todo ha ido bien, se abrirá una ventana con la aplicación en ejecución.</p>
+<p><img alt="Flutter Hello World" src="../assets/flutter-helloworld.png" width="300" /></p>
+<h2 id="estructura-de-un-proyecto">Estructura de un proyecto<a class="headerlink" href="#estructura-de-un-proyecto" title="Permanent link">&para;</a></h2>
+<p>En el ejemplo anterior, se ha creado un proyecto con la estructura por defecto. Veamos qué directorios y archivos se han creado:</p>
+<p><img alt="Flutter scaffolding" src="../assets/flutter-helloworld-scaffold.png" width="200" /></p>
+<p>Lo primero que puede llamarlos la atención son los directorios con nombre de distintas plataformas: <code>android</code>, <code>ios</code>, <code>linux</code>, <code>macos</code>, <code>web</code> y <code>windows</code>. Estos directorios contienen el código necesario para compilar la aplicación para cada una de las plataformas.</p>
+<p>Cada paquete necesita algunos metadatos para poder especificar sus dependencias. Todos estos metadatos van en el pubspec del paquete: un archivo llamado <strong><code>pubspec.yaml</code></strong> que está escrito en el lenguaje YAML.</p>
+<p>El archivo <strong><code>pubspec.yaml</code></strong> contiene la configuración del proyecto, así como las dependencias que utiliza. Es similar al archivo <code>package.json</code> de <em>Node.js</em>.</p>
+<ul>
+<li><strong><code>dependencies</code></strong>: Dependencias del proyecto. Especifica los paquetes en los que se basa la aplicación. Los paquetes de <em>Flutter</em> se pueden encontrar en <a href="https://pub.dev/">pub.dev</a>.</li>
+<li><strong><code>dev_dependencies</code></strong>: Dependencias de desarrollo del proyecto. Se definen los paquetes utilizados exclusivamente en entorno de desarrollo, como por ejemplo <em>linters</em> o <em>test</em>.</li>
+<li><strong><code>flutter</code></strong>: Configuración específica de <em>Flutter</em>. Más información en <a href="https://docs.flutter.dev/tools/pubspec">https://docs.flutter.dev/tools/pubspec</a>.</li>
+</ul>
+<h2 id="widgets">Widgets<a class="headerlink" href="#widgets" title="Permanent link">&para;</a></h2>
+<p>En <em>Flutter</em>, "todo" es un <em>widget</em>. Los <em>widgets</em> son los bloques de construcción básicos de la interfaz de usuario, podemos compararlo a los componentes que creamos en la unidad anterior. Cada <em>widget</em> es una clase que hereda de la clase <code>Widget</code>.</p>
+<p>Referencia a los <em>widgets</em> básicos en <em>Flutter</em>: <a href="https://docs.flutter.dev/ui/widgets/basics">https://docs.flutter.dev/ui/widgets/basics</a></p>
+<h2 id="primera-aplicacion-siguiendo-el-tutorial-oficial">Primera aplicación siguiendo el tutorial oficial<a class="headerlink" href="#primera-aplicacion-siguiendo-el-tutorial-oficial" title="Permanent link">&para;</a></h2>
+<p>La mejor forma de aprender los conceptos básicos de <em>Flutter</em> es siguiendo el tutorial oficial.<a href="https://codelabs.developers.google.com/codelabs/flutter-codelab-first">https://codelabs.developers.google.com/codelabs/flutter-codelab-first</a></p>
+<p>Está disponible en varios lenguajes, entre ellos el español, está organizado en pasos fáciles de seguir e incluye vídeos explicativos.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jsanvil/din2023" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      
+    
+  </body>
+</html>

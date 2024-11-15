@@ -1,0 +1,1747 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../ud4/ud4_5_example/">
+      
+      
+        <link rel="next" href="../ud5_2_flutter_intro/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+    
+    
+      
+        <title>UD5 - 5.1 Usabilidad y experiencia de usuario - DAM - Diseño de Interfaces - 2023/24</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/bs5_layout.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud5-51-usabilidad-y-experiencia-de-usuario" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-header__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAM - Diseño de Interfaces - 2023/24
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD5 - 5.1 Usabilidad y experiencia de usuario
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proyectos/proyecto2ev/" class="md-tabs__link">
+          
+  
+  Proyecto 2ª ev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Inicio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud1/ud1_intro/" class="md-tabs__link">
+          
+  
+  UD1 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud2/ud2_1_electron_requisitos/" class="md-tabs__link">
+          
+  
+  UD2 Elementos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud3/ud3_1_componentes_basicos/" class="md-tabs__link">
+          
+  
+  UD3 Componentes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-tabs__link">
+          
+  
+  UD4 Componentes avanzados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  UD5 Usabilidad y accesibilidad
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-nav__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAM - Diseño de Interfaces - 2023/24
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 2ª ev
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 2ª ev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyectos/proyecto2ev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DIN semipresencial 2023-24 - Proyecto 2ª Evaluación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Inicio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM Desarrollo de Interfaces 2023-2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entorno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entorno de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/ud1_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2 Elementos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 Elementos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_1_electron_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.1. Introducción a Electron. Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_2_primera_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.2. Creando la primera aplicación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_3_maquetacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.3. Maquetación básica del interfaz de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD3 Componentes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 Componentes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_1_componentes_basicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3 - 3.1 Componentes básicos de una interfaz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_2_electron_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3. 2 Comunicación entre procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD4 Componentes avanzados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD4 Componentes avanzados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_1_componentes_avanzados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.1 Componentes avanzados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_2_electron_react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.2 Integración de React en Electron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_3_react-eventos-estados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.3 Eventos y estados en React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_4_route-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.4 Navegación y persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ud4_5_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.5 Aplicación de ejemplo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD5 Usabilidad y accesibilidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UD5 Usabilidad y accesibilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UD5 - 5.1 Usabilidad y experiencia de usuario
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.1 Usabilidad y experiencia de usuario
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#porque-es-importante-la-usabilidad" class="md-nav__link">
+    Porqué es importante la usabilidad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-10-heuristicas-de-nielsen-para-el-diseno-de-interfaces-de-usuario" class="md-nav__link">
+    Las 10 heurísticas de Nielsen para el diseño de interfaces de usuario
+  </a>
+  
+    <nav class="md-nav" aria-label="Las 10 heurísticas de Nielsen para el diseño de interfaces de usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-visibilidad-del-estado-del-sistema" class="md-nav__link">
+    #1. Visibilidad del estado del sistema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-relacion-entre-el-sistema-y-el-mundo-real" class="md-nav__link">
+    #2. Relación entre el sistema y el mundo real
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-control-y-libertad-del-usuario" class="md-nav__link">
+    #3. Control y libertad del usuario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-consistencia-y-estandares" class="md-nav__link">
+    #4. Consistencia y estándares
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prevencion-de-errores" class="md-nav__link">
+    #5. Prevención de errores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-reconocer-en-lugar-de-recordar" class="md-nav__link">
+    #6. Reconocer en lugar de recordar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-flexibilidad-y-eficiencia-de-uso" class="md-nav__link">
+    #7. Flexibilidad y eficiencia de uso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-estetica-y-diseno-minimalista" class="md-nav__link">
+    #8. Estética y diseño minimalista
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-ayuda-a-los-usuarios-a-reconocer-diagnosticar-y-recuperarse-de-los-errores" class="md-nav__link">
+    #9. Ayuda a los usuarios a reconocer, diagnosticar y recuperarse de los errores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ayuda-y-documentacion" class="md-nav__link">
+    #10. Ayuda y documentación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiencia-de-usuario-ux" class="md-nav__link">
+    Experiencia de usuario UX
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiencia de usuario UX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-hick" class="md-nav__link">
+    Ley de Hick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-fitts" class="md-nav__link">
+    Ley de Fitts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-miller" class="md-nav__link">
+    Ley de Miller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-proximidad" class="md-nav__link">
+    Ley de proximidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efecto-de-usabilidad-estetica" class="md-nav__link">
+    Efecto de Usabilidad Estética
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-pregnancia" class="md-nav__link">
+    Ley de Pregnancia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-similitud-o-semejanza" class="md-nav__link">
+    Ley de Similitud o Semejanza
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efecto-de-posicionamiento-en-serie" class="md-nav__link">
+    Efecto de Posicionamiento en Serie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efecto-de-von-restorff" class="md-nav__link">
+    Efecto de Von Restorff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-tesler" class="md-nav__link">
+    Ley de Tesler
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_2_flutter_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.2 Introducción a Flutter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_3_flutter_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.3 Flutter: Widgets y Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_4_flutter_state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.4 Flutter: Gestión de estados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_5_flutter_navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.5 Flutter: Navegación e interactividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_6_flutter_persistence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.6 Flutter: Persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5_7_flutter_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.7 Flutter: Comunicación con el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#porque-es-importante-la-usabilidad" class="md-nav__link">
+    Porqué es importante la usabilidad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-10-heuristicas-de-nielsen-para-el-diseno-de-interfaces-de-usuario" class="md-nav__link">
+    Las 10 heurísticas de Nielsen para el diseño de interfaces de usuario
+  </a>
+  
+    <nav class="md-nav" aria-label="Las 10 heurísticas de Nielsen para el diseño de interfaces de usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-visibilidad-del-estado-del-sistema" class="md-nav__link">
+    #1. Visibilidad del estado del sistema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-relacion-entre-el-sistema-y-el-mundo-real" class="md-nav__link">
+    #2. Relación entre el sistema y el mundo real
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-control-y-libertad-del-usuario" class="md-nav__link">
+    #3. Control y libertad del usuario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-consistencia-y-estandares" class="md-nav__link">
+    #4. Consistencia y estándares
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prevencion-de-errores" class="md-nav__link">
+    #5. Prevención de errores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-reconocer-en-lugar-de-recordar" class="md-nav__link">
+    #6. Reconocer en lugar de recordar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-flexibilidad-y-eficiencia-de-uso" class="md-nav__link">
+    #7. Flexibilidad y eficiencia de uso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-estetica-y-diseno-minimalista" class="md-nav__link">
+    #8. Estética y diseño minimalista
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-ayuda-a-los-usuarios-a-reconocer-diagnosticar-y-recuperarse-de-los-errores" class="md-nav__link">
+    #9. Ayuda a los usuarios a reconocer, diagnosticar y recuperarse de los errores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ayuda-y-documentacion" class="md-nav__link">
+    #10. Ayuda y documentación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiencia-de-usuario-ux" class="md-nav__link">
+    Experiencia de usuario UX
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiencia de usuario UX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-hick" class="md-nav__link">
+    Ley de Hick
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-fitts" class="md-nav__link">
+    Ley de Fitts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-miller" class="md-nav__link">
+    Ley de Miller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-proximidad" class="md-nav__link">
+    Ley de proximidad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efecto-de-usabilidad-estetica" class="md-nav__link">
+    Efecto de Usabilidad Estética
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-pregnancia" class="md-nav__link">
+    Ley de Pregnancia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-similitud-o-semejanza" class="md-nav__link">
+    Ley de Similitud o Semejanza
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efecto-de-posicionamiento-en-serie" class="md-nav__link">
+    Efecto de Posicionamiento en Serie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efecto-de-von-restorff" class="md-nav__link">
+    Efecto de Von Restorff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ley-de-tesler" class="md-nav__link">
+    Ley de Tesler
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ud5-51-usabilidad-y-experiencia-de-usuario">UD5 - 5.1 Usabilidad y experiencia de usuario<a class="headerlink" href="#ud5-51-usabilidad-y-experiencia-de-usuario" title="Permanent link">&para;</a></h1>
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
+<p>La <strong>usabilidad</strong> es la facilidad con la que un usuario puede utilizar una aplicación para realizar una tarea concreta.</p>
+<p>Según la organización internacional W3C (<em>World Wide Web Consortium</em>), la usabilidad se define como:</p>
+<blockquote>
+<p>La <strong>usabilidad</strong> trata de <strong>diseñar productos para que sean efectivos, eficientes y satisfactorios</strong>. La usabilidad incluye el diseño de la <strong>experiencia del usuario</strong>. Esto puede incluir aspectos generales que impacten a todos y no afecten de manera desproporcionada a las personas con discapacidad.</p>
+</blockquote>
+<h2 id="porque-es-importante-la-usabilidad">Porqué es importante la usabilidad<a class="headerlink" href="#porque-es-importante-la-usabilidad" title="Permanent link">&para;</a></h2>
+<p>La usabilidad es una <strong>condición necesaria para la supervivencia de un sistema</strong>. Si una aplicación es <strong>difícil</strong> de usar, la gente la abandonará. Si los usuarios <strong>se pierden</strong> en la interfaz, se marcharán. Si la información es <strong>difícil</strong> de leer o no responde a las preguntas clave de los usuarios, estos lo abandonan. No existe un usuario que lea el <strong>manual</strong> o que pase mucho tiempo tratando de descubrir una interfaz. Hay muchas otras alternativas disponibles; <strong>salir es la primera línea de defensa cuando los usuarios encuentran una dificultad</strong>.</p>
+<blockquote>
+<p><em>La primera ley del comercio electrónico es que si los usuarios no encuentran el producto, tampoco pueden comprarlo.</em></p>
+</blockquote>
+<p>Las buenas prácticas aconsejan gastar alrededor del <strong>10% del presupuesto</strong> de un proyecto de diseño en usabilidad. En promedio, esto duplicará con creces las métricas de calidad. Las mejoras suelen ser sustanciales cuando se enfatiza la usabilidad en el proceso de diseño.</p>
+<p>Para <strong>proyectos internos</strong>, mejorar la usabilidad reduce el presupuesto de <strong>capacitación</strong> del personal y aumenta la cantidad de <strong>transacciones</strong> que realizan los empleados por hora. Para <strong>diseños externos</strong>, aumenta las <strong>ventas</strong>, el número de <strong>usuarios</strong> registrados o clientes potenciales, o cualquier otro indicador clave de rendimiento (KPI).</p>
+<h2 id="las-10-heuristicas-de-nielsen-para-el-diseno-de-interfaces-de-usuario">Las 10 heurísticas de <em>Nielsen</em> para el diseño de interfaces de usuario<a class="headerlink" href="#las-10-heuristicas-de-nielsen-para-el-diseno-de-interfaces-de-usuario" title="Permanent link">&para;</a></h2>
+<p>En 1994, <em>Jakob Nielsen</em> publicó <strong>10 heurísticas para el diseño de interfaces de usuario</strong>, que se han convertido en un <strong>estándar</strong> para evaluar la usabilidad de una aplicación. Estas heurísticas se pueden aplicar a cualquier tipo de interfaz de usuario, incluidas las aplicaciones de <strong>escritorio</strong>, <strong>web</strong> y <strong>móviles</strong>.</p>
+<p>A continuación, se describen las 10 heurísticas de <em>Nielsen</em>, actualizadas en 2020, extraídas del artículo <a href="https://www.nngroup.com/articles/ten-usability-heuristics/"><em>10 Usability Heuristics for User Interface Design</em></a>, y se proporcionan enlaces a artículos y recursos adicionales.</p>
+<h3 id="1-visibilidad-del-estado-del-sistema">#1. Visibilidad del estado del sistema<a class="headerlink" href="#1-visibilidad-del-estado-del-sistema" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><g><rect fill="none" height="24" width="24"/></g><g><path d="M17,5v16c0,0.55-0.45,1-1,1H8c-0.55,0-1-0.45-1-1V5c0-0.55,0.45-1,1-1h2V2h4v2h2C16.55,4,17,4.45,17,5z M15,6H9v8h6V6z"/></g></svg></p>
+<p>El diseño <strong>siempre debe mantener informados a los usuarios</strong> sobre lo que está sucediendo, a través de comentarios adecuados dentro de un período de tiempo razonable.</p>
+<p>Cuando los usuarios conocen el estado actual del sistema, conocen el resultado de sus interacciones anteriores y determinan los próximos pasos. Las interacciones predecibles crean confianza tanto en el producto como en la marca.</p>
+<ul>
+<li><strong>Comunicar</strong> claramente a los usuarios cuál es el <strong>estado</strong> del sistema; no se debe realizar ninguna acción con consecuencias para los usuarios sin informarles.</li>
+<li>Presentar comentarios al usuario lo más <strong>rápido</strong> posible (idealmente, inmediatamente).</li>
+<li>Generar confianza a través de una <strong>comunicación abierta y continua</strong>.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/visibility-system-status/">Visibility of System Status (Usability Heuristic #1)</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%201.pdf">Heuristic 1 - Visibility of System Status (PDF)</a></p>
+<h3 id="2-relacion-entre-el-sistema-y-el-mundo-real">#2. Relación entre el sistema y el mundo real<a class="headerlink" href="#2-relacion-entre-el-sistema-y-el-mundo-real" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg></p>
+<p>El diseño debe hablar el idioma de los usuarios. Utiliza palabras, frases y conceptos <strong>familiares para el usuario</strong>, en lugar de jerga interna. Sigue las <strong>convenciones del mundo real</strong>, haciendo que la información aparezca en un orden natural y lógico.</p>
+<ul>
+<li>Asegurarse de que los usuarios puedan <strong>comprender</strong> el significado sin tener que buscar la definición de una palabra.</li>
+<li><strong>No asumir</strong> nunca que la comprensión de palabras o conceptos coincidirá con la de sus usuarios.</li>
+<li><strong>Analizar la audiencia</strong> descubrirá la terminología familiar, así como sus modelos mentales en torno a conceptos importantes.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/match-system-real-world/">Match Between System and the Real World (Usability Heuristic #2)</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%202.pdf">Heuristic 2 - Match Between System and the Real World (PDF)</a></p>
+<h3 id="3-control-y-libertad-del-usuario">#3. Control y libertad del usuario<a class="headerlink" href="#3-control-y-libertad-del-usuario" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></svg></p>
+<p>Los usuarios suelen realizar acciones por error o cambian de opinión. <strong>Necesitan una "salida de emergencia" claramente marcada</strong> para abandonar la acción no deseada sin tener que pasar por un proceso extenso.</p>
+<ul>
+<li>Permitir <strong><code>Deshacer</code></strong> y **<code>Rehacer**</code>.</li>
+<li>Mostrar una forma clara de salir de la interacción actual, como un botón <strong><code>Cancelar</code></strong>.</li>
+<li>Asegurarse de que la salida esté claramente <strong>etiquetada</strong> y sea <strong>visible</strong>.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/user-control-and-freedom/">User Control and Freedom (Usability Heuristic #3)</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%203.pdf">Heuristic 3 - User Control and Freedom (PDF)</a></p>
+<h3 id="4-consistencia-y-estandares">#4. Consistencia y estándares<a class="headerlink" href="#4-consistencia-y-estandares" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></p>
+<p>Los usuarios no deberían tener que preguntarse si diferentes palabras, situaciones o acciones significan lo mismo. <strong>Sigue las convenciones de la industria y la plataforma</strong>.</p>
+<p>Según la <strong>Ley de <em>Jakob</em></strong> establece que las personas pasan la mayor parte de su tiempo utilizando productos digitales distintos al nuestro. Las experiencias de los usuarios con esos otros productos establecen sus expectativas. No mantener la coherencia puede aumentar la carga cognitiva de los usuarios al obligarlos a aprender algo nuevo.</p>
+<ul>
+<li>Mejorar la <strong>capacidad de aprendizaje</strong> manteniendo ambos tipos de coherencia: interna y externa.</li>
+<li><strong>Consistencia interna</strong>: Mantener la <strong>coherencia</strong> dentro de un solo producto o una familia de productos.</li>
+<li><strong>Consistencia externa</strong>: Seguir las <strong>convenciones</strong> establecidas de la industria.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/consistency-and-standards/">Maintain Consistency and Adhere to Standards (Usability Heuristic #4)</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%204.pdf">Heuristic 4 - Consistency and Standards (PDF)</a></p>
+<h3 id="5-prevencion-de-errores">#5. Prevención de errores<a class="headerlink" href="#5-prevencion-de-errores" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z"/></svg></p>
+<p>Los buenos mensajes de error son importantes, pero los mejores diseños deben <strong>evitar cuidadosamente los errores</strong>. Eliminar las condiciones propensas a errores o presentar a los usuarios una opción de confirmación antes de comprometerse con la acción.</p>
+<p>Hay dos tipos de errores: descuidos y equivocaciones. Los descuidos son <strong>errores inconscientes</strong> causados por falta de atención. Las equivocaciones son <strong>errores conscientes</strong> basados en un desajuste entre el modelo mental del usuario y el diseño.</p>
+<ul>
+<li><strong>Priorizar el esfuerzo</strong>: evita primero los errores con alto coste y luego las pequeñas frustraciones.</li>
+<li>Evitar <strong>descuidos</strong> proporcionando <strong>restricciones</strong> útiles y buenos <strong>valores predeterminados</strong>.</li>
+<li>Evitar <strong>equivocaciones</strong> eliminando cargas de <strong>memoria</strong>, permitiendo <strong>deshacer</strong> y <strong>advirtiendo</strong> a sus usuarios.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/slips/">Preventing User Errors: Avoiding Unconscious Slips</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%205.pdf">Heuristic 5 - Error Prevention (PDF)</a></p>
+<h3 id="6-reconocer-en-lugar-de-recordar">#6. Reconocer en lugar de recordar<a class="headerlink" href="#6-reconocer-en-lugar-de-recordar" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M13,8.57c-0.79,0-1.43,0.64-1.43,1.43s0.64,1.43,1.43,1.43s1.43-0.64,1.43-1.43S13.79,8.57,13,8.57z"/><path d="M13,3C9.25,3,6.2,5.94,6.02,9.64L4.1,12.2C3.85,12.53,4.09,13,4.5,13H6v3c0,1.1,0.9,2,2,2h1v3h7v-4.68 c2.36-1.12,4-3.53,4-6.32C20,6.13,16.87,3,13,3z M16,10c0,0.13-0.01,0.26-0.02,0.39l0.83,0.66c0.08,0.06,0.1,0.16,0.05,0.25 l-0.8,1.39c-0.05,0.09-0.16,0.12-0.24,0.09l-0.99-0.4c-0.21,0.16-0.43,0.29-0.67,0.39L14,13.83c-0.01,0.1-0.1,0.17-0.2,0.17h-1.6 c-0.1,0-0.18-0.07-0.2-0.17l-0.15-1.06c-0.25-0.1-0.47-0.23-0.68-0.39l-0.99,0.4c-0.09,0.03-0.2,0-0.25-0.09l-0.8-1.39 c-0.05-0.08-0.03-0.19,0.05-0.25l0.84-0.66C10.01,10.26,10,10.13,10,10c0-0.13,0.02-0.27,0.04-0.39L9.19,8.95 c-0.08-0.06-0.1-0.16-0.05-0.26l0.8-1.38c0.05-0.09,0.15-0.12,0.24-0.09l1,0.4c0.2-0.15,0.43-0.29,0.67-0.39l0.15-1.06 C12.02,6.07,12.1,6,12.2,6h1.6c0.1,0,0.18,0.07,0.2,0.17l0.15,1.06c0.24,0.1,0.46,0.23,0.67,0.39l1-0.4c0.09-0.03,0.2,0,0.24,0.09 l0.8,1.38c0.05,0.09,0.03,0.2-0.05,0.26l-0.85,0.66C15.99,9.73,16,9.86,16,10z"/></g></g></svg></p>
+<p>Minimizar la carga de memoria del usuario haciendo visibles elementos, acciones y opciones. El usuario <strong>no debería tener que recordar información</strong> de una parte de la interfaz a otra. La información necesaria para utilizar el diseño (por ejemplo, etiquetas de campos de entrada o elementos de menú) debe ser visible o fácilmente recuperable cuando sea necesario.</p>
+<p>Los humanos tienen memorias limitadas a corto plazo. Las interfaces que promueven el reconocimiento reducen la cantidad de esfuerzo cognitivo requerido por parte de los usuarios.</p>
+<ul>
+<li>Permitir que las personas <strong>reconozcan</strong> la información en la interfaz, en lugar de obligarlas a recordarla.</li>
+<li>Ofrecer <strong>ayuda de contexto</strong>, en lugar de presentar un largo tutorial para memorizar.</li>
+<li><strong>Reducir la información</strong> que los usuarios tienen que recordar.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/recognition-and-recall/">Memory Recognition and Recall in User Interfaces</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%206.pdf">Heuristic 6 - Recognition Rather Than Recall (PDF)</a></p>
+<h3 id="7-flexibilidad-y-eficiencia-de-uso">#7. Flexibilidad y eficiencia de uso<a class="headerlink" href="#7-flexibilidad-y-eficiencia-de-uso" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg></p>
+<p>Los atajos, ocultos para los usuarios novatos, pueden acelerar la interacción del usuario experto, de modo que el diseño pueda <strong>atender tanto a usuarios experimentados como a inexpertos</strong>. Permitir a los usuarios personalizar las acciones frecuentes.</p>
+<p>Los procesos flexibles se pueden llevar a cabo de diferentes maneras, de modo que las personas puedan elegir el método que más les convenga.</p>
+<ul>
+<li>Proporcionar <strong>aceleradores</strong> como atajos de teclado y gestos táctiles.</li>
+<li>Crear diseños adaptando el contenido y la funcionalidad al <strong>rol</strong> de cada usuario.</li>
+<li>Permitir la <strong>personalización</strong>, para que los usuarios puedan elegir cómo quieren que funcione el producto.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/flexibility-efficiency-heuristic/">Flexibility and Efficiency of Use (Usability Heuristic #7)</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%207.pdf">Heuristic 7 - Flexibility and Efficiency of Use (PDF)</a></p>
+<h3 id="8-estetica-y-diseno-minimalista">#8. Estética y diseño minimalista<a class="headerlink" href="#8-estetica-y-diseno-minimalista" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/></svg></p>
+<p>Las interfaces <strong>no deben contener información irrelevante</strong> o que rara vez se necesite. Cada unidad adicional de información en una interfaz compite con las unidades de información relevantes y disminuye su visibilidad relativa.</p>
+<p>Esta heurística no significa tener que usar un diseño plano; se trata de asegurarse de mantener el contenido y el diseño visual enfocados en lo esencial. Asegurarse de que los elementos visuales de la interfaz respalden los objetivos principales del usuario.</p>
+<ul>
+<li>Mantener el contenido y el diseño visual de la interfaz de usuario <strong>centrados en lo esencial</strong>.</li>
+<li>No permitir que <strong>elementos innecesario</strong>s distraigan a los usuarios de la información que realmente necesitan.</li>
+<li><strong>Priorizar</strong> el contenido y las funciones para mantener los <strong>objetivos principales</strong>.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/aesthetic-minimalist-design/">Aesthetic and Minimalist Design (Usability Heuristic #8)</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%208.pdf">Heuristic 8 - Aesthetic and Minimalist Design (PDF)</a></p>
+<h3 id="9-ayuda-a-los-usuarios-a-reconocer-diagnosticar-y-recuperarse-de-los-errores">#9. Ayuda a los usuarios a reconocer, diagnosticar y recuperarse de los errores<a class="headerlink" href="#9-ayuda-a-los-usuarios-a-reconocer-diagnosticar-y-recuperarse-de-los-errores" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg></p>
+<p>Los mensajes de error deben expresarse en un <strong>lenguaje sencillo</strong> (sin códigos de error), indicar con precisión el problema y sugerir una solución de manera constructiva.</p>
+<p>Estos mensajes de error también deben presentarse con tratamientos visuales que ayuden a los usuarios a notarlos y reconocerlos.</p>
+<ul>
+<li>Utilizar <strong>elementos visuales</strong> tradicionales para mensajes de error, como texto en negrita y rojo.</li>
+<li>Informar a los usuarios qué salió mal en un lenguaje que puedan entender; <strong>evitar la lenguaje técnico</strong>.</li>
+<li>Ofrecer a los usuarios una <strong>solución o alternativa</strong>, como un acceso directo que pueda resolver el error de inmediato.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/error-message-guidelines/">Error-Message Guidelines</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%209.pdf">Heuristic 9 - Help Users Recognize, Diagnose, and Recover from Errors (PDF)</a></p>
+<h3 id="10-ayuda-y-documentacion">#10. Ayuda y documentación<a class="headerlink" href="#10-ayuda-y-documentacion" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></p>
+<p>Es mejor si el sistema no necesita ninguna explicación adicional. Sin embargo, puede ser necesario proporcionar documentación para <strong>ayudar a los usuarios a comprender</strong> cómo completar sus tareas.</p>
+<p>El contenido de la ayuda y documentación debe ser fácil de encontrar y estar centrado en la tarea del usuario. Debe ser conciso y enumerar los pasos concretos que deben llevarse a cabo.</p>
+<ul>
+<li>Asegurarse que la documentación de ayuda sea <strong>fácil de encontrar</strong>.</li>
+<li>Siempre que sea posible, presentar la documentación en el <strong>contexto</strong> justo en el momento que el usuario lo requiera.</li>
+<li>Enumerar los <strong>pasos concretos</strong> a llevar a cabo.</li>
+</ul>
+<p>Artículo: <a href="https://www.nngroup.com/articles/help-and-documentation/">Help and Documentation (Usability Heuristic #10)</a></p>
+<p>Infografía: <a href="../assets/pdf/NNg%20Jakob%27s%20Usability%20Heuristic%2010.pdf">Heuristic 10 - Help and Documentation (PDF)</a></p>
+<h2 id="experiencia-de-usuario-ux">Experiencia de usuario UX<a class="headerlink" href="#experiencia-de-usuario-ux" title="Permanent link">&para;</a></h2>
+<p>La <strong>experiencia de usuario</strong> es el proceso de diseño de productos que sean útiles, fáciles de usar y agradables de interactuar.</p>
+<p>Existen una serie de Leyes de la UX que nos ayudan a diseñar productos que cumplan con estos requisitos, a continuación se describen algunas de las más importantes:</p>
+<h3 id="ley-de-hick">Ley de <em>Hick</em><a class="headerlink" href="#ley-de-hick" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg> La <strong>Ley de <em>Hick</em></strong> establece que el <strong>tiempo que se tarda en tomar una decisión</strong> aumenta con el <strong>número opciones</strong>.</p>
+<h3 id="ley-de-fitts">Ley de <em>Fitts</em><a class="headerlink" href="#ley-de-fitts" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><g><rect fill="none" height="24" width="24"/></g><g><path d="M13.92,8C13.44,5.16,10.97,3,8,3C4.69,3,2,5.69,2,9c0,2.97,2.16,5.44,5,5.92L7,21h2l0-6.09c0-0.98-0.71-1.8-1.67-1.97 C5.44,12.63,4,10.98,4,9c0-2.21,1.79-4,4-4c1.98,0,3.63,1.44,3.94,3.33C12.11,9.29,12.93,10,13.91,10l4.26,0l-1.59,1.59L18,13l4-4 l-4-4l-1.41,1.41L18.17,8L13.92,8z"/></g></svg> La <strong>Ley de <em>Fitts</em></strong> establece que el <strong>tiempo que se tarda en moverse</strong> a un objetivo depende de dos factores: la <strong>distancia</strong> al objetivo y el <strong>tamaño</strong> del objetivo.</p>
+<h3 id="ley-de-miller">Ley de <em>Miller</em><a class="headerlink" href="#ley-de-miller" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2l-5.5 9h11z"/><circle cx="17.5" cy="17.5" r="4.5"/><path d="M3 13.5h8v8H3z"/></svg> La <strong>Ley de <em>Miller</em></strong> establece que el <strong>número de elementos</strong> que una persona puede retener en su <strong>memoria a corto plazo</strong> es de <strong>7 a 2</strong>.</p>
+<h3 id="ley-de-proximidad">Ley de proximidad<a class="headerlink" href="#ley-de-proximidad" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M19.5,9.5c-1.03,0-1.9,0.62-2.29,1.5h-2.92C13.9,10.12,13.03,9.5,12,9.5s-1.9,0.62-2.29,1.5H6.79 C6.4,10.12,5.53,9.5,4.5,9.5C3.12,9.5,2,10.62,2,12s1.12,2.5,2.5,2.5c1.03,0,1.9-0.62,2.29-1.5h2.92c0.39,0.88,1.26,1.5,2.29,1.5 s1.9-0.62,2.29-1.5h2.92c0.39,0.88,1.26,1.5,2.29,1.5c1.38,0,2.5-1.12,2.5-2.5S20.88,9.5,19.5,9.5z"/></g></g></g></svg> La <strong>Ley de proximidad</strong> establece que los elementos que están <strong>cerca</strong> entre sí se perciben como <strong>relacionados</strong>.</p>
+<h3 id="efecto-de-usabilidad-estetica">Efecto de Usabilidad Estética<a class="headerlink" href="#efecto-de-usabilidad-estetica" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> El <strong>Efecto de Usabilidad Estética</strong> establece que las personas perciben los <strong>diseños estéticos</strong> como más <strong>fáciles</strong> de usar que los diseños menos estéticos.</p>
+<h3 id="ley-de-pregnancia">Ley de Pregnancia<a class="headerlink" href="#ley-de-pregnancia" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><circle cx="14.5" cy="10.5" r="1.25"/><circle cx="9.5" cy="10.5" r="1.25"/><path d="M22.94 12.66c.04-.21.06-.43.06-.66s-.02-.45-.06-.66c-.25-1.51-1.36-2.74-2.81-3.17-.53-1.12-1.28-2.1-2.19-2.91C16.36 3.85 14.28 3 12 3s-4.36.85-5.94 2.26c-.92.81-1.67 1.8-2.19 2.91-1.45.43-2.56 1.65-2.81 3.17-.04.21-.06.43-.06.66s.02.45.06.66c.25 1.51 1.36 2.74 2.81 3.17.52 1.11 1.27 2.09 2.17 2.89C7.62 20.14 9.71 21 12 21s4.38-.86 5.97-2.28c.9-.8 1.65-1.79 2.17-2.89 1.44-.43 2.55-1.65 2.8-3.17zM19 14c-.1 0-.19-.02-.29-.03-.2.67-.49 1.29-.86 1.86C16.6 17.74 14.45 19 12 19s-4.6-1.26-5.85-3.17c-.37-.57-.66-1.19-.86-1.86-.1.01-.19.03-.29.03-1.1 0-2-.9-2-2s.9-2 2-2c.1 0 .19.02.29.03.2-.67.49-1.29.86-1.86C7.4 6.26 9.55 5 12 5s4.6 1.26 5.85 3.17c.37.57.66 1.19.86 1.86.1-.01.19-.03.29-.03 1.1 0 2 .9 2 2s-.9 2-2 2zM7.5 14c.76 1.77 2.49 3 4.5 3s3.74-1.23 4.5-3h-9z"/></svg> La <strong>Ley de Pregnancia</strong> establece que las personas perciben los <strong>diseños más simples</strong> como más <strong>intuitivos</strong> que los diseños más complejos.</p>
+<h3 id="ley-de-similitud-o-semejanza">Ley de Similitud o Semejanza<a class="headerlink" href="#ley-de-similitud-o-semejanza" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg> La <strong>Ley de Similitud o Semeljanza</strong> establece que los elementos que comparten atributos visuales como forma, tamaño, color, textura o valor se perciben como más <strong>relacionados</strong> que los elementos que no comparten atributos visuales.</p>
+<h3 id="efecto-de-posicionamiento-en-serie">Efecto de Posicionamiento en Serie<a class="headerlink" href="#efecto-de-posicionamiento-en-serie" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/></svg> El <strong>Efecto de Posicionamiento en Serie</strong> establece que las personas recuerdan mejor los elementos al <strong>principio</strong> y al <strong>final</strong> de una lista.</p>
+<h3 id="efecto-de-von-restorff">Efecto de Von Restorff<a class="headerlink" href="#efecto-de-von-restorff" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 13v8h8v-8h-8zM3 21h8v-8H3v8zM3 3v8h8V3H3zm13.66-1.31L11 7.34 16.66 13l5.66-5.66-5.66-5.65z"/></svg> El <strong>Efecto de Von Restorff</strong> establece que los elementos que se destacan de su entorno se <strong>recuerdan</strong> mejor que los elementos que se mezclan con su entorno.</p>
+<h3 id="ley-de-tesler">Ley de <em>Tesler</em><a class="headerlink" href="#ley-de-tesler" title="Permanent link">&para;</a></h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#888888"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4l16-.02V7z"/></svg> La <strong>Ley de <em>Tesler</em></strong>, principio de Conservación de la Complejidad, establece que cada aplicación tiene una cantidad fija de complejidad que no se puede eliminar o reducir. La única opción es mover la complejidad de un lugar a otro.</p>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/"><em>Nielsen Norman Group</em> - <em>10 Usability Heuristics for User Interface Design</em></a></li>
+<li><a href="https://lawsofux.com/es/">Leyes de la UX</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Experiencia_de_usuario">Wikipedia - Experiencia de usuario</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jsanvil/din2023" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      
+    
+  </body>
+</html>

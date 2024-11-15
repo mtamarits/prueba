@@ -1,0 +1,2302 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ud4_4_route-store/">
+      
+      
+        <link rel="next" href="../../ud5/ud5_1_usabilidad/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+    
+    
+      
+        <title>UD4 - 4.5 Aplicación de ejemplo - DAM - Diseño de Interfaces - 2023/24</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/bs5_layout.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud4-45-aplicacion-de-ejemplo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-header__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAM - Diseño de Interfaces - 2023/24
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD4 - 4.5 Aplicación de ejemplo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proyectos/proyecto2ev/" class="md-tabs__link">
+          
+  
+  Proyecto 2ª ev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Inicio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud1/ud1_intro/" class="md-tabs__link">
+          
+  
+  UD1 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud2/ud2_1_electron_requisitos/" class="md-tabs__link">
+          
+  
+  UD2 Elementos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud3/ud3_1_componentes_basicos/" class="md-tabs__link">
+          
+  
+  UD3 Componentes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ud4_1_componentes_avanzados/" class="md-tabs__link">
+          
+  
+  UD4 Componentes avanzados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud5/ud5_1_usabilidad/" class="md-tabs__link">
+          
+  
+  UD5 Usabilidad y accesibilidad
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAM - Diseño de Interfaces - 2023/24" class="md-nav__button md-logo" aria-label="DAM - Diseño de Interfaces - 2023/24" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DAM - Diseño de Interfaces - 2023/24
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto 2ª ev
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto 2ª ev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyectos/proyecto2ev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DIN semipresencial 2023-24 - Proyecto 2ª Evaluación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Inicio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM Desarrollo de Interfaces 2023-2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entorno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entorno de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/ud1_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2 Elementos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 Elementos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_1_electron_requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.1. Introducción a Electron. Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_2_primera_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.2. Creando la primera aplicación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ud2_3_maquetacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 - 2.3. Maquetación básica del interfaz de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD3 Componentes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 Componentes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_1_componentes_basicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3 - 3.1 Componentes básicos de una interfaz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ud3_2_electron_procesos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3. 2 Comunicación entre procesos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD4 Componentes avanzados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD4 Componentes avanzados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4_1_componentes_avanzados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.1 Componentes avanzados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4_2_electron_react/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.2 Integración de React en Electron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4_3_react-eventos-estados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.3 Eventos y estados en React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4_4_route-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.4 Navegación y persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UD4 - 4.5 Aplicación de ejemplo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UD4 - 4.5 Aplicación de ejemplo
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicacion" class="md-nav__link">
+    Aplicación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorio" class="md-nav__link">
+    Repositorio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura" class="md-nav__link">
+    Estructura
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mainindexjs" class="md-nav__link">
+    main/index.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preloadindexjs" class="md-nav__link">
+    preload/index.js
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-react" class="md-nav__link">
+    Componentes React
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes React">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appjsx" class="md-nav__link">
+    App.jsx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applistjsx" class="md-nav__link">
+    AppList.jsx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appedititemjsx" class="md-nav__link">
+    AppEditItem.jsx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#themeswitcherjsx" class="md-nav__link">
+    ThemeSwitcher.jsx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootstrap-y-sass" class="md-nav__link">
+    Bootstrap y Sass
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD5 Usabilidad y accesibilidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UD5 Usabilidad y accesibilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_1_usabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.1 Usabilidad y experiencia de usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_2_flutter_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.2 Introducción a Flutter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_3_flutter_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.3 Flutter: Widgets y Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_4_flutter_state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.4 Flutter: Gestión de estados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_5_flutter_navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.5 Flutter: Navegación e interactividad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_6_flutter_persistence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.6 Flutter: Persistencia de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ud5_7_flutter_http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD5 - 5.7 Flutter: Comunicación con el servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicacion" class="md-nav__link">
+    Aplicación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorio" class="md-nav__link">
+    Repositorio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura" class="md-nav__link">
+    Estructura
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mainindexjs" class="md-nav__link">
+    main/index.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preloadindexjs" class="md-nav__link">
+    preload/index.js
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-react" class="md-nav__link">
+    Componentes React
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes React">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appjsx" class="md-nav__link">
+    App.jsx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applistjsx" class="md-nav__link">
+    AppList.jsx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appedititemjsx" class="md-nav__link">
+    AppEditItem.jsx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#themeswitcherjsx" class="md-nav__link">
+    ThemeSwitcher.jsx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootstrap-y-sass" class="md-nav__link">
+    Bootstrap y Sass
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ud4-45-aplicacion-de-ejemplo">UD4 - 4.5 Aplicación de ejemplo<a class="headerlink" href="#ud4-45-aplicacion-de-ejemplo" title="Permanent link">&para;</a></h1>
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
+<p>Con todo lo que hemos aprendido hasta ahora, vamos a analizar una aplicación de ejemplo que nos permita ver cómo se pueden aplicar los conceptos que hemos visto.</p>
+<h2 id="aplicacion">Aplicación<a class="headerlink" href="#aplicacion" title="Permanent link">&para;</a></h2>
+<p>La aplicación que vamos a ver es una lista de la compra. En ella podemos añadir elementos a la lista, marcarlos como comprados, editarlos y eliminarlos.</p>
+<p>La aplicación está desarrollada con <em>React</em> y <em>Electron</em> utilizando el empaquetador <em>Vite</em>. Para el almacenamiento de los datos se utiliza la librería <code>electron-store</code>, que nos permite guardar los datos en un fichero JSON. Para la gestión de rutas se utiliza <code>react-router-dom</code>, lo que facilita la navegación entre componentes sin depender del proceso principal de <em>Electron</em>.</p>
+<h2 id="repositorio">Repositorio<a class="headerlink" href="#repositorio" title="Permanent link">&para;</a></h2>
+<p>El código fuente de la aplicación se encuentra en el repositorio:</p>
+<p><a href="https://github.com/jsanvil/din23-electron-react-app-grocery-list">https://github.com/jsanvil/din23-electron-react-app-grocery-list</a></p>
+<h2 id="estructura">Estructura<a class="headerlink" href="#estructura" title="Permanent link">&para;</a></h2>
+<p>Diagrama con los principales componentes de la aplicación:</p>
+<pre class="mermaid"><code>%%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
+flowchart TD
+
+    subgraph BrowserWindow \n React app
+        APP --&gt; VL[AppList.jsx]
+        APP --&gt; VE[AppEditItem.jsx]
+
+        VL --&gt; CFORM[ItemInputForm.jsx]
+        VL --&gt; CLIST[ItemList.jsx]
+        CLIST --&gt; CIROW[ItemRow.jsx]
+        VL --&gt; CFILT[ItemListFilters.jsx]
+        VL --&gt; CTHEM[ThemeSwitcher.jsx]
+        style APP fill:#fae,stroke:#888
+        style VL fill:#aef,stroke:#888
+        style VE fill:#aef,stroke:#888
+        style CFORM fill:#fea,stroke:#888
+        style CLIST fill:#fea,stroke:#888
+        style CIROW fill:#fea,stroke:#888
+        style CFILT fill:#fea,stroke:#888
+        style CTHEM fill:#fea,stroke:#888
+    end
+
+    PR &lt;-.-&gt; APP[App.jsx]
+
+    subgraph "Electron"
+        MP(main) &lt;--&gt; PR(preload)
+        MP &lt;--&gt; ST(Store)
+    end
+
+    ST &lt;--&gt; JS[(JSON)]</code></pre>
+<h3 id="mainindexjs">main/index.js<a class="headerlink" href="#mainindexjs" title="Permanent link">&para;</a></h3>
+<p><strong>Proceso principal</strong> de <em>Electron</em>.</p>
+<p>Utiliza la librería <code>electron-store</code> para almacenar los datos de la aplicación en un fichero <code>JSON</code> en el sistema de archivos del usuario.</p>
+<p>Contiene los siguientes <strong>eventos</strong>:</p>
+<ul>
+<li>
+<p><strong><code>store:get-list</code></strong>. Lee del fichero JSON y envía los datos al proceso de renderizado.</p>
+</li>
+<li>
+<p><strong><code>store:get-item</code></strong>. Busca un elemento con un ID determinado y lo envía al proceso de renderizado.</p>
+</li>
+<li>
+<p><strong><code>store:add-item</code></strong>. Añade un elemento a la lista de la compra y lo almacena en el fichero JSON. Devuelve la lista de la compra actualizada.</p>
+</li>
+<li>
+<p><strong><code>store:update-item</code></strong>. Edita un elemento de la lista de la compra y lo almacena en el fichero JSON. Devuelve la lista de la compra actualizada.</p>
+</li>
+<li>
+<p><strong><code>store:delete-item</code></strong>. Elimina un elemento de la lista de la compra y lo almacena en el fichero JSON. Devuelve la lista de la compra actualizada.</p>
+</li>
+<li>
+<p><strong><code>store:confirm-item</code></strong>. Muestra un diálogo de confirmación al descartar los cambios en un elemento. Con las opciones de guardar, descartar los cambios y cancelar la acción.</p>
+</li>
+</ul>
+<h3 id="preloadindexjs">preload/index.js<a class="headerlink" href="#preloadindexjs" title="Permanent link">&para;</a></h3>
+<p>Encargado de conectar el proceso de renderizado con el proceso principal.</p>
+<p>Expone los siguientes métodos en <code>window.api</code> que hacen las correspondientes llamadas a <code>ipcMain</code> del proceso principal:</p>
+<ul>
+<li><strong><code>getList</code></strong></li>
+<li><strong><code>getItem</code></strong></li>
+<li><strong><code>addItem</code></strong></li>
+<li><strong><code>updateItem</code></strong></li>
+<li><strong><code>deleteItem</code></strong></li>
+<li><strong><code>confirmItem</code></strong></li>
+</ul>
+<h2 id="componentes-react">Componentes React<a class="headerlink" href="#componentes-react" title="Permanent link">&para;</a></h2>
+<h3 id="appjsx">App.jsx<a class="headerlink" href="#appjsx" title="Permanent link">&para;</a></h3>
+<p>Componente de entrada a la aplicación.</p>
+<p>Utiliza la librería <code>react-router-dom</code> para la navegación entre componentes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">HashRouter</span><span class="p">,</span><span class="w"> </span><span class="nx">Route</span><span class="p">,</span><span class="w"> </span><span class="nx">Routes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">AppList</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./AppList&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">AppEditItem</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./AppEditItem&#39;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">HashRouter</span><span class="o">&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">Routes</span><span class="o">&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">Route</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="w"> </span><span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">AppList</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">Route</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s2">&quot;/:itemId&quot;</span><span class="w"> </span><span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">AppEditItem</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/Routes&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/HashRouter&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="applistjsx">AppList.jsx<a class="headerlink" href="#applistjsx" title="Permanent link">&para;</a></h3>
+<p>Componente utilizado como <strong>vista principal</strong> para representar la lista de la compra, añadir nuevos elementos y filtrar contenido.</p>
+<p>Se definen dos estados:</p>
+<ul>
+<li>
+<p><strong><code>itemList</code></strong> es el estado que contiene la lista de elementos.</p>
+<div class="highlight"><span class="filename">itemList</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">itemList</span><span class="p">,</span><span class="w"> </span><span class="nx">setItemList</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">([])</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong><code>filters</code></strong> es el estado que contiene los filtros de la lista.</p>
+<div class="highlight"><span class="filename">filters</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">filters</span><span class="p">,</span><span class="w"> </span><span class="nx">setFilters</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">checked</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+</li>
+</ul>
+<p>Al iniciar el componente, se obtiene la lista de elementos del proceso principal y se almacena en el estado <code>itemList</code>.</p>
+<div class="highlight"><span class="filename">AppList.jsx - solicitar y recibir la lista de elementos</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span><span class="c1">// useEffect se utiliza para sincronizar con un sistema externo</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="c1">// En este caso, se utiliza para obtener la lista de desde el proceso principal</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">getList</span><span class="p">()</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[])</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="c1">// Se activa el listener para recibir la lista de elementos</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="c1">// cada vez que haya cambios actualizará la lista</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">electron</span><span class="p">.</span><span class="nx">ipcRenderer</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;list-updated&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">handleUpdateList</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">electron</span><span class="p">.</span><span class="nx">ipcRenderer</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s1">&#39;list-updated&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">handleUpdateList</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="c1">// Listener para recibir la lista de elementos</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">  </span><span class="c1">// antes de actualizar el estado, se filtran los elementos</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleUpdateList</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span><span class="w"> </span><span class="nx">list</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">newList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getFilteredList</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="nx">setItemList</span><span class="p">([...</span><span class="nx">newList</span><span class="p">])</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">  </span><span class="c1">// Devuelve la lista filtrada con los parámetros del estado filters</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">getFilteredList</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">filteredList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[...</span><span class="nx">list</span><span class="p">]</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">filters</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">filters</span><span class="p">.</span><span class="nx">checked</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">      </span><span class="nx">filteredList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">list</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">().</span><span class="nx">includes</span><span class="p">(</span><span class="nx">filters</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">())</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">filters</span><span class="p">.</span><span class="nx">checked</span><span class="p">)</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">checked</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">      </span><span class="p">})</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">filteredList</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<p>Por otro lado se definen los siguientes <strong>manejadores de eventos</strong>:</p>
+<div class="highlight"><span class="filename">AppList.jsx - handlers</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="c1">// Actualiza los filtros y vuelve a pedir la lista</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleFilters</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">checked</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">newFilters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="nx">checked</span><span class="o">:</span><span class="w"> </span><span class="nx">checked</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nx">setFilters</span><span class="p">(</span><span class="nx">newFilters</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">getList</span><span class="p">()</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="c1">// Marca un elemento como completado y lo actualiza</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleChecked</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">checked</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">updateItem</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">  </span><span class="c1">// Muestra un diálogo de confirmación para borrar un elemento</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleDelete</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<p>Vista:</p>
+<div class="highlight"><span class="filename">AppList.jsx - render</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;app&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;app-header&quot;</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;container d-flex justify-content-between align-items-center&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;display-5 text-primary&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">em</span><span class="o">&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-bag-check-fill&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt; Lista de la compra</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">          </span><span class="o">&lt;</span><span class="err">/em&gt;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="p">{</span><span class="cm">/* Componente encargado de cambiar el tema de la aplicación (light/dark) */</span><span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">ThemeSwitcher</span><span class="w"> </span><span class="o">/&gt;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* Componente encargado de añadir nuevos elementos a la lista */</span><span class="p">}</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">ItemInputForm</span><span class="w"> </span><span class="o">/&gt;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* Componente encargado de mostrar los elementos de la lista */</span><span class="p">}</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">ItemList</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="nx">itemList</span><span class="o">=</span><span class="p">{</span><span class="nx">itemList</span><span class="p">}</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">        </span><span class="nx">filters</span><span class="o">=</span><span class="p">{</span><span class="nx">filters</span><span class="p">}</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="nx">deleteCallback</span><span class="o">=</span><span class="p">{</span><span class="nx">handleDelete</span><span class="p">}</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="nx">checkCallback</span><span class="o">=</span><span class="p">{</span><span class="nx">handleChecked</span><span class="p">}</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">      </span><span class="o">/&gt;</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* Componente encargado aplicar filtros la lista */</span><span class="p">}</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">ItemListFilters</span><span class="w"> </span><span class="nx">filterCallback</span><span class="o">=</span><span class="p">{</span><span class="nx">handleFilters</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</code></pre></div>
+<p><img alt="Vista principal" src="../assets/example-app-list-components.png" /></p>
+<ul>
+<li>
+<p><code>components/ItemInputForm.jsx</code></p>
+<p>Formulario simple para añadir nuevos elementos.</p>
+<ul>
+<li>Importa la clase <code>Item.class.js</code> que define las propiedades de un elemento de la lista.</li>
+<li>Mediante el evento <code>onSubmit</code> del formulario se llama a la función <code>handleAddItem</code>.</li>
+<li>La función <code>handleAddItem</code> se encarga de crear un nuevo elemento y hacer la llamada al proceso principal para añadirlo a la lista.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ItemInputForm.jsx</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span>
+<span class="normal"><a href="#__codelineno-6-32">32</a></span>
+<span class="normal"><a href="#__codelineno-6-33">33</a></span>
+<span class="normal"><a href="#__codelineno-6-34">34</a></span>
+<span class="normal"><a href="#__codelineno-6-35">35</a></span>
+<span class="normal"><a href="#__codelineno-6-36">36</a></span>
+<span class="normal"><a href="#__codelineno-6-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="hll"><span class="k">import</span><span class="w"> </span><span class="nx">Item</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../model/Item.class&#39;</span>
+</span><a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="hll"><span class="kd">function</span><span class="w"> </span><span class="nx">handleAddItem</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">itemName</span><span class="p">.</span><span class="nx">value</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="k">return</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Item</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="hll"><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+</span><a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">reset</span><span class="p">()</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">itemName</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="p">}</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">ItemInputForm</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;app-item-input&quot;</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;container&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="hll"><span class="w">    </span><span class="o">&lt;</span><span class="nx">form</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;itemForm&quot;</span><span class="w"> </span><span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">handleAddItem</span><span class="p">}</span><span class="o">&gt;</span>
+</span><a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;d-flex gap-2 align-items-center&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;input-group&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;input-group-text text-primary&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">                </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-pencil-square&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">            </span><span class="o">&lt;</span><span class="err">/span&gt;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">input</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">                </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">                </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;itemName&quot;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">                </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;itemName&quot;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">                </span><span class="nx">autoComplete</span><span class="o">=</span><span class="s2">&quot;off&quot;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="w">                </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-control&quot;</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><span class="w">                </span><span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;producto...&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;btnAdd&quot;</span><span class="w"> </span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Añadir producto&quot;</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn btn-primary&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-bag-plus-fill&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/form&gt;</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36"></a><span class="p">)</span>
+<a id="__codelineno-6-37" name="__codelineno-6-37"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p><code>components/ItemListFilters.jsx</code></p>
+<p>Permite aplicar filtros a la lista. Filtrar por nombre y mostrar/ocultar completados.</p>
+<ul>
+<li>Recibe la función <code>filterCallback</code> como parámetro que indicará al componente padre que se han aplicado los filtros.</li>
+<li>La función <code>handleFilters</code> se encarga de obtener los valores de los filtros y llamar a la función <code>filterCallback</code>.</li>
+<li>La función <code>handleClearFilters</code> se encarga de limpiar los filtros y llamar a la función <code>handleFilters</code>.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ItemListFilters.jsx</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span>
+<span class="normal"><a href="#__codelineno-7-33">33</a></span>
+<span class="normal"><a href="#__codelineno-7-34">34</a></span>
+<span class="normal"><a href="#__codelineno-7-35">35</a></span>
+<span class="normal"><a href="#__codelineno-7-36">36</a></span>
+<span class="normal"><a href="#__codelineno-7-37">37</a></span>
+<span class="normal"><a href="#__codelineno-7-38">38</a></span>
+<span class="normal"><a href="#__codelineno-7-39">39</a></span>
+<span class="normal"><a href="#__codelineno-7-40">40</a></span>
+<span class="normal"><a href="#__codelineno-7-41">41</a></span>
+<span class="normal"><a href="#__codelineno-7-42">42</a></span>
+<span class="normal"><a href="#__codelineno-7-43">43</a></span>
+<span class="normal"><a href="#__codelineno-7-44">44</a></span>
+<span class="normal"><a href="#__codelineno-7-45">45</a></span>
+<span class="normal"><a href="#__codelineno-7-46">46</a></span>
+<span class="normal"><a href="#__codelineno-7-47">47</a></span>
+<span class="normal"><a href="#__codelineno-7-48">48</a></span>
+<span class="normal"><a href="#__codelineno-7-49">49</a></span>
+<span class="normal"><a href="#__codelineno-7-50">50</a></span>
+<span class="normal"><a href="#__codelineno-7-51">51</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">ItemListFilters</span><span class="p">({</span><span class="w"> </span><span class="nx">filterCallback</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="hll"><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleFilters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;filter-name&#39;</span><span class="p">).</span><span class="nx">value</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;filter-hide-completed&#39;</span><span class="p">).</span><span class="nx">checked</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="hll"><span class="w">    </span><span class="nx">filterCallback</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">checked</span><span class="p">)</span>
+</span><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="hll"><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleClearFilters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;filter-name&#39;</span><span class="p">).</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;filter-hide-completed&#39;</span><span class="p">).</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="nx">handleFilters</span><span class="p">()</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;app-filters&quot;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">      </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;container px-3 d-flex flex-row gap-3 align-items-center justify-content-end&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;text-primary&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-funnel-fill&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/span&gt;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;filter-completed border rounded p-1&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;checkbox&quot;</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">          </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-check-input&quot;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">          </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;checked&quot;</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">          </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;filter-hide-completed&quot;</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="hll"><span class="w">          </span><span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">handleFilters</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+</span><a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">label</span><span class="w"> </span><span class="nx">htmlFor</span><span class="o">=</span><span class="s2">&quot;filter-hide-completed&quot;</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-check-label&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;icon-visible bi-eye-fill&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;icon-hidden bi-eye-slash&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-check&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/label&gt;</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;filter-search input-group input-group-sm&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;input-group-text&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-search&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/span&gt;</span>
+<a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+<a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">          </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;filter-name&quot;</span>
+<a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">          </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;name&quot;</span>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">          </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-control&quot;</span>
+<a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">          </span><span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;buscar...&quot;</span>
+<a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="hll"><span class="w">          </span><span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">handleFilters</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+</span><a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;filter-clear&quot;</span>
+<a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="w">        </span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Limpiar filtros&quot;</span>
+<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">        </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn btn-sm btn-outline-secondary&quot;</span>
+<a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="hll"><span class="w">        </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleClearFilters</span><span class="p">}</span><span class="o">&gt;</span>
+</span><a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-trash-fill&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>components/ItemList.jsx</code></li>
+</ul>
+<p>Renderiza la lista utilizando iterando sobre los datos recibidos y renderizando un componente <code>ItemRow</code> por cada elemento.</p>
+<p>De los parámetros que recibe mediante <code>props</code> utiliza <code>itemList</code> para representar la lista y el resto los pasa al componente <code>ItemRow</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Pasando eventos a través de varios componentes</p>
+<p>Esta forma de pasar eventos, no es la más adecuada.</p>
+<p>En una aplicación más compleja deberíamos utilizar el componente <em><code>Context</code></em>.</p>
+<p>En este caso, se ha optado por esta solución para simplificar el código.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ItemList.jsx</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">ItemRow</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./ItemRow&#39;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">ItemList</span><span class="p">({</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="hll"><span class="w">  </span><span class="nx">itemList</span><span class="p">,</span>
+</span><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="hll"><span class="w">  </span><span class="nx">filters</span><span class="p">,</span>
+</span><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="hll"><span class="w">  </span><span class="nx">deleteCallback</span><span class="p">,</span>
+</span><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="hll"><span class="w">  </span><span class="nx">editCallback</span><span class="p">,</span>
+</span><a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="hll"><span class="w">  </span><span class="nx">checkCallback</span>
+</span><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;app-list&quot;</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;container&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">ul</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;list-group&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="hll"><span class="w">        </span><span class="p">{</span><span class="nx">itemList</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="hll"><span class="w">          </span><span class="o">&lt;</span><span class="nx">ItemRow</span>
+</span><a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="hll"><span class="w">            </span><span class="nx">item</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">}</span>
+</span><a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="hll"><span class="w">            </span><span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span>
+</span><a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="hll"><span class="w">            </span><span class="nx">filter</span><span class="o">=</span><span class="p">{</span><span class="nx">filters</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
+</span><a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="hll"><span class="w">            </span><span class="nx">deleteCallback</span><span class="o">=</span><span class="p">{</span><span class="nx">deleteCallback</span><span class="p">}</span>
+</span><a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="hll"><span class="w">            </span><span class="nx">editCallback</span><span class="o">=</span><span class="p">{</span><span class="nx">editCallback</span><span class="p">}</span>
+</span><a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="hll"><span class="w">            </span><span class="nx">checkCallback</span><span class="o">=</span><span class="p">{</span><span class="nx">checkCallback</span><span class="p">}</span>
+</span><a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="hll"><span class="w">          </span><span class="o">/&gt;</span>
+</span><a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="hll"><span class="w">        </span><span class="p">))}</span>
+</span><a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/ul&gt;</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>components/ItemRow.jsx</code></li>
+</ul>
+<p>Renderiza un elemento de la lista. Incluye un <em>checkbox</em> para marcar el elemento como completado, un botón para editarlo y otro para eliminarlo.</p>
+<ul>
+<li>Recibe el elemento a renderizar, filtros aplicados y los eventos para eliminar, editar y marcar como completado.</li>
+<li>Utiliza la función <code>formatFilteredName</code> para resaltar el texto que coincide con el filtro.</li>
+<li>Utiliza <code>useNavigate</code> para navegar a la vista de edición del elemento.</li>
+<li>La función <code>formatFilteredName</code> se encarga de resaltar el texto que coincide con el filtro.</li>
+<li>La función <code>handleChecked</code> se encarga de modificar la propiedad <code>checked</code> del elemento y llamar a la función <code>checkCallback</code>.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ItemRow.jsx</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span>
+<span class="normal"><a href="#__codelineno-9-31">31</a></span>
+<span class="normal"><a href="#__codelineno-9-32">32</a></span>
+<span class="normal"><a href="#__codelineno-9-33">33</a></span>
+<span class="normal"><a href="#__codelineno-9-34">34</a></span>
+<span class="normal"><a href="#__codelineno-9-35">35</a></span>
+<span class="normal"><a href="#__codelineno-9-36">36</a></span>
+<span class="normal"><a href="#__codelineno-9-37">37</a></span>
+<span class="normal"><a href="#__codelineno-9-38">38</a></span>
+<span class="normal"><a href="#__codelineno-9-39">39</a></span>
+<span class="normal"><a href="#__codelineno-9-40">40</a></span>
+<span class="normal"><a href="#__codelineno-9-41">41</a></span>
+<span class="normal"><a href="#__codelineno-9-42">42</a></span>
+<span class="normal"><a href="#__codelineno-9-43">43</a></span>
+<span class="normal"><a href="#__codelineno-9-44">44</a></span>
+<span class="normal"><a href="#__codelineno-9-45">45</a></span>
+<span class="normal"><a href="#__codelineno-9-46">46</a></span>
+<span class="normal"><a href="#__codelineno-9-47">47</a></span>
+<span class="normal"><a href="#__codelineno-9-48">48</a></span>
+<span class="normal"><a href="#__codelineno-9-49">49</a></span>
+<span class="normal"><a href="#__codelineno-9-50">50</a></span>
+<span class="normal"><a href="#__codelineno-9-51">51</a></span>
+<span class="normal"><a href="#__codelineno-9-52">52</a></span>
+<span class="normal"><a href="#__codelineno-9-53">53</a></span>
+<span class="normal"><a href="#__codelineno-9-54">54</a></span>
+<span class="normal"><a href="#__codelineno-9-55">55</a></span>
+<span class="normal"><a href="#__codelineno-9-56">56</a></span>
+<span class="normal"><a href="#__codelineno-9-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">parse</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;html-react-parser&#39;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="hll"><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useNavigate</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span>
+</span><a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="c1">// función para resaltar el texto que coincide con el filtro</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">formatFilteredName</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">filter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">name</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">  </span><span class="c1">// se utiliza html-react-parser para convertir el string en un elemento React</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">parse</span><span class="p">(</span><span class="nx">name</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">(</span><span class="sb">`(</span><span class="si">${</span><span class="nx">filter</span><span class="si">}</span><span class="sb">)`</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gi&#39;</span><span class="p">),</span><span class="w"> </span><span class="s1">&#39;&lt;em&gt;$1&lt;/em&gt;&#39;</span><span class="p">))</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="p">}</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">ItemRow</span><span class="p">({</span><span class="w"> </span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">,</span><span class="w"> </span><span class="nx">deleteCallback</span><span class="p">,</span><span class="w"> </span><span class="nx">checkCallback</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">navigate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useNavigate</span><span class="p">()</span>
+</span><a id="__codelineno-9-15" name="__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleChecked</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">updatedItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">item</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">    </span><span class="nx">updatedItem</span><span class="p">.</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">checked</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">updatedItem</span><span class="p">.</span><span class="nx">checked</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="nx">checkCallback</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">li</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;list-group-item d-flex justify-content-between align-items-center gap-2&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* checkbox */</span><span class="p">}</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">input</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">        </span><span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="sb">`item-status-</span><span class="si">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="w">        </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;checkbox&quot;</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">        </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;completed&quot;</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">        </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-check-input&quot;</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="w">        </span><span class="nx">defaultChecked</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">checked</span><span class="p">}</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="hll"><span class="w">        </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">handleChecked</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">)}</span>
+</span><a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="w">      </span><span class="o">/&gt;</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* nombre */</span><span class="p">}</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">label</span><span class="w"> </span><span class="nx">htmlFor</span><span class="o">=</span><span class="p">{</span><span class="sb">`item-status-</span><span class="si">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">formatFilteredName</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">filter</span><span class="p">)}</span><span class="o">&lt;</span><span class="err">/label&gt;</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* cantidad */</span><span class="p">}</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">em</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;small border rounded px-1&quot;</span><span class="o">&gt;</span><span class="nx">x</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">quantity</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/em&gt;</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* espaciador */</span><span class="p">}</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;flex-grow-1&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* botón editar */</span><span class="p">}</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">button</span>
+<a id="__codelineno-9-42" name="__codelineno-9-42"></a><span class="w">        </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn btn-link edit py-1 px-2&quot;</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43"></a><span class="w">        </span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot;editar&quot;</span>
+<a id="__codelineno-9-44" name="__codelineno-9-44"></a><span class="w">        </span><span class="c1">// onClick={() =&gt; editCallback(item)}</span>
+<a id="__codelineno-9-45" name="__codelineno-9-45"></a><span class="hll"><span class="w">        </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">navigate</span><span class="p">(</span><span class="sb">`./</span><span class="si">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">)}</span><span class="o">&gt;</span>
+</span><a id="__codelineno-9-46" name="__codelineno-9-46"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-pencil&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-9-47" name="__codelineno-9-47"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-9-48" name="__codelineno-9-48"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* botón eliminar */</span><span class="p">}</span>
+<a id="__codelineno-9-49" name="__codelineno-9-49"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">button</span>
+<a id="__codelineno-9-50" name="__codelineno-9-50"></a><span class="w">        </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn btn-link delete py-1 px-2&quot;</span>
+<a id="__codelineno-9-51" name="__codelineno-9-51"></a><span class="w">        </span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot;eliminar&quot;</span>
+<a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="hll"><span class="w">        </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">deleteCallback</span><span class="p">(</span><span class="nx">item</span><span class="p">)}</span><span class="o">&gt;</span>
+</span><a id="__codelineno-9-53" name="__codelineno-9-53"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-x-circle&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-9-54" name="__codelineno-9-54"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-9-55" name="__codelineno-9-55"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/li&gt;</span>
+<a id="__codelineno-9-56" name="__codelineno-9-56"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-9-57" name="__codelineno-9-57"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="appedititemjsx">AppEditItem.jsx<a class="headerlink" href="#appedititemjsx" title="Permanent link">&para;</a></h3>
+<p>Componente utilizado como vista para editar un elemento.</p>
+<p>Está configurado con la ruta <strong><code>/:itemId</code></strong> por lo que recibe el ID del elemento a editar en la <em>url</em>.</p>
+<p>Permite volver a la vista principal mediante un botón. Si se han realizado cambios en el elemento, muestra un diálogo de confirmación.</p>
+<ul>
+<li>Recibe el ID del elemento en la url y se guarda con <code>useParams</code>.</li>
+<li>Realiza una petición al proceso principal para obtener el elemento a editar.</li>
+<li>Almacena elemento en el estado <code>item</code>.</li>
+<li>Crea un estado con el elemento original para comparar si se han realizado cambios.</li>
+<li>Utiliza <code>useNavigate</code> para navegar a la vista principal.</li>
+<li>La función <code>handleSubmitChanges</code> se encarga de actualizar el elemento y navegar a la vista principal. Se llama desde el evento <code>onSubmit</code> del formulario, que se activa al pulsar el botón <em>Guardar</em> <code>&lt;button type="submit" ...</code>.</li>
+<li>La función <code>handleDelete</code> se encarga de llamar al proceso principal para mostrar un diálogo de confirmación para borrar el elemento.</li>
+<li>La función <code>handleDiscard</code> se encarga de llamar al proceso principal para mostrar un diálogo de confirmación si se han realizado cambios en el elemento. Con las opciones de guardar, descartar los cambios y cancelar la acción.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">AppEditItem.jsx</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-10-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-10-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-10-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-10-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-10-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-10-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-10-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-10-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-10-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-10-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-10-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-10-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-10-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-10-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-10-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-10-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-10-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-10-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-10-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-10-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-10-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-10-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-10-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-10-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-10-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-10-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-10-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-10-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-10-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-10-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-10-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-10-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-10-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-10-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-10-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-10-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-10-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-10-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-10-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-10-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-10-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-10-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-10-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-10-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-10-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-10-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-10-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-10-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-10-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-10-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-10-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-10-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-10-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-10-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-10-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-10-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-10-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-10-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-10-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-10-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-10-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-10-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-10-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-10-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-10-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-10-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-10-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-10-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-10-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-10-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-10-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-10-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-10-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-10-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-10-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-10-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-10-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-10-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-10-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-10-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-10-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-10-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-10-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-10-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-10-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-10-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-10-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-10-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-10-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-10-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-10-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-10-100">100</a></span>
+<span class="normal"><a href="#__codelineno-10-101">101</a></span>
+<span class="normal"><a href="#__codelineno-10-102">102</a></span>
+<span class="normal"><a href="#__codelineno-10-103">103</a></span>
+<span class="normal"><a href="#__codelineno-10-104">104</a></span>
+<span class="normal"><a href="#__codelineno-10-105">105</a></span>
+<span class="normal"><a href="#__codelineno-10-106">106</a></span>
+<span class="normal"><a href="#__codelineno-10-107">107</a></span>
+<span class="normal"><a href="#__codelineno-10-108">108</a></span>
+<span class="normal"><a href="#__codelineno-10-109">109</a></span>
+<span class="normal"><a href="#__codelineno-10-110">110</a></span>
+<span class="normal"><a href="#__codelineno-10-111">111</a></span>
+<span class="normal"><a href="#__codelineno-10-112">112</a></span>
+<span class="normal"><a href="#__codelineno-10-113">113</a></span>
+<span class="normal"><a href="#__codelineno-10-114">114</a></span>
+<span class="normal"><a href="#__codelineno-10-115">115</a></span>
+<span class="normal"><a href="#__codelineno-10-116">116</a></span>
+<span class="normal"><a href="#__codelineno-10-117">117</a></span>
+<span class="normal"><a href="#__codelineno-10-118">118</a></span>
+<span class="normal"><a href="#__codelineno-10-119">119</a></span>
+<span class="normal"><a href="#__codelineno-10-120">120</a></span>
+<span class="normal"><a href="#__codelineno-10-121">121</a></span>
+<span class="normal"><a href="#__codelineno-10-122">122</a></span>
+<span class="normal"><a href="#__codelineno-10-123">123</a></span>
+<span class="normal"><a href="#__codelineno-10-124">124</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="p">,</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="hll"><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useParams</span><span class="p">,</span><span class="w"> </span><span class="nx">useNavigate</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span>
+</span><a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">AppEditItem</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="c1">// item es el estado que contiene el elemento a editar</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">setItem</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">({})</span>
+</span><a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">  </span><span class="c1">// originalItem estado original del elemento</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">  </span><span class="c1">// usado para comparar si hubo cambios</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">originalItem</span><span class="p">,</span><span class="w"> </span><span class="nx">setOriginalItem</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">({})</span>
+</span><a id="__codelineno-10-11" name="__codelineno-10-11"></a>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">  </span><span class="c1">// Obtiene el id del item de la URL</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">itemId</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useParams</span><span class="p">()</span>
+</span><a id="__codelineno-10-14" name="__codelineno-10-14"></a>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">navigate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useNavigate</span><span class="p">()</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="hll"><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">itemId</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">itemFetched</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">      </span><span class="nx">setItem</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="nx">itemFetched</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">      </span><span class="nx">setOriginalItem</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="nx">itemFetched</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[])</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="hll"><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleSubmitChanges</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">itemName</span><span class="p">.</span><span class="nx">value</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="k">return</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">newItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">updateItem</span><span class="p">(</span><span class="nx">newItem</span><span class="p">)</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30"></a><span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">reset</span><span class="p">()</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">itemName</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="w">    </span><span class="nx">navigate</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34"></a>
+<a id="__codelineno-10-35" name="__codelineno-10-35"></a><span class="hll"><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleDelete</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-10-36" name="__codelineno-10-36"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">confirm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">deleteItem</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">confirm</span><span class="p">)</span><span class="w"> </span><span class="nx">navigate</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-39" name="__codelineno-10-39"></a>
+<a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="hll"><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleDiscard</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-10-41" name="__codelineno-10-41"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">confirm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">api</span><span class="p">.</span><span class="nx">confirmItem</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+<a id="__codelineno-10-42" name="__codelineno-10-42"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">confirm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-43" name="__codelineno-10-43"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;discard&#39;</span><span class="o">:</span>
+<a id="__codelineno-10-44" name="__codelineno-10-44"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;save&#39;</span><span class="o">:</span>
+<a id="__codelineno-10-45" name="__codelineno-10-45"></a><span class="w">        </span><span class="nx">navigate</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-46" name="__codelineno-10-46"></a><span class="w">        </span><span class="k">break</span>
+<a id="__codelineno-10-47" name="__codelineno-10-47"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;cancel&#39;</span><span class="o">:</span>
+<a id="__codelineno-10-48" name="__codelineno-10-48"></a><span class="w">        </span><span class="k">break</span>
+<a id="__codelineno-10-49" name="__codelineno-10-49"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-50" name="__codelineno-10-50"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-51" name="__codelineno-10-51"></a>
+<a id="__codelineno-10-52" name="__codelineno-10-52"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">setName</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-53" name="__codelineno-10-53"></a><span class="w">    </span><span class="nx">setItem</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-10-54" name="__codelineno-10-54"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-55" name="__codelineno-10-55"></a>
+<a id="__codelineno-10-56" name="__codelineno-10-56"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">setQuantity</span><span class="p">(</span><span class="nx">quantity</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-57" name="__codelineno-10-57"></a><span class="w">    </span><span class="nx">setItem</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">quantity</span><span class="o">:</span><span class="w"> </span><span class="nx">quantity</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-10-58" name="__codelineno-10-58"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-59" name="__codelineno-10-59"></a>
+<a id="__codelineno-10-60" name="__codelineno-10-60"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-10-61" name="__codelineno-10-61"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;app-item-edit&quot;</span>
+<a id="__codelineno-10-62" name="__codelineno-10-62"></a><span class="w">      </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;container vh-100 d-flex flex-column gap-3 justify-content-center align-items-center&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-63" name="__codelineno-10-63"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">h1</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;text-primary&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-64" name="__codelineno-10-64"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-pencil-square&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt; Editar producto</span>
+<a id="__codelineno-10-65" name="__codelineno-10-65"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<a id="__codelineno-10-66" name="__codelineno-10-66"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">form</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="s2">&quot;#&quot;</span>
+<a id="__codelineno-10-67" name="__codelineno-10-67"></a><span class="w">        </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;itemForm&quot;</span>
+<a id="__codelineno-10-68" name="__codelineno-10-68"></a><span class="w">        </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;container&quot;</span>
+<a id="__codelineno-10-69" name="__codelineno-10-69"></a><span class="hll"><span class="w">        </span><span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">handleSubmitChanges</span><span class="p">}</span><span class="o">&gt;</span>
+</span><a id="__codelineno-10-70" name="__codelineno-10-70"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;d-flex flex-column gap-2 align-items-center&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-71" name="__codelineno-10-71"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;input-group&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-72" name="__codelineno-10-72"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;input-group-text text-primary col-2&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-73" name="__codelineno-10-73"></a><span class="w">              </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-pencil-square&quot;</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">Producto</span><span class="o">:&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-10-74" name="__codelineno-10-74"></a><span class="w">            </span><span class="o">&lt;</span><span class="err">/span&gt;</span>
+<a id="__codelineno-10-75" name="__codelineno-10-75"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+<a id="__codelineno-10-76" name="__codelineno-10-76"></a><span class="w">              </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;itemName&quot;</span>
+<a id="__codelineno-10-77" name="__codelineno-10-77"></a><span class="w">              </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;itemName&quot;</span>
+<a id="__codelineno-10-78" name="__codelineno-10-78"></a><span class="w">              </span><span class="nx">required</span>
+<a id="__codelineno-10-79" name="__codelineno-10-79"></a><span class="w">              </span><span class="nx">autoComplete</span><span class="o">=</span><span class="s2">&quot;off&quot;</span>
+<a id="__codelineno-10-80" name="__codelineno-10-80"></a><span class="w">              </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-control&quot;</span>
+<a id="__codelineno-10-81" name="__codelineno-10-81"></a><span class="w">              </span><span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;producto...&quot;</span>
+<a id="__codelineno-10-82" name="__codelineno-10-82"></a><span class="hll"><span class="w">              </span><span class="nx">onChange</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setName</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span>
+</span><a id="__codelineno-10-83" name="__codelineno-10-83"></a><span class="w">              </span><span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+<a id="__codelineno-10-84" name="__codelineno-10-84"></a><span class="w">          </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-10-85" name="__codelineno-10-85"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;input-group&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-86" name="__codelineno-10-86"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;input-group-text text-primary col-2&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-87" name="__codelineno-10-87"></a><span class="w">              </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-hash&quot;</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">Cantidad</span><span class="o">:&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-10-88" name="__codelineno-10-88"></a><span class="w">            </span><span class="o">&lt;</span><span class="err">/span&gt;</span>
+<a id="__codelineno-10-89" name="__codelineno-10-89"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;number&quot;</span>
+<a id="__codelineno-10-90" name="__codelineno-10-90"></a><span class="w">              </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;itemQuantity&quot;</span>
+<a id="__codelineno-10-91" name="__codelineno-10-91"></a><span class="w">              </span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;itemQuantity&quot;</span>
+<a id="__codelineno-10-92" name="__codelineno-10-92"></a><span class="w">              </span><span class="nx">autoComplete</span><span class="o">=</span><span class="s2">&quot;off&quot;</span>
+<a id="__codelineno-10-93" name="__codelineno-10-93"></a><span class="w">              </span><span class="nx">min</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+<a id="__codelineno-10-94" name="__codelineno-10-94"></a><span class="w">              </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-control&quot;</span>
+<a id="__codelineno-10-95" name="__codelineno-10-95"></a><span class="w">              </span><span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;cantidad...&quot;</span>
+<a id="__codelineno-10-96" name="__codelineno-10-96"></a><span class="hll"><span class="w">              </span><span class="nx">onChange</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setQuantity</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span>
+</span><a id="__codelineno-10-97" name="__codelineno-10-97"></a><span class="w">              </span><span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">quantity</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+<a id="__codelineno-10-98" name="__codelineno-10-98"></a><span class="w">          </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-10-99" name="__codelineno-10-99"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;d-flex gap-2&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-100" name="__codelineno-10-100"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span>
+<a id="__codelineno-10-101" name="__codelineno-10-101"></a><span class="w">              </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;btnDelete&quot;</span>
+<a id="__codelineno-10-102" name="__codelineno-10-102"></a><span class="w">              </span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Borrar&quot;</span>
+<a id="__codelineno-10-103" name="__codelineno-10-103"></a><span class="w">              </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn btn-danger&quot;</span>
+<a id="__codelineno-10-104" name="__codelineno-10-104"></a><span class="hll"><span class="w">              </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">handleDelete</span><span class="p">(</span><span class="nx">item</span><span class="p">)}</span><span class="o">&gt;</span>
+</span><a id="__codelineno-10-105" name="__codelineno-10-105"></a><span class="w">              </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-trash&quot;</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">Borrar</span><span class="o">&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-10-106" name="__codelineno-10-106"></a><span class="w">            </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-10-107" name="__codelineno-10-107"></a><span class="hll"><span class="w">            </span><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span>
+</span><a id="__codelineno-10-108" name="__codelineno-10-108"></a><span class="w">                </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;btnSave&quot;</span>
+<a id="__codelineno-10-109" name="__codelineno-10-109"></a><span class="w">                </span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Guardar&quot;</span>
+<a id="__codelineno-10-110" name="__codelineno-10-110"></a><span class="w">                </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn btn-primary&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-10-111" name="__codelineno-10-111"></a><span class="w">              </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-save&quot;</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">Guardar</span><span class="w"> </span><span class="nx">cambios</span><span class="o">&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-10-112" name="__codelineno-10-112"></a><span class="w">            </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-10-113" name="__codelineno-10-113"></a><span class="w">            </span><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span>
+<a id="__codelineno-10-114" name="__codelineno-10-114"></a><span class="w">              </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;btnDiscard&quot;</span>
+<a id="__codelineno-10-115" name="__codelineno-10-115"></a><span class="w">              </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn btn-secondary&quot;</span>
+<a id="__codelineno-10-116" name="__codelineno-10-116"></a><span class="hll"><span class="w">              </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">handleDiscard</span><span class="p">()}</span><span class="o">&gt;</span>
+</span><a id="__codelineno-10-117" name="__codelineno-10-117"></a><span class="w">              </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;bi bi-arrow-left&quot;</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">Volver</span><span class="o">&lt;</span><span class="err">/i&gt;</span>
+<a id="__codelineno-10-118" name="__codelineno-10-118"></a><span class="w">            </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<a id="__codelineno-10-119" name="__codelineno-10-119"></a><span class="w">          </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-10-120" name="__codelineno-10-120"></a><span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-10-121" name="__codelineno-10-121"></a><span class="w">      </span><span class="o">&lt;</span><span class="err">/form&gt;</span>
+<a id="__codelineno-10-122" name="__codelineno-10-122"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-10-123" name="__codelineno-10-123"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-10-124" name="__codelineno-10-124"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="themeswitcherjsx">ThemeSwitcher.jsx<a class="headerlink" href="#themeswitcherjsx" title="Permanent link">&para;</a></h3>
+<p>Componente que permite cambiar el tema de la aplicación (<em>light/dark</em>).</p>
+<p>Aprovechando que <em>Bootstrap</em> utiliza ofrece la opción para definir el tema de colores, se puede cambiar el tema de la aplicación de forma sencilla modificando el valor del atributo <strong><code>data-bs-theme</code></strong> en el elemento raíz del documento <em>html</em> (<code>document.documentElement</code>).</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ThemeSwitcher.jsx</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">ThemeSwitcher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleThemeSwitch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">isChecked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">checked</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="hll"><span class="w">        </span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;data-bs-theme&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">isChecked</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;dark&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;light&#39;</span><span class="p">)</span>
+</span><a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-check form-switch&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">input</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-check-input&quot;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;checkbox&quot;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">        </span><span class="nx">role</span><span class="o">=</span><span class="s2">&quot;switch&quot;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="hll"><span class="w">        </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleThemeSwitch</span><span class="p">}</span>
+</span><a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">      </span><span class="o">/&gt;</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="bootstrap-y-sass">Bootstrap y Sass<a class="headerlink" href="#bootstrap-y-sass" title="Permanent link">&para;</a></h2>
+<p>Para dar estilos personalizados a la aplicación se utiliza <strong><em>Bootstrap</em></strong> y <strong><em>Sass</em></strong>.</p>
+<p>Los estilos personalizados se encuentran en el fichero <code>src/renderer/src/styles/custom.scss</code>, donde se han sobrecargado los colores por defecto de <em>Bootstrap</em>.</p>
+<p><code>cumtom.scss</code> se importa desde el fichero <code>src/renderer/src/main.jsx</code>, que es el componente raíz de la aplicación. De esta forma, el resto de componentes lo podrán utilizar sin tenerlo que importar de nuevo.</p>
+<div class="highlight"><span class="filename">src/renderer/src/main.jsx</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./styles/custom.scss&#39;</span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jsanvil/din2023" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      
+    
+  </body>
+</html>
